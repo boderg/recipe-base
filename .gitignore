@@ -1,0 +1,6 @@
+.venv
+env.py
+__pycache__/
+.hintrc
+.DS_Store
+```
