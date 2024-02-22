@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Base</title>
+</head>
+<body>
+    {% for recipe in recipes %}
+        {{ recipe.recipe_img }}<br>
+        {{ recipe.recipe_name }}<br>
+        {{ recipe.main_ingredients }}<br>
+        {{ recipe.optional_ingredients }}<br>
+        {{ recipe.preparation_time }}<br>
+        {{ recipe.preparation_method }}<br>
+        {{ recipe.cooking_time }}<br>
+        {{ recipe.cooking_method }}<br>
+        {{ recipe.created_by }}<br>
+        {{ recipe.created_date }}<br>
+        {{ recipe.category_name }}<br>
+    {% endfor %}
+</body>
+</html>
