@@ -17,7 +17,7 @@
 
     <header>
         <!-- top navbar -->
-        <nav id="navbar" class="blue-grey lighten-5">
+        <nav id="navbar" class="blue-grey lighten-5 z-depth-2">
             <div class="nav-wrapper">
                 <a href="{{ url_for('get_recipes') }}" class="brand-logo teal-text text-darken-1">Recipe Base</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger right">
@@ -57,6 +57,7 @@
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     {% block scripts %}
     {% endblock %}
+
 </body>
 
 </html>
