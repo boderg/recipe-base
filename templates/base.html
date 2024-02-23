@@ -17,12 +17,12 @@
 
     <header>
         <!-- top navbar -->
-        <nav class="blue-grey lighten-5">
+        <nav id="navbar" class="blue-grey lighten-5">
             <div class="nav-wrapper">
                 <a href="{{ url_for('get_recipes') }}" class="brand-logo teal-text text-darken-1">Recipe Base</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger right">
                     <i class="fas fa-bars teal-text text-darken-1"></i></a>
-                    <ul class="right hide-on-med-and-down">
+                    <ul class="right hide-on-med-and-down nav-list">
                     <li><a class="teal-text text-darken-1" href="{{ url_for('get_recipes') }}">Recipes</a></li>
                     <li><a class="teal-text text-darken-1" href="#">Sign Up</a></li>
                     <li><a class="teal-text text-darken-1" href="#">Log In</a></li>
