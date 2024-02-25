@@ -58,3 +58,27 @@ body {
     background-color: darkorchid;
     color: orange;
 }
+
+/* Flash Messages */
+
+.flashes {
+    margin: 20px auto 0 auto;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.5);
+    background-color: orange;
+    color: darkorchid;
+    width: 50%;
+}
+
+.flashes h4 {
+    line-height: 1.5;
+    padding-top: 5px;
+}
+
+/* @media queries */
+
+@media only screen and (max-width: 996px) {
+    .brand-logo {
+        margin-left: 0;
+    }
+}
