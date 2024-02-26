@@ -74,6 +74,10 @@ a.brand-logo {
     color: var(--charcoal);
 }
 
+.input-field .prefix.active {
+    color: var(--citron);
+}
+
 .fa-right-to-bracket {
     filter: none;
     color: var(--silver);
@@ -128,6 +132,7 @@ a.brand-logo {
 .flashes h4 {
     line-height: 1.5;
     padding-top: 5px;
+    color: var(--charcoal);
 }
 
 /* @media queries */
