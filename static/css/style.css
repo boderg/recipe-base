@@ -43,6 +43,7 @@ main {
 
 .brand-logo {
     margin-left: 30px;
+    font-family: 'Cairo', sans-serif;
 }
 
 a.brand-logo {
@@ -51,6 +52,7 @@ a.brand-logo {
 
 .nav-list {
     margin-right: 30px;
+    font-family: 'Cairo', sans-serif;
 }
 
 .nav-list li a {
@@ -64,6 +66,7 @@ a.brand-logo {
     margin: 5% 0 5% 10px;
     box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.5);
     background-color: var(--silver);
+    font-family: 'Cairo', sans-serif;
 }
 
 .sidenav li h4 {
@@ -99,6 +102,7 @@ a.brand-logo {
 
 .card-panel h3 {
     color: var(--charcoal);
+    font-family: 'Cairo', sans-serif;
 }
 
 /* Forms */
@@ -109,6 +113,7 @@ a.brand-logo {
 
 .input-field label {
     color: var(--charcoal);
+    font-family: 'Karma', serif;
 }
 
 .input-field input[type=text]:focus + label,
@@ -130,6 +135,7 @@ a.brand-logo {
     box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.5);
     background-color: var(--charcoal);
     color: var(--silver);
+    font-family: 'Cairo', sans-serif;
 }
 
 .btn:hover {
@@ -170,8 +176,21 @@ a.brand-logo {
     color: var(--charcoal);
 }
 
+.page-footer h5 {
+    font-family: 'Cairo', sans-serif;
+}
+
+.page-footer a,
+.page-footer p {
+    font-family: 'Karma', serif;
+}
+
 .footer-copyright .container, .footer-copyright .container a, .page-footer a {
     color: var(--charcoal);
+}
+
+.footer-copyright {
+    font-family: 'Karma', serif;
 }
 
 /* @media queries */
