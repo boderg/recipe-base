@@ -2,11 +2,13 @@
 {% block content %}
 
 <div class="row">
+    <!-- form section -->
     <form class="col s12 m10 offset-m1" method="post" action="{{ url_for('register') }}">
         <div class="card-panel">
             <div class="row">
                 <h3 class="center-align">Register</h3>
             </div>
+            <!-- username -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-user-plus prefix"></i>
@@ -14,6 +16,7 @@
                     <label for="username">Username</label>
                 </div>
             </div>
+            <!-- password -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-user-lock prefix"></i>
@@ -21,13 +24,22 @@
                     <label for="password">Password</label>
                 </div>
             </div>
+            <!-- confirm password -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-check prefix"></i>
-                    <input id="password" name="password" type="password" minlength="5" maxlength="10" pattern="^[a-zA-Z0-9]{3,20}$" class="validate" required>
-                    <label for="password"> Confirm Password</label>
+                    <input id="password2" name="password2" type="password" minlength="5" maxlength="10" pattern="^[a-zA-Z0-9]{3,20}$" class="validate" required>
+                    <label for="password2"> Confirm Password</label>
                 </div>
             </div>
+            <!-- email -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-envelope prefix"></i>
+                    <input id="email" name="email" type="email" class="validate" required>
+                    <label for="email">Email</label>
+                </div>
+            <!-- submit button -->
             <div class="row">
                 <button class=" col s12 btn" type="submit" name="action">Register
                     <i class="fas fa-right-to-bracket postfix"></i>
