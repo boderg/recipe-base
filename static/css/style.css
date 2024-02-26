@@ -107,6 +107,15 @@ a.brand-logo {
     color: var(--silver);
 }
 
+.btn:hover {
+    background-color: var(--citron);
+    color: var(--charcoal);
+}
+
+.btn:hover .fa-right-to-bracket{
+    color: var(--charcoal);
+}
+
 /* Flash Messages */
 
 .flashes {
