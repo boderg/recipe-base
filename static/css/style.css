@@ -16,6 +16,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    background-image: url(../images/pastel-pots.jpeg);
     background-color: var(--white-smoke);
 }
 
@@ -37,14 +38,31 @@ body {
     margin-left: 30px;
 }
 
+a.brand-logo {
+    color: var(--charcoal);
+}
+
 .nav-list {
     margin-right: 30px;
+}
+
+.nav-list li a {
+    color: var(--charcoal);
 }
 
 .sidenav {
     max-height: 80%;
     margin: 5% 0 5% 10px;
     box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.5);
+    background-color: var(--silver);
+}
+
+.sidenav li h4 {
+    color: var(--charcoal);
+}
+
+.sidenav li a {
+    color: var(--charcoal);
 }
 
 .fa-bars {
@@ -53,10 +71,12 @@ body {
 
 .fas {
     filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.5));
+    color: var(--charcoal);
 }
 
 .fa-right-to-bracket {
     filter: none;
+    color: var(--silver);
 }
 
 .text-shadow {
@@ -71,11 +91,20 @@ body {
     background-color: var(--silver);
 }
 
+.card-panel h3 {
+    color: var(--charcoal);
+}
+
+.card-panel label {
+    color: var(--charcoal);
+}
+
 /* Buttons */
 
 .btn {
     box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.5);
     background-color: var(--charcoal);
+    color: var(--silver);
 }
 
 /* Flash Messages */
