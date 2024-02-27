@@ -3,15 +3,15 @@
 
 <div class="row">
     <!-- form section -->
-    <form class="col s12 m10 offset-m1" method="post" action="{{ url_for('register') }}">
+    <form class="col s12 m10 offset-m1" method="post" action="{{ url_for('login') }}">
         <div class="card-panel">
             <div class="row">
-                <h3 class="center-align">Join the Recipe Base</h3>
+                <h3 class="center-align">Log In to Recipe Base</h3>
             </div>
             <!-- username -->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-user-plus prefix"></i>
+                    <i class="fas fa-user prefix"></i>
                     <input id="username" name="username" type="text" minlength="3" maxlength="20" pattern="^[a-zA-Z0-9]{3,20}$" class="validate" required>
                     <label for="username">Username</label>
                 </div>
@@ -24,38 +24,24 @@
                     <label for="password">Password</label>
                 </div>
             </div>
-            <!-- confirm password -->
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-check prefix"></i>
-                    <input id="password2" name="password2" type="password" minlength="5" maxlength="10" pattern="^[a-zA-Z0-9]{3,20}$" class="validate" required>
-                    <label for="password2"> Confirm Password</label>
-                </div>
-            </div>
-            <!-- email -->
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-envelope prefix"></i>
-                    <input id="email" name="email" type="email" class="validate" required>
-                    <label for="email">Email</label>
-                </div>
             <!-- submit button -->
             <div class="row">
-                <button class=" col s12 btn" type="submit" name="action">Sign Up
-                    <i class="fas fa-pencil postfix"></i>
+                <button class=" col s12 btn" type="submit" name="action">Log In
+                    <i class="fas fa-right-to-bracket postfix"></i>
                 </button>
             </div>
-            <!-- log in link -->
+            <!-- sign up link -->
             <div class="row">
                 <div class="col s12 question">
                     <p class="center-align">
-                        Already have an account? <a href="{{ url_for('login') }}">Log In</a>
+                    Don't have an account? <a href="{{ url_for('register') }}">Sign Up</a>
                     </p>
                 </div>
             </div>
         </div>
     </form>
 </div>
+
 
 
             
