@@ -1,62 +1,38 @@
 {% extends "base.html" %}
 {% block content %}
-    {% for recipe in recipes %}
-        {{ recipe.recipe_img }}<br>
-        {{ recipe.recipe_name }}<br>
-        {{ recipe.main_ingredients }}<br>
-        {{ recipe.optional_ingredients }}<br>
-        {{ recipe.preparation_time }}<br>
-        {{ recipe.preparation_method }}<br>
-        {{ recipe.cooking_time }}<br>
-        {{ recipe.cooking_method }}<br>
-        {{ recipe.created_by }}<br>
-        {{ recipe.created_date }}<br>
-        {{ recipe.category_name }}<br>
-    {% endfor %}
 
-    <div class="row">
-    <div class="card sticky-action col s12 m5 offset-m1 l3">
+<div class="row">
+    {% for recipe in recipes %}
+    <div class="card sticky-action col s12 m6 l4">
         <div class="card-image waves-effect waves-block waves-light">
-            <img class="activator" src="images/office.jpg" alt="alt-image">
+            <img class="activator" src="../static/images/kitchen-75-white.jpg" alt="alt-image">
         </div>
         <div class="card-content">
-            <span class="card-title activator"><em>Card Title</em><i
-                    class="fas fa-ellipsis-vertical right"></i></span>
+            <span class="card-title activator"><h5><strong><em>{{ recipe.recipe_name.title() }}</em></strong></h5><i
+                    class="fas fa-ellipsis-vertical right tooltipped" data-position="right" data-tooltip="View Recipe"></i></span>
             <p><a href="#">This is a link</a></p>
         </div>
         <div class="card-reveal">
-            <span class="card-title">Card Title<i class="fas fa-xmark right"></i></span>
-            <p>Here is some more information about this product that is only revealed once clicked on.</p>
+            <span class="card-title"><h5><strong><em>{{ recipe.recipe_name.title() }}</em></strong></h5><i class="fas fa-xmark right"></i></span>
+            <h6><strong>Ingredients</strong></h6>
+            <p>{{ recipe.main_ingredients }}</p>
+            <h6><strong>Optional Ingredients</strong></h6>
+            <p>{{ recipe.optional_ingredients }}</p>
+            <h6><strong>Preparation Time:</strong></h6>
+            <p>{{ recipe.preparation_time }}</p>
+            <h6><strong>Preparation Method</strong></h6>
+            <p>{{ recipe.preparation_method }}</p>
+            <h6><strong>Cooking Time:</strong></h6>
+            <p>{{ recipe.cooking_time }}</p>
+            <h6><strong>Cooking Method</strong></h6>
+            <p>{{ recipe.cooking_method }}</p>
+            <p>{{ recipe.created_by }}</p>
+            <p>{{ recipe.created_date }}</p>
+            <h6><strong>Category</strong></h6>
+            <p>{{ recipe.category_name.title() }}</p>
         </div>
     </div>
-    <div class="card sticky-action col s12 m5 offset-m1 l3 offset-l1">
-        <div class="card-image waves-effect waves-block waves-light">
-            <img class="activator" src="images/office.jpg" alt="alt-image">
-        </div>
-        <div class="card-content">
-            <span class="card-title activator"><em>Card Title</em><i
-                    class="fas fa-ellipsis-vertical right"></i></span>
-            <p><a href="#">This is a link</a></p>
-        </div>
-        <div class="card-reveal">
-            <span class="card-title">Card Title<i class="fas fa-xmark right"></i></span>
-            <p>Here is some more information about this product that is only revealed once clicked on.</p>
-        </div>
-    </div>
-    <div class="card sticky-action col s12 m5 offset-m1 l3 offset-l1">
-        <div class="card-image waves-effect waves-block waves-light">
-            <img class="activator" src="images/office.jpg" alt="alt-image">
-        </div>
-        <div class="card-content">
-            <span class="card-title activator"><em>Card Title</em><i
-                    class="fas fa-ellipsis-vertical right"></i></span>
-            <p><a href="#">This is a link</a></p>
-        </div>
-        <div class="card-reveal">
-            <span class="card-title">Card Title<i class="fas fa-xmark right"></i></span>
-            <p>Here is some more information about this product that is only revealed once clicked on.</p>
-        </div>
-    </div>
+    {% endfor %}
 </div>
 
 {% endblock %}
