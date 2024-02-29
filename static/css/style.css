@@ -6,7 +6,8 @@
     --text-secondary: #e1ce7aff;
     --desert-sand: #ebcfb2ff;
     --bg-main: #c5baafff;
-    --bg-main-opaque: #c5baaf50;
+    --bg-main-opaque: #c5baafa9;
+    --bg-secondary: #e1ce7a50;
     --bg-body: #f5f5f5ff;
     --white: #ffffffff;
     --pink-pot: #fbc5aaff;
@@ -19,8 +20,9 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    /* background-image: url(../images/pastel-pots.jpeg); */
-    background-color: var(--bg-body);
+    /* background-image: url(../images/rich-pastel-pots-weave-60-white.jpg);
+    background-size: cover; */
+    background-color: var(--bg-secondary);
     display: flex;
     min-height: 100vh;
     flex-direction: column;
@@ -104,6 +106,18 @@ a.brand-logo {
 .card-panel h3 {
     color: var(--text-main);
     font-family: 'Cairo', sans-serif;
+
+}
+
+/* Cards */
+
+.card {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+}
+
+.card-title {
+    font-family: 'Cormorant Infant', sans-serif;
 }
 
 /* Forms */
