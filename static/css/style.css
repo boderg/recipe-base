@@ -121,12 +121,20 @@ a.brand-logo {
     font-family: 'Cormorant Infant', sans-serif;
 }
 
-.card h6 {
+.card h5 {
     font-family: 'Cormorant Infant', serif;
 }
 
-.card p {
+.card p, .card a, .card li{
     font-family: 'Karma', serif;
+}
+
+.ingredient {
+    list-style: circle;
+}
+
+.para-indent {
+    text-indent: 40px;
 }
 
 .card-content, .card-reveal {
