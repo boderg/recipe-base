@@ -170,6 +170,11 @@ a.brand-logo {
     box-shadow: 0 1px 0 0 var(--text-secondary) !important;
 }
 
+input.select-dropdown.dropdown-trigger {
+    color: var(--text-main);
+    font-family: 'Karma', serif;
+}
+
 /* Buttons */
 
 .btn {
