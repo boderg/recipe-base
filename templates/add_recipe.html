@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="row">
+    <form class="col s12 m8 offset-m2" method="post" action="">
+        <div class="card-panel">
+            <div class="row">
+                <h3 class="center-align">Add a Recipe</h3>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-pen-clip prefix"></i>
+                    <input id="recipe_title" type="text" class="validate">
+                    <label for="recipe_title">Recipe Title</label>
+                </div>
+                <div class="input-field col s6">
+                    <i class="fas fa-list prefix"></i>
+                    <input id="main_ingredients" type="text" class="validate">
+                    <label for="main_ingredients">Main Ingredients</label>
+                </div>
+                <div class="input-field col s6">
+                    <i class="fas fa-list prefix"></i>
+                    <input id="optional_ingredients" type="text" class="validate">
+                    <label for="optional_ingredients">Optional Ingredients</label>
+                </div>
+                <div class="input-field col s6">
+                    <i class="fas fa-list prefix"></i>
+                    <input id="prep_instructions" type="text" class="validate">
+                    <label for="prep_instructions">Preparation Instructions</label>
+                </div>
+                <div class="input-field col s6">
+                    <i class="fas fa-list prefix"></i>
+                    <input id="cook_instructions" type="text" class="validate">
+                    <label for="cook_instructions">Cooking Instructions</label>
+                </div>
+                <div class="input-field col s6">
+                    <i class="fas fa-clock prefix"></i>
+                    <input id="prep_time" type="text" class="validate">
+                    <label for="prep_time">Preparation Time</label>
+                </div>
+                <div class="input-field col s6">
+                    <i class="fas fa-clock prefix"></i>
+                    <input id="cook_time" type="text" class="validate">
+                    <label for="cook_time">Cooking Time</label>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+        
+
+{% endblock %}
