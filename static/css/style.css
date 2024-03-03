@@ -175,6 +175,16 @@ input.select-dropdown.dropdown-trigger {
     font-family: 'Karma', serif;
 }
 
+::placeholder {
+    color: var(--text-main);
+    font-family: 'Karma', serif;
+    font-style: italic;
+}
+
+.select-wrapper .caret {
+    fill: var(--text-main);
+}
+
 /* Buttons */
 
 .btn {
