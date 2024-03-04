@@ -31,11 +31,23 @@ function addInputEventListener(parentElement) {
         if (event.target.tagName.toLowerCase() === 'input') {
 
             // Check if the value is not empty, the last key pressed was not backspace, and the input field doesn't already have a sibling input field
-            if (event.target.value.length === 1 && lastKeyPressed !== 'Backspace' && !(event.target.nextElementSibling && event.target.nextElementSibling.tagName.toLowerCase() === 'input')) {
+            if (event.target.value.length === 1 
+            && lastKeyPressed !== 'Backspace' 
+            && !(event.target.nextElementSibling 
+            && event.target.nextElementSibling.tagName.toLowerCase() === 'input')) {
 
                 // Create a new input field
                 let newInput = document.createElement('input');
                 newInput.placeholder = 'Enter next item';
+                newInput.type = 'text';
+                newInput.name = event.target.name;
+
+                // Add blur event listener to the new input field to remove it if it's empty
+                newInput.addEventListener('blur', function() {
+                    if (newInput.parentNode.lastChild === newInput && newInput.value === '') {
+                        newInput.parentNode.removeChild(newInput);
+                    }
+                });
 
                 // Append the new input field to the parent element
                 parentElement.appendChild(newInput);
