@@ -190,22 +190,21 @@ input.select-dropdown.dropdown-trigger {
 .btn {
     /* box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.5); */
     /* background-color: var(--text-main); */
-    color: var(--bg-main);
+    /* color: var(--bg-main); */
     font-family: 'Cairo', sans-serif;
 }
 
 .btn:hover {
     /* background-color: var(--text-secondary); */
-    color: var(--text-main);
+    color: var(--text-secondary);
 }
 
 .btn .fas {
     filter: none;
-    color: var(--bg-main);
 }
 
 .btn:hover .fas {
-    color: var(--text-main);
+    color: var(--text-secondary);
 }
 
 .btn.submit, .btn .fas {
