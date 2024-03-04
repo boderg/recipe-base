@@ -5,6 +5,7 @@ from flask import (
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
+from datetime import datetime
 if os.path.exists("env.py"):
     import env
 
@@ -118,7 +119,8 @@ def add_recipe():
             "cooking_method": request.form.getlist("cooking_method"),
             "serving_size": request.form.get("serving_size"),
             "created_by": session["user"],
-            "recipe_image": request.form.get("recipe_image")
+            "recipe_image": request.form.get("recipe_image"),
+            "created_on": datetime.now().strftime("%d-%m-%Y at %H:%M")
         }
         mongo.db.recipes.insert_one(recipe)
         flash("Recipe Successfully Added")
