@@ -208,6 +208,11 @@ input.select-dropdown.dropdown-trigger {
     color: var(--text-main);
 }
 
+.btn.submit, .btn .fas {
+    /* background-color: var(--bg-main); */
+    color: var(--text-main);
+}
+
 /* Question */
 
 .question {
