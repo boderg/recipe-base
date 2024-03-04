@@ -107,7 +107,7 @@ def logout():
 def add_recipe():
     if request.method == "POST":
         recipe = {
-            "category_name": request.form.get("category_name"),
+            "category_name": request.form.getlist("category_name"),
             "recipe_name": request.form.get("recipe_name"),
             "recipe_description": request.form.get("recipe_description"),
             "main_ingredients": request.form.getlist("main_ingredients"),
