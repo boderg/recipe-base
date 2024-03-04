@@ -53,7 +53,12 @@
             <h5><strong><em>Date created:</em></strong></h5>
             <p>{{ recipe.created_on }}</p>
             <h5><strong><em>Category:</em></strong></h5>
-            <p class="para-indent"><a href="">{{ recipe.category_name.title() }}</a></p>
+            <ol>
+                {% for category in recipe.category_name %}
+                <li><a href="#">{{ category.capitalize() }}</a></li>
+                {% endfor %}
+            </ol>
+            
         </div>
     </div>
     {% endfor %}
