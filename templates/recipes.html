@@ -18,7 +18,7 @@
                     class="fas fa-ellipsis-vertical right tooltipped" data-position="right" data-tooltip="Quick View"></i></span>
             <!-- recipe description -->
             <p>{{ recipe.recipe_description.capitalize() }}</p>
-            <p><a href="#">View Recipe</a></p>
+            <p><a href="#modal1" class="waves-effect waves-light btn modal-trigger">View Recipe</a></p>
         </div>
         <!-- card reveal content -->
         <div class="card-reveal">
@@ -80,5 +80,69 @@
     </div>
     {% endfor %}
 </div>
+
+<!-- modal-content -->
+<section>
+    {% for recipe in recipes %}
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h4><strong><em>{{ recipe.recipe_name.title() }}</em></strong></h4>
+            <!-- serves -->
+            <h5><strong><em>Serves:</em></strong></h5>
+            <p>{{ recipe.serving_size }}</p>
+            <!-- ingredients -->
+            <h5><strong><em>Ingredients:</em></strong></h5>
+            <ol class="ingredient">
+                {% for ingredient in recipe.main_ingredients %}
+                <li>{{ ingredient.capitalize() }}</li>
+                {% endfor %}
+            </ol>
+            <!-- optional ingredients -->
+            <h5><strong><em>Optional Ingredients:</em></strong></h5>
+            <ol class="ingredient">
+                {% for ingredient in recipe.optional_ingredients %}
+                <li>{{ ingredient.capitalize() }}</li>
+                {% endfor %}
+            </ol>
+            <!-- preparation time -->
+            <h5><strong><em>Preparation Time:</em></strong></h5>
+            <p class="para-indent">{{ recipe.preparation_time }}</p>
+            <!-- preparation instructions -->
+            <h5><strong><em>Preparation Instructions:</em></strong></h5>
+            <ol>
+                {% for method in recipe.preparation_method %}
+                <li>{{ method.capitalize() }}</li>
+                {% endfor %}
+            </ol>
+            <!-- cooking time -->
+            <h5><strong><em>Cooking Time:</em></strong></h5>
+            <p class="para-indent">{{ recipe.cooking_time }}</p>
+            <!-- cooking instructions -->
+            <h5><strong><em>Cooking Instructions:</em></strong></h5>
+            <ol>
+                {% for method in recipe.cooking_method %}
+                <li>{{ method.capitalize() }}</li>
+                {% endfor %}
+            </ol>
+            <!-- created by -->
+            <h5><strong><em>Created by:</em></strong></h5>
+            <p>{{ recipe.created_by.capitalize() }}</p>
+            <!-- date created -->
+            <h5><strong><em>Date created:</em></strong></h5>
+            <p>{{ recipe.created_on }}</p>
+            <!-- category -->
+            <h5><strong><em>Category:</em></strong></h5>
+            <ol>
+                {% for category in recipe.category_name %}
+                <li><a href="#">{{ category.capitalize() }}</a></li>
+                {% endfor %}
+            </ol>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+        </div>
+    </div>
+    {% endfor %}
+</section>
 
 {% endblock %}
