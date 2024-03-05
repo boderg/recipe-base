@@ -82,7 +82,6 @@
 </div>
 
 <!-- modal-content -->
-<section>
     {% for recipe in recipes %}
     <div id="modal1" class="modal">
         <div class="modal-content">
@@ -139,10 +138,9 @@
             </ol>
         </div>
         <div class="modal-footer">
-            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat" title="Close"><i class="fas fa-xmark"></i></a>
         </div>
     </div>
     {% endfor %}
-</section>
 
 {% endblock %}
