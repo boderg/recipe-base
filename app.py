@@ -28,6 +28,12 @@ def get_recipes():
     return render_template("recipes.html", recipes=recipes)
 
 
+@app.route("/recipe/<recipe_id>")
+def recipe(recipe_id):
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    return render_template("single_recipe.html", recipe=recipe)
+
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
