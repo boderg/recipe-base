@@ -29,21 +29,21 @@
                 <!-- recipe image url -->
                 <div class="input-field col s12">
                     <i class="fas fa-image prefix"></i>
-                    <input id="recipe_image" name="recipe_image" type="text" class="validate">
+                    <input id="recipe_image" name="recipe_image" type="url" class="validate">
                     <label for="recipe_image">Recipe Image URL (optional)</label>
                 </div>
                 <!-- add ingredients -->
-                <div class="input-field col s12 tooltipped" data-position="top" 
-                data-tooltip="Add an ingredient (one per line) - when you add an ingredient a 
-                new field will appear below for the next ingredient."  id="list1">
+                <div class="input-field col s12 tooltipped" data-position="top"
+                data-tooltip="Add an ingredient (one per line) - when an ingredient is added a 
+                new field will appear below ready for the next ingredient."  id="list1">
                     <i class="fas fa-list prefix"></i>
                     <input id="main_ingredients" name="main_ingredients" type="text" class="validate">
                     <label for="main_ingredients">Main Ingredients</label>
                 </div>
                 <!-- add optional ingredients -->
                 <div class="input-field col s12 tooltipped" data-position="top" 
-                data-tooltip="Add an ingredient (one per line) - when you add an ingredient a 
-                new field will appear below for the next ingredient." 
+                data-tooltip="Add an ingredient (one per line) - when an ingredient is added a 
+                new field will appear below ready for the next ingredient." 
                 id="list2">
                     <i class="fas fa-list prefix"></i>
                     <input id="optional_ingredients" name="optional_ingredients" type="text" class="validate">
@@ -51,16 +51,16 @@
                 </div>
                 <!-- add preparation instructions -->
                 <div class="input-field col s12 tooltipped" data-position="top" 
-                data-tooltip="Add an instruction - when you add an instruction 
-                a new field will appear below for the next instruction."  id="list3">
+                data-tooltip="Add an instruction - when an instruction is added 
+                a new field will appear below ready for the next instruction."  id="list3">
                     <i class="fas fa-list prefix"></i>
                     <input id="preparation_method" name="preparation_method" type="text" class="validate">
                     <label for="preparation_method">Preparation Instructions</label>
                 </div>
                 <!-- add cooking instructions -->
                 <div class="input-field col s12 tooltipped" data-position="top" 
-                data-tooltip="Add an instruction (one per line) - when you add an instruction 
-                a new field will appear below for the next instruction."  id="list4">
+                data-tooltip="Add an instruction - when an instruction is added 
+                a new field will appear below ready for the next instruction."  id="list4">
                     <i class="fas fa-list prefix"></i>
                     <input id="cooking_method" name="cooking_method" type="text" class="validate">
                     <label for="cooking_method">Cooking Instructions</label>
@@ -84,13 +84,13 @@
                 <!-- select categories -->
                 <div class="input-field col s12" dropdown>
                     <i class="fas fa-folder-open prefix"></i>
-                    <label for="category_name">Select your recipe's food categories from the dropdown. Pick all options that apply.</label>
                     <select multiple title="category_name" name="category_name">
                         <option value="" disabled selected></option>
                         {% for category in categories %}
                             <option value="{{ category.category_name }}">{{ category.category_name.capitalize() }}</option>
                         {% endfor %}
                     </select>
+                    <label for="category_name">Select your recipe's food categories from the dropdown. Pick all options that apply.</label>
                 </div>
                 <!-- submit button -->
                 <div class="row">
