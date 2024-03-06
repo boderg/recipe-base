@@ -2,17 +2,13 @@
 
 :root {
     --black: #000000ff;
-    --text-main: #424b54ff;
-    /* --text-secondary: #e1ce7aff; */
-    --text-secondary: #f6f1eeff;
-    --desert-sand: #ebcfb2ff;
-    --bg-main: #c5baafff;
-    --bg-main-opaque: #ed7d31a9;
-    --bg-secondary: #e1ce7a50;
-    --bg-body: #f6f1eeff;
     --white: #ffffffff;
-    --pink-pot: #fbc5aaff;
-    --blue-bowl: #c7d8c4ff;
+    --text-main: #393e05ff;
+    --text-secondary: #ffffbeff;
+    --bg-grey: #393e05ff;
+    --bg-yellow: #ffffbeff;
+    --edit-text: #007662ff;
+    --edit-bg: #f2fedcff;
 }
 
 /* Body */
@@ -21,8 +17,8 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    /* background-image: url(../images/rich-pastel-pots-weave-60-white.jpg);
-    background-size: cover; */
+    background-image: url(../images/utensils-yellow-gradient.jpg);
+    background-size: cover;
     /* background-color: var(--bg-body); */
     display: flex;
     min-height: 100vh;
@@ -42,7 +38,7 @@ main {
 
 .nav-wrapper {
     /* box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.5); */
-    /* background-color: var(--bg-main);    */
+    background-image: url(../images/yellow-pattern.png);   
 }
 
 .brand-logo {
@@ -69,7 +65,7 @@ a.brand-logo {
     max-height: 80%;
     margin: 5% 0 5% 10px;
     /* box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.5); */
-    /* background-color: var(--bg-main); */
+    background-image: url(../images/yellow-pattern.png);
     font-family: 'Cairo', sans-serif;
 }
 
@@ -88,7 +84,7 @@ a.brand-logo {
 }
 
 .fas {
-    filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.5));
+    /* filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.5)); */
     color: var(--text-main);
 }
 
@@ -101,7 +97,8 @@ a.brand-logo {
 .card-panel {
     margin: 30px 0;
     /* box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.5); */
-    /* background-color: var(--bg-main); */
+    background-image: url(../images/yellow-pattern.png);
+    border: 5px solid var(--text-main);
 }
 
 .card-panel h3 {
@@ -112,9 +109,10 @@ a.brand-logo {
 /* Cards */
 
 .card {
-    /* background-color: var(--bg-main); */
+    background-image: url(../images/yellow-pattern.png);
     color: var(--text-main);
     margin: 30px 15px;
+    border: 5px solid var(--text-main);
 }
 
 .card-title {
@@ -138,12 +136,20 @@ a.brand-logo {
 }
 
 .card-content, .card-reveal {
-    /* background-color: var(--bg-body); */
+    background-image: url(../images/yellow-pattern.png);
     color: var(--text-main);
 }
 
 .card-reveal {
-    border: 2px solid var(--text-main);
+    /* border: 2px solid var(--text-main); */
+}
+
+.single {
+    margin: 30px 0;
+}
+
+#recipe, #serves, #ingredients, #prep, #cook, #details {
+    padding: 10px;
 }
 
 /* Forms */
@@ -188,28 +194,28 @@ input.select-dropdown.dropdown-trigger {
 /* Buttons */
 
 .btn {
-    /* box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.5); */
-    /* background-color: var(--text-main); */
-    /* color: var(--bg-main); */
+    background-color: var(--text-main);
+    color: var(--bg-yellow);
     font-family: 'Cairo', sans-serif;
 }
 
 .btn:hover {
-    /* background-color: var(--text-secondary); */
+    background-color: var(--edit-text);
     color: var(--text-secondary);
 }
 
 .btn .fas {
     filter: none;
+    color: var(--bg-yellow);
 }
 
 .btn:hover .fas {
     color: var(--text-secondary);
+    background-color: var(--edit-text);
 }
 
-.btn.submit, .btn .fas {
-    /* background-color: var(--bg-main); */
-    color: var(--text-main);
+a.btn {
+    font-family: 'Cairo', sans-serif;
 }
 
 /* Question */
@@ -235,7 +241,7 @@ input.select-dropdown.dropdown-trigger {
 
 .flashes {
     /* box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.5); */
-    /* background-color: var(--bg-main); */
+    background-image: url(../images/yellow-pattern.png);
 }
 
 .flashes h4 {
@@ -248,7 +254,7 @@ input.select-dropdown.dropdown-trigger {
 /* Footer */
 
 .page-footer {
-    background-color: transparent;
+    background-image: url(../images/yellow-pattern.png);
     /* box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.5); */
     color: var(--text-main);
     margin-top: 30px;
