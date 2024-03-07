@@ -4,79 +4,87 @@
 <div class="row">
     <!-- card front content -->
     {% for recipe in recipes %}
-    <div class="card col s12 m4 center-align">
-        <div class="card-image">
-            {% if recipe.recipe_image %}
-            <img class="activator" src="{{ recipe.recipe_image.url }}" alt="alt image">
-            {% else %}
-            <img class="activator" src="{{ url_for('static', filename='images/kitchen.jpg') }}" alt="Copper Kitchen Utensils">
-            {% endif %}
-        </div>
-        <!-- recipe name -->
-        <div class="card-content">
-            <span class="card-title activator"><h5><strong><em><em>{{ recipe.recipe_name.title() }}</em></em></strong></h5><i
-                    class="fas fa-eye right tooltipped" data-position="right" data-tooltip="Quick View"></i></span>
-            <!-- recipe description -->
-            <p>{{ recipe.recipe_description.capitalize() }}</p>
-            <a href="{{ url_for('recipe', recipe_id=recipe._id) }}" class="btn">View Full Recipe <i class="fas fa-glasses "></i></a>
-            
-        </div>
-        <!-- card reveal content -->
-        <div class="card-reveal">
-            <span class="card-title">
-                <h4><strong><em>{{ recipe.recipe_name.title() }}</em></strong></h4><i class="fas fa-xmark right"></i>
-            </span>
-            <!-- serves -->
-            <!-- <h5><strong><em>Serves:</em></strong></h5>
+    <div class="col s12 m3">
+        <div class="card">
+            <div class="card-image">
+                {% if recipe.recipe_image %}
+                <img class="activator" src="{{ recipe.recipe_image.url }}" alt="alt image">
+                {% else %}
+                <img class="activator" src="{{ url_for('static', filename='images/kitchen.jpg') }}"
+                    alt="Copper Kitchen Utensils">
+                {% endif %}
+            </div>
+            <!-- recipe name -->
+            <div class="card-content">
+                <span class="card-title activator">
+                    <h5><strong><em><em>{{ recipe.recipe_name.title() }}</em></em></strong></h5><i
+                        class="fas fa-eye right tooltipped" data-position="right" data-tooltip="Quick View"></i>
+                </span>
+                <!-- recipe description -->
+                <p class="description">{{ recipe.recipe_description.capitalize() }}</p>
+                <div>
+                <a href="{{ url_for('recipe', recipe_id=recipe._id) }}" class="btn">View Full Recipe 
+                    <i class="fas fa-glasses "></i></a>
+                </div>
+            </div>
+            <!-- card reveal content -->
+            <div class="card-reveal">
+                <span class="card-title">
+                    <h4><strong><em>{{ recipe.recipe_name.title() }}</em></strong></h4><i
+                        class="fas fa-xmark right"></i>
+                </span>
+                <!-- serves -->
+                <!-- <h5><strong><em>Serves:</em></strong></h5>
             <p class="para-indent">{{ recipe.serving_size }}</p> -->
-            <!-- ingredients -->
-            <h5><strong><em>Ingredients:</em></strong></h5>
-            <ol class="ingredient">
-                {% for ingredient in recipe.main_ingredients %}
-                <li>{{ ingredient.capitalize() }}</li>
-                {% endfor %}
-            </ol>
-            <!-- optional ingredients -->
-            <!-- <h5><strong><em>Optional Ingredients:</em></strong></h5>
+                <!-- ingredients -->
+                <h5><strong><em>Ingredients:</em></strong></h5>
+                <ol class="ingredient">
+                    {% for ingredient in recipe.main_ingredients %}
+                    <li>{{ ingredient.capitalize() }}</li>
+                    {% endfor %}
+                </ol>
+                <!-- optional ingredients -->
+                <!-- <h5><strong><em>Optional Ingredients:</em></strong></h5>
             <ol class="ingredient">
                 {% for ingredient in recipe.optional_ingredients %}
                 <li>{{ ingredient.capitalize() }}</li>
                 {% endfor %}
             </ol> -->
-            <!-- preparation time -->
-            <!-- <h5><strong><em>Preparation Time:</em></strong></h5>
+                <!-- preparation time -->
+                <!-- <h5><strong><em>Preparation Time:</em></strong></h5>
             <p class="para-indent">{{ recipe.preparation_time }}</p> -->
-            <!-- preparation instructions -->
-            <!-- <h5><strong><em>Preparation Instructions:</em></strong></h5> -->
-            <!-- <ol>
+                <!-- preparation instructions -->
+                <!-- <h5><strong><em>Preparation Instructions:</em></strong></h5> -->
+                <!-- <ol>
                 {% for method in recipe.preparation_method %}
                 <li>{{ method.capitalize() }}</li>
                 {% endfor %}
             </ol> -->
-            <!-- cooking time -->
-            <!-- <h5><strong><em>Cooking Time:</em></strong></h5>
+                <!-- cooking time -->
+                <!-- <h5><strong><em>Cooking Time:</em></strong></h5>
             <p class="para-indent">{{ recipe.cooking_time }}</p> -->
-            <!-- cooking instructions -->
-            <!-- <h5><strong><em>Cooking Instructions:</em></strong></h5>
+                <!-- cooking instructions -->
+                <!-- <h5><strong><em>Cooking Instructions:</em></strong></h5>
             <ol>
                 {% for method in recipe.cooking_method %}
                 <li>{{ method.capitalize() }}</li>
                 {% endfor %}
             </ol> -->
-            <!-- created by -->
-            <!-- <h5><strong><em>Created by:</em></strong></h5>
+                <!-- created by -->
+                <!-- <h5><strong><em>Created by:</em></strong></h5>
             <p>{{ recipe.created_by.capitalize() }}</p> -->
-            <!-- date created -->
-            <!-- <h5><strong><em>Date created:</em></strong></h5>
+                <!-- date created -->
+                <!-- <h5><strong><em>Date created:</em></strong></h5>
             <p>{{ recipe.created_on }}</p> -->
-            <!-- category -->
-            <h5><strong><em>Category:</em></strong></h5>
-            <ol>
-                {% for category in recipe.category_name %}
-                <li><a href="#">{{ category.capitalize() }}</a></li>
-                {% endfor %}
-            </ol>
-            
+                <!-- category -->
+                <h5><strong><em>Category:</em></strong></h5>
+                <ol class="category">
+                    {% for category in recipe.category_name %}
+                    <li><a href="#">{{ category.capitalize() }}</a></li>
+                    {% endfor %}
+                </ol>
+
+            </div>
         </div>
     </div>
     {% endfor %}
