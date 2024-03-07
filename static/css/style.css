@@ -4,11 +4,12 @@
     --black: #000000ff;
     --white: #ffffffff;
     --text-main: #393e05ff;
-    --text-secondary: #ffffbeff;
+    --text-secondary: #f5cb5de7;
     --bg-grey: #393e05ff;
     --bg-yellow: #ffffbeff;
     --edit-text: #007662ff;
     --edit-bg: #f2fedcff;
+    --bg-orange: #f5cb5de7;
 }
 
 /* Body */
@@ -38,7 +39,9 @@ main {
 
 .nav-wrapper {
     /* box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.5); */
-    background-image: url(../images/yellow-pattern.png);   
+    /* background-image: url(../images/orange-check2-90.png); */
+    background-color: var(--bg-orange);
+    border-bottom: 5px solid var(--text-main);
 }
 
 .brand-logo {
@@ -65,7 +68,8 @@ a.brand-logo {
     max-height: 80%;
     margin: 5% 0 5% 10px;
     /* box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.5); */
-    background-image: url(../images/yellow-pattern.png);
+    /* background-image: url(../images/orange-check2-90.png); */
+    background-color: var(--bg-orange);
     font-family: 'Cairo', sans-serif;
 }
 
@@ -101,7 +105,8 @@ a.brand-logo {
 .card-panel {
     margin: 30px 0;
     /* box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.5); */
-    background-image: url(../images/yellow-pattern.png);
+    /* background-image: url(../images/orange-check2-90.png); */
+    background-color: var(--bg-orange);
     border: 5px solid var(--text-main);
 }
 
@@ -113,7 +118,8 @@ a.brand-logo {
 /* Cards */
 
 .card {
-    background-image: url(../images/yellow-pattern.png);
+    /* background-image: url(../images/orange-check2-90.png); */
+    background-color: var(--bg-orange);
     color: var(--text-main);
     margin: 30px auto;
     border: 5px solid var(--text-main);
@@ -140,12 +146,13 @@ a.brand-logo {
 }
 
 .card-content, .card-reveal {
-    background-image: url(../images/yellow-pattern.png);
+    /* background-image: url(../images/orange-check2-90.png); */
+    background-color: var(--bg-orange);
     color: var(--text-main);
 }
 
-.card-reveal {
-    /* border: 2px solid var(--text-main); */
+.card-image {
+    margin: 10px 10px 0 10px;
 }
 
 .single {
@@ -158,6 +165,10 @@ a.brand-logo {
 
 #recipe, #serves, #ingredients, #prep, #cook, #details {
     padding: 10px;
+}
+
+.category li, .ingredient li {
+    list-style: none;
 }
 
 /* Forms */
@@ -177,22 +188,6 @@ a.brand-logo {
     color: var(--text-main) !important;
 }
 
-.input-field input[type=text]:focus,
-.input-field input[type=password]:focus,
-.input-field input[type=email]:focus {
-    border-bottom: 1px solid var(--edit-text) !important;
-    box-shadow: 0 1px 0 0 var(--edit-text) !important;
-}
-
-input.select-dropdown.dropdown-trigger {
-    color: var(--text-main);
-    font-family: 'Karma', serif;
-}
-
-input.select-dropdown.dropdown-trigger:focus + label {
-    border-bottom: 1px solid var(--edit-text) !important;
-}
-
 ::placeholder {
     color: var(--text-main);
     font-family: 'Karma', serif;
@@ -201,6 +196,19 @@ input.select-dropdown.dropdown-trigger:focus + label {
 
 .select-wrapper .caret {
     fill: var(--text-main);
+}
+
+.select-wrapper span {
+    background-color: var(--bg-orange);
+    color: var(--text-main);
+}
+
+.select-dropdown li.disabled > span {
+    background-color: var(--bg-orange);
+}
+
+.select-dropdown {
+    border: 2px solid var(--text-main);
 }
 
 /* Buttons */
@@ -225,6 +233,7 @@ a.btn {
     font-family: 'Cairo', sans-serif;
 }
 
+
 /* Question */
 
 .question {
@@ -236,7 +245,7 @@ a.btn {
     color: var(--text-main);
 }
 .question a:hover {
-    color: var(--text-secondary);
+    color: var(--edit-text);
 }
 
 /* Flash Messages */
@@ -248,7 +257,8 @@ a.btn {
 
 .flashes {
     /* box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.5); */
-    background-image: url(../images/yellow-pattern.png);
+    /* background-image: url(../images/orange-check2-90.png); */
+    background-color: var(--bg-orange);
 }
 
 .flashes h4 {
@@ -261,10 +271,12 @@ a.btn {
 /* Footer */
 
 .page-footer {
-    background-image: url(../images/yellow-pattern.png);
+    /* background-image: url(../images/orange-check2-90.png); */
+    background-color: var(--bg-orange);
     /* box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.5); */
     color: var(--text-main);
     margin-top: 30px;
+    border-top: 5px solid var(--text-main);
 }
 
 .page-footer h5 {
@@ -276,12 +288,20 @@ a.btn {
     font-family: 'Karma', serif;
 }
 
+.page-footer a:hover {
+    color: var(--edit-text);
+}
+
 .footer-copyright .container, .footer-copyright .container a, .page-footer a {
     color: var(--text-main);
 }
 
 .footer-copyright {
     font-family: 'Karma', serif;
+}
+
+.footer-copyright a:hover {
+    color: var(--edit-text);
 }
 
 /* @media queries */
