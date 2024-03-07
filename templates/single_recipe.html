@@ -3,69 +3,82 @@
 
 <div class="row">
     <div class="card col s12 single">
-        <div class="col s10 offset-s1" id="recipe">
-            <h4><strong><em>{{ recipe.recipe_name.title() }}</em></strong></h4>
+        <div class="row">
+            <div class="col s12 center-align" id="recipe">
+                <h4><strong><em>{{ recipe.recipe_name.title() }}</em></strong></h4>
+            </div>
+            <!-- serves -->
+            <div class="col s2 offset-s5 center-align" id="serves">
+                <h5><strong><em>Serves:</em></strong></h5>
+                <p class="para-indent">{{ recipe.serving_size }}</p>
+            </div>
         </div>
-        <!-- serves -->
-        <div class="col s10 offset-s1" id="serves">
-            <h5><strong><em>Serves:</em></strong></h5>
-            <p class="para-indent">{{ recipe.serving_size }}</p>
+        <div class="row">
+            <!-- ingredients -->
+            <div class="col s10 m5 offset-s1 offset-m1" id="ingredients">
+                <h5><strong><em>Ingredients:</em></strong></h5>
+                <ol class="ingredient">
+                    {% for ingredient in recipe.main_ingredients %}
+                    <li>{{ ingredient.capitalize() }}</li>
+                    {% endfor %}
+                </ol>
+            </div>
+            <!-- optional ingredients -->
+            <div class="col s10 m5 offset-s1 offset-m1" id="optional">
+                <h5><strong><em>Optional Ingredients:</em></strong></h5>
+                <ol class="ingredient">
+                    {% for ingredient in recipe.optional_ingredients %}
+                    <li>{{ ingredient.capitalize() }}</li>
+                    {% endfor %}
+                </ol>
+            </div>
         </div>
-        <!-- ingredients -->
-        <div class="col s10 offset-s1" id="ingredients">
-            <h5><strong><em>Ingredients:</em></strong></h5>
-            <ol class="ingredient">
-                {% for ingredient in recipe.main_ingredients %}
-                <li>{{ ingredient.capitalize() }}</li>
-                {% endfor %}
-            </ol>
-        <!-- optional ingredients -->
-            <h5><strong><em>Optional Ingredients:</em></strong></h5>
-            <ol class="ingredient">
-                {% for ingredient in recipe.optional_ingredients %}
-                <li>{{ ingredient.capitalize() }}</li>
-                {% endfor %}
-            </ol>
+        <div class="row">
+            <!-- preparation time -->
+            <div class="col s10 offset-s1 m5 offset-m1" id="prep">
+                <h5><strong><em>Preparation Time:</em></strong></h5>
+                <p class="para-indent">{{ recipe.preparation_time }}</p>
+                <!-- preparation instructions -->
+                <h5><strong><em>Preparation Instructions:</em></strong></h5>
+                <ol>
+                    {% for method in recipe.preparation_method %}
+                    <li>{{ method.capitalize() }}</li>
+                    {% endfor %}
+                </ol>
+            </div>
+            <!-- cooking time -->
+            <div class="col s10 offset-s1 m5 offset-m1" id="cook">
+                <h5><strong><em>Cooking Time:</em></strong></h5>
+                <p class="para-indent">{{ recipe.cooking_time }}</p>
+                <!-- cooking instructions -->
+                <h5><strong><em>Cooking Instructions:</em></strong></h5>
+                <ol>
+                    {% for method in recipe.cooking_method %}
+                    <li>{{ method.capitalize() }}</li>
+                    {% endfor %}
+                </ol>
+            </div>
         </div>
-        <!-- preparation time -->
-        <div class="col s5 offset-s1" id="prep">
-            <h5><strong><em>Preparation Time:</em></strong></h5>
-            <p class="para-indent">{{ recipe.preparation_time }}</p>
-        <!-- preparation instructions -->
-            <h5><strong><em>Preparation Instructions:</em></strong></h5>
-            <ol>
-                {% for method in recipe.preparation_method %}
-                <li>{{ method.capitalize() }}</li>
-                {% endfor %}
-            </ol>
+        <div class="row">
+            <!-- created by -->
+            <div class="col s10 offset-s1 center-align" id="details">
+                <h5><strong><em>Created by:</em></strong></h5>
+                <p>{{ recipe.created_by.capitalize() }}</p>
+                <!-- date created -->
+                <h5><strong><em>Date created:</em></strong></h5>
+                <p>{{ recipe.created_on }}</p>
+                <!-- category -->
+                <h5><strong><em>Category:</em></strong></h5>
+                <ol>
+                    {% for category in recipe.category_name %}
+                    <li><a href="#">{{ category.capitalize() }}</a></li>
+                    {% endfor %}
+                </ol>
+            </div>
         </div>
-        <!-- cooking time -->
-        <div class="col s5" id="cook">
-            <h5><strong><em>Cooking Time:</em></strong></h5>
-            <p class="para-indent">{{ recipe.cooking_time }}</p>
-        <!-- cooking instructions -->
-            <h5><strong><em>Cooking Instructions:</em></strong></h5>
-            <ol>
-                {% for method in recipe.cooking_method %}
-                <li>{{ method.capitalize() }}</li>
-                {% endfor %}
-            </ol>
-        </div>
-        
-        <!-- created by -->
-        <div class="col s10 offset-s1" id="details">
-            <h5><strong><em>Created by:</em></strong></h5>
-            <p>{{ recipe.created_by.capitalize() }}</p>
-        <!-- date created -->
-            <h5><strong><em>Date created:</em></strong></h5>
-            <p>{{ recipe.created_on }}</p>
-        <!-- category -->
-            <h5><strong><em>Category:</em></strong></h5>
-            <ol>
-                {% for category in recipe.category_name %}
-                <li><a href="#">{{ category.capitalize() }}</a></li>
-                {% endfor %}
-            </ol>
+        <div class="col s12 ed-btn center-align">
+            <a href="" class="btn">Edit <i class="fas fa-pen-to-square"></i></a>
+            <a href="" class="btn">Delete <i class="fas fa-trash-can"></i></a>
         </div>
     </div>
 </div>
