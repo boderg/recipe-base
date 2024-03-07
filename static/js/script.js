@@ -59,3 +59,13 @@ function addInputEventListener(parentElement) {
 
 // Add input event listener to each parent element
 parentElements.forEach(addInputEventListener);
+
+// Add event listener to the form to prevent the form 
+// from submitting when the enter key is pressed
+let form = document.getElementById('add_recipe');
+
+form.addEventListener('keydown', function (event) {
+    if (event.key === 'Enter') {
+        event.preventDefault();
+    }
+});
