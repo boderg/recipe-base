@@ -30,6 +30,18 @@ main {
     flex: 1 0 auto;    
 }
 
+h1 {
+    font-family: 'Cormorant Infant', serif;
+    color: var(--text-main);
+    background-color: var(--bg-orange);
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 10px;
+    border: 5px solid var(--text-main);
+    font-style: italic;
+    font-weight: 900;
+}
+
 /* Navigation */
 
 #navbar {

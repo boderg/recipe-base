@@ -34,6 +34,11 @@ def recipe(recipe_id):
     return render_template("single_recipe.html", recipe=recipe)
 
 
+@app.route("/home")
+def home():
+    return render_template("home.html")
+
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
