@@ -35,7 +35,7 @@
                 <!-- add ingredients -->
                 <div class="input-field col s12 tooltipped" data-position="top"
                 data-tooltip="Add an ingredient (one per line) - when an ingredient is added a 
-                new field will appear below ready for the next ingredient.">
+                new field will appear below ready for the next ingredient." id="list1">
                     <i class="fas fa-list prefix"></i>
                     <input id="main_ingredients" name="main_ingredients" value="{{ recipe.main_ingredients }}" type="text" class="validate" >
                     <label for="main_ingredients">Main Ingredients</label>
@@ -43,7 +43,7 @@
                 <!-- add optional ingredients -->
                 <div class="input-field col s12 tooltipped" data-position="top" 
                 data-tooltip="Add an ingredient (one per line) - when an ingredient is added a 
-                new field will appear below ready for the next ingredient." >
+                new field will appear below ready for the next ingredient." id="list2">
                     <i class="fas fa-list prefix"></i>
                     <input id="optional_ingredients" name="optional_ingredients" value="{{ recipe.optional_ingredients }}" type="text" class="validate">
                     <label for="optional_ingredients">Optional Ingredients</label>
@@ -51,7 +51,7 @@
                 <!-- add preparation instructions -->
                 <div class="input-field col s12 tooltipped" data-position="top" 
                 data-tooltip="Add an instruction - when an instruction is added 
-                a new field will appear below ready for the next instruction.">
+                a new field will appear below ready for the next instruction." id="list3">
                     <i class="fas fa-list prefix"></i>
                     <input id="preparation_method" name="preparation_method" value="{{ recipe.preparation_method }}" type="text" class="validate">
                     <label for="preparation_method">Preparation Instructions</label>
@@ -59,7 +59,7 @@
                 <!-- add cooking instructions -->
                 <div class="input-field col s12 tooltipped" data-position="top" 
                 data-tooltip="Add an instruction - when an instruction is added 
-                a new field will appear below ready for the next instruction.">
+                a new field will appear below ready for the next instruction." id="list4">
                     <i class="fas fa-list prefix"></i>
                     <input id="cooking_method" name="cooking_method" value="{{ recipe.cooking_method }}" type="text" class="validate">
                     <label for="cooking_method">Cooking Instructions</label>
