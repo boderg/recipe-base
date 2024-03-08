@@ -77,8 +77,11 @@
             </div>
         </div>
         <div class="col s12 ed-btn center-align">
+            <a href="{{ url_for('get_recipes') }}" class="btn">Back <i class="fas fa-arrow-left"></i></a>
+            {% if session.user|lower == recipe.created_by|lower %}
             <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn">Edit <i class="fas fa-pen-to-square"></i></a>
             <a href="" class="btn">Delete <i class="fas fa-trash-can"></i></a>
+            {% endif %}
         </div>
     </div>
 </div>
