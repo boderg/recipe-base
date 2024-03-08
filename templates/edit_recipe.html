@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="row">
+    <form class="col s12 m8 offset-m2" method="post" action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" id="edit_recipe">
+        <div class="card-panel">
+            <div class="row">
+                <h3 class="center-align">Edit Recipe</h3>
+            </div>
+            <!-- recipe title -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-pen-clip prefix"></i>
+                    <input id="recipe_name" name="recipe_name" type="text" class="validate">
+                    <label for="recipe_name">Recipe Title</label>
+                </div>
+                <!-- serving size -->
+                <div class="input-field col s12">
+                    <i class="fas fa-utensils prefix"></i>
+                    <input id="serving_size" name="serving_size" type="number" class="validate">
+                    <label for="serving_size">Serving Size</label>
+                </div>
+                <!-- recipe description -->
+                <div class="input-field col s12">
+                    <i class="fas fa-comment-dots prefix"></i>
+                    <textarea id="recipe_description" name="recipe_description" class="materialize-textarea validate"></textarea>
+                    <label for="recipe_description">Recipe Description</label>
+                </div>
+                <!-- recipe image url -->
+                <div class="input-field col s12">
+                    <i class="fas fa-image prefix"></i>
+                    <input id="recipe_image" name="recipe_image" type="url" class="validate">
+                    <label for="recipe_image">Recipe Image URL (optional)</label>
+                </div>
+                <!-- add ingredients -->
+                <div class="input-field col s12 tooltipped" data-position="top"
+                data-tooltip="Add an ingredient (one per line) - when an ingredient is added a 
+                new field will appear below ready for the next ingredient."  id="list1">
+                    <i class="fas fa-list prefix"></i>
+                    <input id="main_ingredients" name="main_ingredients" type="text" class="validate">
+                    <label for="main_ingredients">Main Ingredients</label>
+                </div>
+                <!-- add optional ingredients -->
+                <div class="input-field col s12 tooltipped" data-position="top" 
+                data-tooltip="Add an ingredient (one per line) - when an ingredient is added a 
+                new field will appear below ready for the next ingredient." 
+                id="list2">
+                    <i class="fas fa-list prefix"></i>
+                    <input id="optional_ingredients" name="optional_ingredients" type="text" class="validate">
+                    <label for="optional_ingredients">Optional Ingredients</label>
+                </div>
+                <!-- add preparation instructions -->
+                <div class="input-field col s12 tooltipped" data-position="top" 
+                data-tooltip="Add an instruction - when an instruction is added 
+                a new field will appear below ready for the next instruction."  id="list3">
+                    <i class="fas fa-list prefix"></i>
+                    <input id="preparation_method" name="preparation_method" type="text" class="validate">
+                    <label for="preparation_method">Preparation Instructions</label>
+                </div>
+                <!-- add cooking instructions -->
+                <div class="input-field col s12 tooltipped" data-position="top" 
+                data-tooltip="Add an instruction - when an instruction is added 
+                a new field will appear below ready for the next instruction."  id="list4">
+                    <i class="fas fa-list prefix"></i>
+                    <input id="cooking_method" name="cooking_method" type="text" class="validate">
+                    <label for="cooking_method">Cooking Instructions</label>
+                </div>
+                <!-- add preparation time -->
+                <div class="input-field col s12 l6 tooltipped" data-position="top" data-tooltip="Enter time value">
+                    <legend>
+                        <i class="fas fa-clock prefix"></i>
+                        <label for="preparation_time">Preparation Time</label>
+                        <input id="preparation_time" name="preparation_time" type="time" step="60" class="validate">
+                    </legend>
+                </div>
+                <!-- add cooking time -->
+                <div class="input-field col s12 l6 tooltipped" data-position="top" data-tooltip="Enter time value">
+                    <legend>
+                        <i class="fas fa-clock prefix"></i>
+                        <label for="cooking_time">Cooking Time</label>
+                        <input id="cooking_time" name="cooking_time" type="time" step="60" class="validate">
+                    </legend>
+                </div>
+                <!-- select categories -->
+                <div class="input-field col s12" dropdown>
+                    <i class="fas fa-folder-open prefix"></i>
+                    <select multiple title="category_name" name="category_name">
+                        <option value="" disabled selected></option>
+                        {% for category in categories %}
+                            <option value="{{ category.category_name }}">{{ category.category_name.capitalize() }}</option>
+                        {% endfor %}
+                    </select>
+                    <label for="category_name">Select your recipe's food categories from the dropdown. Pick all options that apply.</label>
+                </div>
+                <!-- submit button -->
+                <div class="row">
+                    <div class="col s12 center-align">
+                        <button class="btn submit" type="submit">Edit Recipe
+                            <i class="fas fa-pen-to-square"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+        
+
+{% endblock %}
