@@ -8,6 +8,7 @@
     --bg-grey: #393e05ff;
     --bg-yellow: #ffffbeff;
     --edit-text: #007662ff;
+    --edit-text-light: #00ecc5ff;
     --edit-bg: #f2fedcff;
     --bg-orange: #f5cb5ddf;
 }
@@ -20,7 +21,6 @@ body {
     overflow-x: hidden;
     background-image: url(../images/utensils-yellow-gradient.jpg);
     background-size: cover;
-    /* background-color: var(--bg-body); */
     display: flex;
     min-height: 100vh;
     flex-direction: column;
@@ -30,16 +30,17 @@ main {
     flex: 1 0 auto;    
 }
 
-h1 {
+h1, h2 {
     font-family: 'Cormorant Infant', serif;
-    color: var(--text-main);
-    background-color: var(--bg-orange);
-    width: -moz-fit-content;
-    width: fit-content;
-    padding: 10px;
-    border: 5px solid var(--text-main);
     font-style: italic;
     font-weight: 900;
+}
+
+.card.home h4 {
+    font-family: 'Cairo', sans-serif;
+    color: var(--text-main);
+    padding: 30px 0;
+    font-weight: 500;
 }
 
 /* Navigation */
@@ -50,10 +51,7 @@ h1 {
 }
 
 .nav-wrapper {
-    /* box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.5); */
-    /* background-image: url(../images/orange-check2-90.png); */
-    background-color: var(--bg-orange);
-    border-bottom: 5px solid var(--text-main);
+    background-image: linear-gradient(180deg, var(--bg-yellow), var(--bg-orange) 50%, var(--bg-orange) 95%, var(--bg-grey));
 }
 
 .brand-logo {
@@ -79,8 +77,6 @@ a.brand-logo {
 .sidenav {
     max-height: 80%;
     margin: 5% 0 5% 10px;
-    /* box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.5); */
-    /* background-image: url(../images/orange-check2-90.png); */
     background-color: var(--bg-orange);
     font-family: 'Cairo', sans-serif;
 }
@@ -100,7 +96,6 @@ a.brand-logo {
 }
 
 .fas {
-    /* filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.5)); */
     color: var(--text-main);
 }
 
@@ -116,10 +111,10 @@ a.brand-logo {
 
 .card-panel {
     margin: 30px 0;
-    /* box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.5); */
-    /* background-image: url(../images/orange-check2-90.png); */
-    background-color: var(--bg-orange);
-    border: 5px solid var(--text-main);
+    border: 2px solid var(--text-main);
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    background-image: linear-gradient(180deg, var(--bg-yellow), var(--bg-orange) 50%, var(--bg-orange) 95%, var(--bg-grey));
 }
 
 .card-panel h3 {
@@ -130,11 +125,12 @@ a.brand-logo {
 /* Cards */
 
 .card {
-    /* background-image: url(../images/orange-check2-90.png); */
-    background-color: var(--bg-orange);
     color: var(--text-main);
     margin: 30px auto;
-    border: 5px solid var(--text-main);
+    border: 2px solid var(--text-main);
+    background-image: linear-gradient(180deg, var(--bg-yellow), var(--bg-orange) 50%, var(--bg-orange) 95%, var(--bg-grey));
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
 }
 
 .card-title {
@@ -158,17 +154,20 @@ a.brand-logo {
 }
 
 .card-content, .card-reveal {
-    /* background-image: url(../images/orange-check2-90.png); */
-    background-color: var(--bg-orange);
+    background-image: linear-gradient(180deg, var(--bg-yellow), var(--bg-orange) 50%, var(--bg-orange) 95%, var(--bg-grey));
     color: var(--text-main);
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
 }
 
 .card-image {
-    margin: 10px 10px 0 10px;
+    margin: 30px 30px 0 30px;
 }
 
 .single {
     margin: 30px 0;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
 }
 
 .ed-btn {
@@ -268,9 +267,7 @@ a.btn {
 }
 
 .flashes {
-    /* box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.5); */
-    /* background-image: url(../images/orange-check2-90.png); */
-    background-color: var(--bg-orange);
+    background-image: linear-gradient(180deg, var(--bg-yellow), var(--bg-orange) 50%, var(--bg-orange) 95%, var(--bg-grey));
 }
 
 .flashes h4 {
@@ -283,12 +280,9 @@ a.btn {
 /* Footer */
 
 .page-footer {
-    /* background-image: url(../images/orange-check2-90.png); */
-    background-color: var(--bg-orange);
-    /* box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.5); */
+    background-image: linear-gradient(180deg, var(--bg-yellow), var(--bg-orange) 50%, var(--bg-orange) 95%, var(--bg-grey));
     color: var(--text-main);
     margin-top: 30px;
-    border-top: 5px solid var(--text-main);
 }
 
 .page-footer h5 {
@@ -325,14 +319,5 @@ a.btn {
 
     .flash-banner {
         margin: 30px 0 0 0;
-        /* width: 95%; */
     }
-}
-
-.row {
-    /* border: 2px solid red; */
-}
-
-.col {
-    /* border: 2px solid blue; */
 }
