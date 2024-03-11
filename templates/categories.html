@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="row">
+    <div class="card col s12 center-align">
+        <h3>Food Categories</h3>
+    </div>
+</div>
+
+<div class="row">
+    {% for category in categories %}
+    <div class="col s12 m4">
+        <div class="card">
+            <div class="card-image">
+                <img src="{{ url_for('static', filename='images/kitchen.jpg') }}" alt="food image">
+            </div>
+            <div class="card-content">
+                <span class="card-title">
+                    <em>{{ category.category_name.capitalize() }}</em>
+                </span>
+                <div class="card-action">
+                    <a href="#">This is a link</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
