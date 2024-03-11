@@ -19,7 +19,10 @@
                     <em>{{ category.category_name.capitalize() }}</em>
                 </span>
                 <div class="card-action">
-                    <a href="#">This is a link</a>
+                    {% if session.user|lower == "admin"|lower %}
+                    <a href="" class="btn">Edit <i class="fas fa-pen-to-square"></i></a>
+                    <a href="" class="btn">Delete <i class="fas fa-trash-can"></i></a>
+                    {% endif %}
                 </div>
             </div>
         </div>
