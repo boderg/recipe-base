@@ -53,11 +53,17 @@ h1, h2 {
 
 .nav-wrapper {
     /* background-image: linear-gradient(180deg, var(--bg-yellow), var(--bg-orange) 50%, var(--bg-orange) 95%, var(--bg-grey)); */
+    /* border-radius: 10px; */
+    padding: 0 10px;
+    margin: 10px auto 0 auto;
+
 }
 
 .brand-logo {
     margin-left: 30px;
     font-family: 'Cairo', sans-serif;
+    font-weight: 700;
+    font-style: italic;
 }
 
 a.brand-logo {
