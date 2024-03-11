@@ -1,12 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
 
+<h3>Add a Recipe</h3>
+<hr>
+
 <div class="row">
     <form class="col s12 m8 offset-m2" method="post" action="{{ url_for('add_recipe') }}" id="add_recipe">
         <div class="card-panel">
-            <div class="row">
+            <!-- <div class="row">
                 <h3 class="center-align">Add a Recipe</h3>
-            </div>
+            </div> -->
             <!-- recipe title -->
             <div class="row">
                 <div class="input-field col s12">
