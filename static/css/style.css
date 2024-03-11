@@ -31,10 +31,10 @@ main {
     flex: 1 0 auto;
 }
 
-h1, h2 {
-    font-family: 'Cormorant Infant', serif;
+h1, h2, h3 {
+    font-family: 'Cairo', serif;
     font-style: italic;
-    font-weight: 900;
+    font-weight: 700;
 }
 
 .card.home h4 {
@@ -136,11 +136,17 @@ a.brand-logo {
     background-image: linear-gradient(180deg, var(--bg-yellow), var(--bg-orange) 50%, var(--bg-orange) 95%, var(--bg-grey));
 }
 
+.card-title em {
+    color: var(--text-main);
+    font-weight: 700;
+    font-size: 125%;
+}
+
 .card-title {
     font-family: 'Cormorant Infant', sans-serif;
 }
 
-.card h5 {
+.card h4 {
     font-family: 'Cormorant Infant', serif;
 }
 
@@ -175,6 +181,13 @@ a.brand-logo {
 
 .ed-btn {
     margin: 0 auto 30px auto;
+}
+
+#recipe h3 {
+    font-family: 'Cairo', sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    padding-top: 30px;
 }
 
 #recipe, #serves, #ingredients, #prep, #cook, #details {

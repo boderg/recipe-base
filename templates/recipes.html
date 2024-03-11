@@ -2,9 +2,15 @@
 {% block content %}
 
 <div class="row">
+    <div class="card col s12 center-align">
+        <h3>Recipes</h3>
+    </div>
+</div>
+
+<div class="row">
     <!-- card front content -->
     {% for recipe in recipes %}
-    <div class="col s12 m6 l4 xl3">
+    <div class="col s12 m6 l4">
         <div class="card">
             <div class="card-image">
                 {% if recipe.recipe_image %}
@@ -17,12 +23,12 @@
             <!-- recipe name -->
             <div class="card-content">
                 <span class="card-title activator">
-                    <h5><strong><em><em>{{ recipe.recipe_name.title() }}</em></em></strong></h5><i
-                        class="fas fa-eye right tooltipped" data-position="right" data-tooltip="Quick View"></i>
+                    <em>{{ recipe.recipe_name.title() }}</em>
+                    <i class="fas fa-eye right tooltipped" data-position="right" data-tooltip="Quick View"></i>
                 </span>
                 <!-- recipe description -->
                 <p class="description">{{ recipe.recipe_description.capitalize() }}</p>
-                <div>
+                <div class="card-action">
                 <a href="{{ url_for('recipe', recipe_id=recipe._id) }}" class="btn">View Full Recipe 
                     <i class="fas fa-glasses "></i></a>
                 </div>
