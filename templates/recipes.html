@@ -26,8 +26,10 @@
                 <!-- recipe description -->
                 <p class="description">{{ recipe.recipe_description.capitalize() }}</p>
                 <div class="card-action">
+                    {% if session.user|lower %}
                 <a href="{{ url_for('recipe', recipe_id=recipe._id) }}" class="btn">View Full Recipe 
                     <i class="fas fa-glasses "></i></a>
+                    {% endif %}
                 </div>
             </div>
             <!-- card reveal content -->
