@@ -5,12 +5,14 @@
     --white: #ffffffff;
     --text-main: #393e05ff;
     --text-secondary: #f5cb5de7;
-    --bg-grey: #393e05ff;
-    --bg-yellow: #ffffbeff;
     --edit-text: #007662ff;
     --edit-text-light: #00ecc53f;
     --edit-bg: #f2fedcff;
+    --bg-main: #98d6d6ff;
+    --bg-sidenav: #98d6d6ff;
+    --bg-yellow: #ffffbeff;
     --bg-orange: #f5cb5ddf;
+    --bg-grey: #393e05ff;
 }
 
 /* Body */
@@ -19,7 +21,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    background-color: var(--edit-text-light);
+    background-color: var(--bg-main);
     display: flex;
     min-height: 100vh;
     flex-direction: column;
@@ -86,7 +88,7 @@ a.brand-logo {
 .sidenav {
     max-height: 80%;
     margin: 5% 0 5% 10px;
-    background-color: var(--edit-text-light);
+    background-color: var(--bg-sidenav);
     font-family: 'Cairo', sans-serif;
 }
 
