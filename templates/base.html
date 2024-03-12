@@ -33,11 +33,10 @@
                     <ul class="right hide-on-med-and-down nav-list">
                         <li><a href="{{ url_for('get_recipes') }}">Recipes</a></li>
                         {% if session['user'] %}
-                        <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                         <li><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
                         <li><a href="{{ url_for('get_categories') }}">Categories</a></li>
                         {% if session.user|lower == "admin"|lower %}
-                        <li><a href="#">Add Category</a></li>
+                        <li><a href="{{ url_for('add_category') }}">Add Category</a></li>
                         {% endif %}
                         <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                         <li><a href="{{ url_for('logout') }}">Log Out</a></li>
@@ -55,12 +54,10 @@
                 </li>
                 <li><a href="{{ url_for('get_recipes') }}"><i class="fas fa-rectangle-list prefix"></i>Recipes</a></li>
                 {% if session['user'] %}
-                <li><a href="{{ url_for('profile', username=session['user']) }}"><i
-                            class="fas fa-user prefix"></i>Profile</a></li>
                 <li><a href="{{ url_for('add_recipe') }}"><i class="fas fa-plus prefix"></i>Add Recipe</a></li>
                 <li><a href="{{ url_for('get_categories') }}"><i class="fas fa-table prefix"></i>Categories</a></li>
                 {% if session.user|lower == "admin"|lower %}
-                <li><a href="#"><i class="fas fa-plus prefix"></i>Add Category</a></li>
+                <li><a href="{{ url_for('add_category') }}"><i class="fas fa-plus prefix"></i>Add Category</a></li>
                 {% endif %}
                 <li><a href="{{ url_for('profile', username=session['user']) }}"><i
                             class="fas fa-user prefix"></i>Profile</a></li>

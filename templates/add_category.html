@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3>Add a Category</h3>
+<hr>
+
+<div class="row">
+    <form class="col s12 m8 offset-m2" method="post" action="{{ url_for('add_category') }}">
+        <div class="card-panel">
+            <!-- recipe title -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-pen-clip prefix"></i>
+                    <input id="category_name" name="category_name" type="text" class="validate">
+                    <label for="category_name">Food Category</label>
+                </div>
+                <!-- recipe image url -->
+                <div class="input-field col s12">
+                    <i class="fas fa-image prefix"></i>
+                    <input id="recipe_image" name="recipe_image" type="url" class="validate">
+                    <label for="recipe_image">Recipe Image URL (optional)</label>
+                </div>
+                <!-- submit button -->
+                <div class="row">
+                    <div class="col s12 center-align">
+                        <button class="btn submit" type="submit">Add Category
+                            <i class="fas fa-plus right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+        
+
+{% endblock %}
