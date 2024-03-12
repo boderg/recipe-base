@@ -20,8 +20,6 @@ body {
     padding: 0;
     overflow-x: hidden;
     background-color: var(--edit-text-light);
-    /* background-image: url(../images/kitchen.jpg); */
-    /* background-size: cover; */
     display: flex;
     min-height: 100vh;
     flex-direction: column;
@@ -58,8 +56,6 @@ h1, h2, h3 {
 }
 
 .nav-wrapper {
-    /* background-image: linear-gradient(180deg, var(--bg-yellow), var(--bg-orange) 50%, var(--bg-orange) 95%, var(--bg-grey)); */
-    /* border-radius: 10px; */
     padding: 0 10px;
     margin: 10px auto 0 auto;
 
@@ -90,7 +86,7 @@ a.brand-logo {
 .sidenav {
     max-height: 80%;
     margin: 5% 0 5% 10px;
-    background-color: var(--bg-orange);
+    background-color: var(--edit-text-light);
     font-family: 'Cairo', sans-serif;
 }
 
@@ -123,7 +119,8 @@ a.brand-logo {
 /* Card Panels */
 
 .card-panel {
-    margin: 30px 0;
+    margin: 60px 0 30px 0;
+    padding: 60px 30px 30px 30px;
     border: 2px solid var(--text-main);
     background-image: linear-gradient(180deg, var(--bg-yellow), var(--bg-orange) 50%, var(--bg-orange) 95%, var(--bg-grey));
 }
@@ -279,14 +276,13 @@ a.btn {
     color: var(--text-main);
 }
 .question a:hover {
-    color: var(--edit-text);
+    color: var(--bg-orange);
 }
 
 /* Flash Messages */
 
 .flash-banner {
     margin: 30px 0 0 0;
-    /* width: 45%; */
 }
 
 .flashes {
