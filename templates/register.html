@@ -28,7 +28,8 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-user-plus prefix"></i>
-                    <input id="username" name="username" type="text" minlength="3" maxlength="20" pattern="^[a-zA-Z0-9]{3,20}$" class="validate" required>
+                    <input id="username" name="username" type="text" minlength="3" maxlength="20"
+                        pattern="^[a-zA-Z0-9]{3,20}$" class="validate" required>
                     <label for="username">Username</label>
                 </div>
             </div>
@@ -36,7 +37,8 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-user-lock prefix"></i>
-                    <input id="password" name="password" type="password" minlength="5" maxlength="10" pattern="^[a-zA-Z0-9]{3,20}$" class="validate" required>
+                    <input id="password" name="password" type="password" minlength="6" maxlength="10"
+                        pattern="^[a-zA-Z0-9]{3,20}$" class="validate" required>
                     <label for="password">Password</label>
                 </div>
             </div>
@@ -44,7 +46,8 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-check prefix"></i>
-                    <input id="password2" name="password2" type="password" minlength="5" maxlength="10" pattern="^[a-zA-Z0-9]{3,20}$" class="validate" required>
+                    <input id="password2" name="password2" type="password" minlength="6" maxlength="10"
+                        pattern="^[a-zA-Z0-9]{3,20}$" class="validate" required>
                     <label for="password2"> Confirm Password</label>
                 </div>
             </div>
@@ -55,26 +58,27 @@
                     <input id="email" name="email" type="email" class="validate" required>
                     <label for="email">Email</label>
                 </div>
-            <!-- submit button -->
-            <div class="row">
-                <div class="col s12 center-align">
-                    <button class="btn submit" type="submit">Sign Up
-                        <i class="fas fa-pen-clip postfix"></i>
-                    </button>
-                </div>
-            </div>
-            <!-- log in link -->
-            <div class="row">
-                <div class="col s12 question">
-                    <p class="center-align">
-                        Already have an account? <a href="{{ url_for('login') }}">Log In</a>
-                    </p>
+                <!-- submit button -->
+                <div class="row">
+                    <div class="col s12 center-align">
+                        <button class="btn submit" type="submit">Sign Up
+                            <i class="fas fa-pen-clip postfix"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
     </form>
+    <!-- log in link -->
+    <div class="row">
+        <div class="col s12 question">
+            <p class="center-align">
+                Already have an account? <a href="{{ url_for('login') }}">Log In</a>
+            </p>
+        </div>
+    </div>
 </div>
 
 
-            
+
 {% endblock %}
