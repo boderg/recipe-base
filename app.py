@@ -22,8 +22,8 @@ mongo = PyMongo(app)
 
 
 @app.after_request
-def add_header(response):
-    response.cache_control.no_store = True
+def after_response(response):
+    response.headers.add('Cache-Control', 'no-store, no-cache, must-revalidate, post-check=0, pre-check=0')
     return response
 
 
