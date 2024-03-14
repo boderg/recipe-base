@@ -13,6 +13,7 @@
     --bg-yellow: #ffffbeff;
     --bg-orange: #f5cb5ddf;
     --bg-grey: #393e05ff;
+    --bg-grey-light: #393e0525;
 }
 
 /* Body */
@@ -21,7 +22,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    background-color: var(--bg-main);
+    background-color: var(--white);
     display: flex;
     min-height: 100vh;
     flex-direction: column;
@@ -123,8 +124,8 @@ a.brand-logo {
 .card-panel {
     margin: 60px 0 30px 0;
     padding: 60px 30px 30px 30px;
-    border: 2px solid var(--text-main);
-    background-image: linear-gradient(180deg, var(--bg-yellow), var(--bg-orange) 50%, var(--bg-orange) 95%, var(--bg-grey));
+    /* border: 2px solid var(--text-main); */
+    /* background-image: linear-gradient(180deg, var(--bg-yellow), var(--bg-orange) 50%, var(--bg-orange) 95%, var(--bg-grey)); */
 }
 
 .card-panel h3 {
@@ -137,8 +138,8 @@ a.brand-logo {
 .card {
     color: var(--text-main);
     margin: 30px auto;
-    border: 2px solid var(--text-main);
-    background-image: linear-gradient(180deg, var(--bg-yellow), var(--bg-orange) 50%, var(--bg-orange) 95%, var(--bg-grey));
+    /* border: 2px solid var(--text-main); */
+    /* background-image: linear-gradient(180deg, var(--bg-yellow), var(--bg-orange) 50%, var(--bg-orange) 95%, var(--bg-grey)); */
 }
 
 .card-title em {
@@ -168,7 +169,7 @@ a.brand-logo {
 }
 
 .card-content, .card-reveal {
-    background-image: linear-gradient(180deg, var(--bg-yellow), var(--bg-orange) 50%, var(--bg-orange) 95%, var(--bg-grey));
+    /* background-image: linear-gradient(180deg, var(--bg-yellow), var(--bg-orange) 50%, var(--bg-orange) 95%, var(--bg-grey)); */
     color: var(--text-main);
 }
 
@@ -288,7 +289,8 @@ a.btn {
 }
 
 .flashes {
-    background-image: linear-gradient(180deg, var(--bg-yellow), var(--bg-orange) 50%, var(--bg-orange) 95%, var(--bg-grey));
+    /* background-image: linear-gradient(180deg, var(--bg-yellow), var(--bg-orange) 50%, var(--bg-orange) 95%, var(--bg-grey)); */
+    width: 75%;
 }
 
 .flashes h4 {
@@ -320,6 +322,10 @@ a.btn {
     color: var(--edit-text);
 }
 
+.page-footer .footer-copyright {
+    background-color: transparent;
+}
+
 .footer-copyright .container, .footer-copyright .container a, .page-footer a {
     color: var(--text-main);
 }
@@ -346,4 +352,11 @@ a.btn {
 
 .search {
     padding: 20px 0 10px 0;
+}
+
+.card, hr, .card-panel, .flashes {
+        background: linear-gradient(white, white) padding-box,
+                    linear-gradient(135deg, cyan, magenta, yellow, black) border-box;
+        border-radius: 15px;
+        border: 3px solid transparent;
 }
