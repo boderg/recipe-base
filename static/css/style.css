@@ -3,8 +3,8 @@
 :root {
     --black: #000000ff;
     --white: #ffffffff;
-    --text-main: #393e05ff;
-    --text-secondary: #f5cb5de7;
+    --text-main: #403b4aff;
+    --text-secondary: #80c3b2ff;
     --edit-text: #007662ff;
     --edit-text-light: #00ecc53f;
     --edit-bg: #f2fedcff;
@@ -67,7 +67,6 @@ hr {
 }
 
 .brand-logo {
-    /* margin-left: 30px; */
     font-family: 'Cairo', sans-serif;
     font-weight: 700;
     font-style: italic;
@@ -90,16 +89,9 @@ a.brand-logo {
     color: var(--white);
 }
 
-/* nav ul a:hover, a.brand-logo:hover {
-    background: linear-gradient(var(--white), var(--white)) padding-box,
-                linear-gradient(135deg, #e7e9bb 10%, #403b4a 100%) border-box;
-    border-radius: 15px;
-    border: 5px solid transparent;
-} */
-
-/* a.brand-logo:hover {
-    padding: 0 10px;
-} */
+.nav-list li a:hover {
+    color: var(--text-main);
+}
 
 /* Side Navigation */
 
@@ -225,16 +217,21 @@ a.brand-logo {
 }
 
 .card, .card-panel, .flashes {
-    background: linear-gradient(white, white) padding-box,
+    background: linear-gradient( #f8ebff 10%, #80c3b2 100%) padding-box,
                 linear-gradient(135deg, #e7e9bb 10%, #403b4a 100%) border-box;
     border-radius: 15px;
     border: 5px solid transparent;
 }
 
+.card-reveal {
+    background: linear-gradient( #f8ebff 10%, #80c3b2 100%);
+}
+
 /* Forms / Inputs / Dropdowns */
 
 .input-field .prefix.active {
-    color: var(--edit-text);
+    color: #f8ebff;
+    filter: drop-shadow(0 0 3px #333);
 }
 
 .input-field label {
@@ -244,7 +241,10 @@ a.brand-logo {
 
 .input-field input[type=text]:focus + label,
 .input-field input[type=password]:focus + label,
-.input-field input[type=email]:focus + label {
+.input-field input[type=email]:focus + label,
+.input-field input[type=number]:focus + label,
+.input-field input[type=url]:focus + label,
+.materialize-textarea:focus + label {
     color: var(--text-main) !important;
 }
 
@@ -259,16 +259,18 @@ a.brand-logo {
 }
 
 .select-wrapper span {
-    background-color: var(--bg-orange);
     color: var(--text-main);
 }
 
 .select-dropdown li.disabled > span {
-    background-color: var(--bg-orange);
+    background-color: #f8ebff;
 }
 
-.select-dropdown {
-    border: 2px solid var(--text-main);
+.dropdown-content {
+    background: linear-gradient( #f8ebff 10%, #80c3b2 100%) padding-box,
+                linear-gradient(135deg, #e7e9bb 10%, #403b4a 100%) border-box;
+    border-radius: 15px;
+    border: 3px solid transparent;
 }
 
 /* Buttons */
@@ -280,6 +282,7 @@ a.brand-logo {
 .btn .fas {
     color: var(--white);
 }
+
 
 .btn {
     background-image: linear-gradient(135deg, #403b4a 0%, #e7e9bb  51%, #403b4a  100%);
@@ -293,9 +296,9 @@ a.brand-logo {
     margin: 10px;
 }
 
-.btn:hover {
-    background-position: right center; /* change the direction of the change here */
-    color: var(--white);
+.btn:hover, .btn:hover .fas{
+    background-position: right center;
+    color: var(--text-main);
     text-decoration: none;
 }
 
@@ -338,8 +341,6 @@ a.brand-logo {
     background-color: transparent;
     color: var(--text-main);
     margin-top: 30px;
-    /* background-image: linear-gradient(135deg, rgba(0, 255, 255, 0.205), rgba(255, 0, 255, 0.205), rgba(255, 255, 0, 0.205), rgba(0, 0, 0, 0.205)); */
-    /* background-image: linear-gradient( 135deg, #e7e9bb77 10%, #403b4a77 100%); */
 }
 
 .page-footer h5 {
