@@ -22,7 +22,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    background-color: var(--white);
+    background-image: linear-gradient( 270deg, #e7e9bb77 10%, #403b4a77 100%);
     display: flex;
     min-height: 100vh;
     flex-direction: column;
@@ -37,6 +37,13 @@ h1, h2, h3 {
     font-style: italic;
     font-weight: 700;
     color: var(--text-main);
+}
+
+hr {
+    background: linear-gradient(var(--white), var(--white)) padding-box,
+                linear-gradient(135deg, #e7e9bb 10%, #403b4a 100%) border-box;
+    border-radius: 15px;
+    border: 3px solid transparent;
 }
 
 /* Images */
@@ -66,9 +73,12 @@ h1, h2, h3 {
     font-style: italic;
 }
 
+nav .brand-logo {
+    padding: 0 15px;
+}
+
 a.brand-logo {
-    color: var(--text-main);
-    /* padding: 0 10px; */
+    color: var(--white);
 }
 
 .nav-list {
@@ -77,19 +87,19 @@ a.brand-logo {
 }
 
 .nav-list li a {
-    color: var(--text-main);
+    color: var(--white);
 }
 
-nav ul a:hover, a.brand-logo:hover {
-    background: linear-gradient(white, white) padding-box,
-                linear-gradient(135deg, cyan, magenta, yellow, black) border-box;
+/* nav ul a:hover, a.brand-logo:hover {
+    background: linear-gradient(var(--white), var(--white)) padding-box,
+                linear-gradient(135deg, #e7e9bb 10%, #403b4a 100%) border-box;
     border-radius: 15px;
     border: 5px solid transparent;
-}
+} */
 
-a.brand-logo:hover {
+/* a.brand-logo:hover {
     padding: 0 10px;
-}
+} */
 
 /* Side Navigation */
 
@@ -115,11 +125,12 @@ a.brand-logo:hover {
 }
 
 .fas {
-    color: var(--text-main);
+    color: #403b4a;
 }
 
-.fas:hover {
-    color: var(--bg-orange);
+.fas:hover, .fas:active {
+    color: #e7e9bb;
+    filter: drop-shadow(0 0 3px #333);
 }
 
 /* Search Bar */
@@ -213,9 +224,9 @@ a.brand-logo:hover {
     list-style: none;
 }
 
-.card, hr, .card-panel, .flashes {
+.card, .card-panel, .flashes {
     background: linear-gradient(white, white) padding-box,
-                linear-gradient(135deg, cyan, magenta, yellow, black) border-box;
+                linear-gradient(135deg, #e7e9bb 10%, #403b4a 100%) border-box;
     border-radius: 15px;
     border: 5px solid transparent;
 }
@@ -262,25 +273,30 @@ a.brand-logo:hover {
 
 /* Buttons */
 
-.btn {
-    background-color: var(--text-main);
-    color: var(--white);
+.btn, a.btn {
     font-family: 'Cairo', sans-serif;
-    margin: 10px;
-}
-
-.btn:hover, .btn:hover .fas {
-    background-color: var(--bg-orange);
-    color: var(--text-main);
 }
 
 .btn .fas {
-    filter: none;
     color: var(--white);
 }
 
-a.btn {
-    font-family: 'Cairo', sans-serif;
+.btn {
+    background-image: linear-gradient(135deg, #403b4a 0%, #e7e9bb  51%, #403b4a  100%);
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: var(--white);            
+    box-shadow: 0 0 5px #333;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.btn:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: var(--white);
+    text-decoration: none;
 }
 
 
@@ -322,7 +338,8 @@ a.btn {
     background-color: transparent;
     color: var(--text-main);
     margin-top: 30px;
-    background-image: linear-gradient(135deg, rgba(0, 255, 255, 0.205), rgba(255, 0, 255, 0.205), rgba(255, 255, 0, 0.205), rgba(0, 0, 0, 0.205));
+    /* background-image: linear-gradient(135deg, rgba(0, 255, 255, 0.205), rgba(255, 0, 255, 0.205), rgba(255, 255, 0, 0.205), rgba(0, 0, 0, 0.205)); */
+    /* background-image: linear-gradient( 135deg, #e7e9bb77 10%, #403b4a77 100%); */
 }
 
 .page-footer h5 {
