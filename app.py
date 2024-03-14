@@ -21,6 +21,12 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
+@app.after_request
+def add_header(response):
+    response.cache_control.no_store = True
+    return response
+
+
 @app.route("/")
 def home():
     return render_template("home.html")
