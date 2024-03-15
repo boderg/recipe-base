@@ -96,18 +96,29 @@ a.brand-logo {
 /* Side Navigation */
 
 .sidenav {
-    max-height: 80%;
-    margin: 5% 0 5% 10px;
-    background-color: var(--bg-sidenav);
+    max-height: 98%;
+    margin: 10px;
+    padding: 10px;
     font-family: 'Cairo', sans-serif;
+    background: linear-gradient( #f8ebff 10%, #80c3b2 100%) padding-box,
+                linear-gradient(135deg, #e7e9bb 10%, #403b4a 100%) border-box;
+    border-radius: 15px;
+    border: 5px solid transparent;
 }
 
 .sidenav li h4 {
+    margin-bottom: 50px;
+    font-style: italic;
+    font-weight: 700;
     color: var(--text-main);
 }
 
-.sidenav li a {
+.sidenav li a, .sidenav .fas{
     color: var(--text-main);
+}
+
+.sidenav li a:hover, .sidenav .fas:hover {
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 /* Icons */
