@@ -59,8 +59,7 @@
                 {% if session.user|lower == "admin"|lower %}
                 <li><a href="{{ url_for('add_category') }}"><i class="fas fa-plus prefix"></i>Add Category</a></li>
                 {% endif %}
-                <li><a href="{{ url_for('profile', username=session['user']) }}"><i
-                            class="fas fa-user prefix"></i>Profile</a></li>
+                <li><a href="{{ url_for('profile', username=session['user']) }}"><i class="fas fa-user prefix"></i>Profile</a></li>
                 <li><a href="{{ url_for('logout') }}"><i class="fas fa-right-from-bracket prefix"></i>Log Out</a></li>
                 {% else %}
                 <li><a href="{{ url_for('register') }}"><i class="fas fa-pen-clip prefix"></i>Sign Up</a></li>
