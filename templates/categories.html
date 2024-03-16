@@ -15,7 +15,7 @@
                 <span class="card-title">
                     <em>{{ category.category_name.capitalize() }}</em>
                 </span>
-                <a href="#" class="btn">View Category 
+                <a href="{{ url_for('single_category', category_id=category._id) }}" class="btn">View Category 
                     <i class="fas fa-glasses "></i></a>
                 <div class="card-action">
                     {% if session.user|lower == "admin"|lower %}

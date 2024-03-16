@@ -228,6 +228,14 @@ def delete_category(category_id):
     return redirect(url_for("get_categories"))
 
 
+@app.route("/single_category/<category_id>")
+def single_category(category_id):
+    category = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
+    recipes = list(mongo.db.recipes.find({"category_name": category["category_name"]}))
+    return render_template("single_category.html", category=category, recipes=recipes)
+
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
