@@ -32,7 +32,15 @@ main {
     flex: 1 0 auto;
 }
 
-h1, h2, h3 {
+h1, h2 {
+    font-family: 'Cormorant Infant', sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    color: var(--text-main);
+
+}
+
+h3 {
     font-family: 'Cairo', serif;
     font-style: italic;
     font-weight: 700;
@@ -48,7 +56,7 @@ hr {
 
 /* Images */
 
-.pots {
+.chefs {
     height: 300px;
     width: 500px;
 }
