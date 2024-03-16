@@ -75,7 +75,6 @@ hr {
 }
 
 .brand-logo {
-    font-family: 'Cairo', sans-serif;
     font-weight: 700;
     font-style: italic;
 }
@@ -216,10 +215,6 @@ a.brand-logo {
     list-style: none;
 }
 
-.ed-btn {
-    margin: 0 auto 30px auto;
-}
-
 #recipe h3 {
     font-family: 'Cairo', sans-serif;
     font-weight: 700;
@@ -294,7 +289,7 @@ a.brand-logo {
 
 /* Buttons */
 
-.btn, a.btn {
+a.btn {
     font-family: 'Cairo', sans-serif;
 }
 
@@ -320,6 +315,10 @@ a.brand-logo {
     background-position: right center;
     color: var(--text-main);
     text-decoration: none;
+}
+
+.ed-btn {
+    margin: 0 auto 30px auto;
 }
 
 
