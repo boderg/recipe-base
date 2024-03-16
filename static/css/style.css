@@ -313,6 +313,7 @@ a.brand-logo {
     box-shadow: 0 0 5px #333;
     border-radius: 10px;
     margin: 10px;
+    height: auto;
 }
 
 .btn:hover, .btn:hover .fas{
