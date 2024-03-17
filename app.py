@@ -129,6 +129,17 @@ def logout():
     return redirect(url_for("login"))
 
 
+@app.route("/profile/<username>", methods=["GET", "POST"])
+def profile(username):
+    user = mongo.db.users.find_one(
+        {"username": session["user"]})
+    
+    if session["user"]:
+        return render_template("profile.html", username=username, user=user)
+
+    return redirect(url_for("login"))
+
+
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
     if request.method == "POST":

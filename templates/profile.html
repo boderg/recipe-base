@@ -8,10 +8,35 @@
     <div class="col s12 m8 offset-m2">
         <div class="card-panel">
             <div class="row">
-                
+                <div class="col s4 profile-image">
+                    <img src="{{ user.user_image }}" alt="{{ user.username }}" class="circle responsive-img">
+                </div>
+                <div class="col s8">
+                    <h5>{{ user.username.capitalize() }}</h5>
+                    <p>Name: {{ user.first_name.capitalize()}} {{ user.last_name.capitalize() }}</p>
+                    <p>Email: {{ user.email }}</p>
+                    <p>Joined on: {{ user.date_joined }}</p>
+                    
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <p>{{ user.username.capitalize() }}'s Bio:</p>
+                    <p>{{ user.bio }}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 ed-btn center-align">
+                    <a href="#" 
+                    class="btn">Edit Profile <i class="fas fa-pen-to-square"></i></a>
+                    <a href="#" 
+                    onclick="return confirm('Are you sure you want to delete your profile? This action cannot be undone.')" 
+                    class="btn delete">Delete Profile <i class="fas fa-trash-can"></i></a>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
+
             
 {% endblock %}
