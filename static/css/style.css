@@ -22,7 +22,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    background-image: linear-gradient( 270deg, #e7e9bb77 10%, #403b4a77 100%);
+    background-image: linear-gradient(to top, #e7e9bb77, #403b4a77 100%);
     display: flex;
     min-height: 100vh;
     flex-direction: column;
