@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3>Join Recipe Base</h3>
+<hr>
+
+<div class="row">
+    <!-- form section -->
+    <form class="col s12 m8 offset-m2" method="post" action="{{ url_for('edit_profile', username=session['user']) }}">
+        <div class="card-panel">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" value="{{ user.email }}">
+            <!-- Add other fields as necessary -->
+            <input type="submit" value="Update Profile">
+        </div>
+    </form>
+
+</div>
+
+
+
+{% endblock %}

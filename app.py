@@ -62,7 +62,7 @@ def register():
             return redirect(url_for("register"))
 
         register = {
-            "firts_name": request.form.get("first_name"),
+            "first_name": request.form.get("first_name"),
             "last_name": request.form.get("last_name"),
             "username": request.form.get("username").lower(),
             "password": generate_password_hash(request.form.get("password")),
@@ -123,8 +123,29 @@ def profile(username):
     return redirect(url_for("login"))
 
 
-@app.route("/delete_user/<username>")
-def delete_user(username):
+@app.route("/edit_profile/<username>", methods=["GET", "POST"])
+def edit_profile(username):
+    if request.method == "POST":
+
+        mongo.db.users.update_one(
+            {"username": session["user"]},
+            {"$set": {
+                "email": request.form.get("email"),
+                "first_name": request.form.get("first_name"),
+                "last_name": request.form.get("last_name"),
+                "bio": request.form.get("bio"),
+                "profile_image": request.form.get("profile_image")
+            }}
+        )
+        flash("Profile Successfully Updated")
+        return redirect(url_for("profile", username=session['user']))
+
+    user = mongo.db.users.find_one({"username": session["user"]})
+    return render_template("edit_profile.html", username=username, user=user)
+
+
+@app.route("/delete_profile/<username>")
+def delete_profile(username):
     mongo.db.users.delete_one({"username": session["user"]})
     flash("User Successfully Deleted")
     session.pop("user")
