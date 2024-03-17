@@ -28,6 +28,7 @@
 </div>
 <!-- cards -->
 <div class="row">
+    {% if not session.user %}
     <div class="col s12 l4">
         <div class="card home center-align">
             <a href="#modal1" class="modal-trigger"><h4>Save your recipes</h4></a>
@@ -44,7 +45,24 @@
                 <h4>Join the community</h4>
             </a>
         </div>
-    </div>    
+    </div>  
+    {% else %}
+    <div class="col s12 l4">
+        <div class="card home center-align">
+            <a href="{{ url_for('add_recipe') }}"><h4>Save your recipes</h4></a>
+        </div>
+    </div>
+    <div class="col s12 l4">
+        <div class="card home center-align">
+            <a href="{{ url_for('get_recipes') }}"><h4>Edit your recipes</h4></a>
+        </div>
+    </div>
+    <div class="col s12 l4">
+        <div class="card home center-align">
+                <a href="{{ url_for('get_recipes') }}"><h4>Search all recipes</h4></a>
+        </div>
+    </div> 
+    {% endif %}
 </div>
 
 
