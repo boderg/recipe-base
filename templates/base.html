@@ -121,6 +121,34 @@
                 </div>
             </div>
         </footer>
+
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h4>Save your recipes</h4>
+                <p>Save your recipes to view for later. <br>
+                    Your recipes can be accessed and changed by you only when you login to your profile. <br>
+                    Add new, edit or delete any of your own recipes. <br>
+                    Others can view your recipes but cannot change or delete them.</p>
+            </div>
+            <div class="modal-footer">
+                <a href="{{ url_for('register') }}" class="modal-close btn">Sign Up</a>
+            </div>
+        </div>
+
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+                <h4>Why join us?</h4>
+                <p>Join us to save your recipes and to view other users recipes. <br>
+                    You can add, edit and delete your own recipes. <br>
+                    You can view and search for recipes by category. <br>
+                    You can view other users profiles and their recipes.
+                    You get a full view of your recipe and instructions.</p>
+            </div>
+            <div class="modal-footer">
+                <a href="{{ url_for('register') }}" class="modal-close btn">Sign Up</a>
+            </div>
+        </div>
+
         <!-- scripts -->
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"
             integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
