@@ -21,12 +21,6 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
-@app.after_request
-def after_response(response):
-    response.headers.add('Cache-Control', 'no-store, no-cache, must-revalidate, post-check=0, pre-check=0')
-    return response
-
-
 @app.route("/")
 def home():
     return render_template("home.html")
@@ -110,17 +104,6 @@ def login():
     return render_template("login.html")
 
 
-@app.route("/profile/<username>", methods=["GET", "POST"])
-def profile(username):
-    username = mongo.db.users.find_one(
-        {"username": session["user"]})["username"]
-    
-    if session["user"]:
-        return render_template("profile.html", username=username)
-
-    return redirect(url_for("login"))
-
-
 @app.route("/logout")
 def logout():
     # remove user from session cookies
@@ -137,6 +120,14 @@ def profile(username):
     if session["user"]:
         return render_template("profile.html", username=username, user=user)
 
+    return redirect(url_for("login"))
+
+
+@app.route("/delete_user/<username>")
+def delete_user(username):
+    mongo.db.users.delete_one({"username": session["user"]})
+    flash("User Successfully Deleted")
+    session.pop("user")
     return redirect(url_for("login"))
 
 
