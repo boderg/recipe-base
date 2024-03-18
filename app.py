@@ -126,16 +126,17 @@ def profile(username):
 @app.route("/edit_profile/<username>", methods=["GET", "POST"])
 def edit_profile(username):
     if request.method == "POST":
-
-        mongo.db.users.update_one(
-            {"username": session["user"]},
-            {"$set": {
+        edit = {
                 "email": request.form.get("email"),
                 "first_name": request.form.get("first_name"),
                 "last_name": request.form.get("last_name"),
                 "bio": request.form.get("bio"),
-                "profile_image": request.form.get("profile_image")
-            }}
+                "profile_image": request.form.get("profile_image"),
+                "updated_on": datetime.now().strftime("%d-%m-%Y at %H:%M")
+            }
+        mongo.db.users.update_one(
+            {"username": session["user"]},
+            {"$set": edit}
         )
         flash("Profile Successfully Updated")
         return redirect(url_for("profile", username=session['user']))
@@ -196,7 +197,7 @@ def edit_recipe(recipe_id):
             "recipe_image": request.form.get("recipe_image"),
             "created_on": datetime.now().strftime("%d-%m-%Y at %H:%M")
         }
-        mongo.db.recipes.replace_one({"_id": ObjectId(recipe_id)}, edit)
+        mongo.db.recipes.update_one({"_id": ObjectId(recipe_id)}, {"$set": edit})
         flash("Recipe Successfully Updated")
 
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
@@ -256,7 +257,6 @@ def single_category(category_id):
     category = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
     recipes = list(mongo.db.recipes.find({"category_name": category["category_name"]}))
     return render_template("single_category.html", category=category, recipes=recipes)
-
 
 
 if __name__ == "__main__":
