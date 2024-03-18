@@ -13,7 +13,7 @@
                 </div>
                 <div class="col s8">
                     <h5>{{ user.username.capitalize() }}</h5>
-                    <p>Name: {{ user.first_name }} {{ user.last_name }}</p>
+                    <p>Name: {{ user.first_name.capitalize() }} {{ user.last_name.capitalize() }}</p>
                     <p>Email: {{ user.email }}</p>
                     <p>Joined on: {{ user.date_joined }}</p>
                     
@@ -23,14 +23,14 @@
                     <p>{{ user.username.capitalize() }}'s Bio:</p>
                     <p>{{ user.bio }}</p>
                 </div>
+                <div class="col s12">
+                    <p>Last updated on: {{ user.updated_on }}</p>
+                </div>
             </div>
             <div class="row">
                 <div class="col s12 ed-btn center-align">
                     <a href="{{ url_for('edit_profile', username=session['user']) }}" 
                     class="btn">Edit Profile <i class="fas fa-pen-to-square"></i></a>
-                    <a href="{{ url_for('delete_profile', username=session['user']) }}" 
-                    onclick="return confirm('Are you sure you want to delete your profile? This action cannot be undone.')" 
-                    class="btn delete">Delete Profile <i class="fas fa-trash-can"></i></a>
                 </div>
             </div>
         </div>
