@@ -160,10 +160,10 @@ Sample JS code validation documentation (tables are extremely helpful!):
 The CI Python Linter can be used two different ways.
 - Copy/Paste your Python code directly into the linter.
 - As an API, using the "raw" URL appended to the linter URL.
-    - To find the "raw" URL, navigate to your file directly on the GitHub repo.
-    - On that page, GitHub provides a button on the right called "Raw" that you can click on.
-    - From that new page, copy the full URL, and paste it after the CI Python Linter URL (with a `/` separator).
-    - Check the example table below for a live demo.
+  - To find the "raw" URL, navigate to your file directly on the GitHub repo.
+  - On that page, GitHub provides a button on the right called "Raw" that you can click on.
+  - From that new page, copy the full URL, and paste it after the CI Python Linter URL (with a `/` separator).
+  - Check the example table below for a live demo.
 
 It's recommended to validate each file using the API URL.
 This will give you a custom URL which you can use on your testing documentation.
@@ -620,47 +620,35 @@ This can be used for both "fixed" and "unresolved" issues.
 
 ## Bugs
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-This section is primarily used for JavaScript and Python applications,
-but feel free to use this section to document any HTML/CSS bugs you might run into.
-
-It's very important to document any bugs you've discovered while developing the project.
-Make sure to include any necessary steps you've implemented to fix the bug(s) as well.
-
-**PRO TIP**: screenshots of bugs are extremely helpful, and go a long way!
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-- JS Uncaught ReferenceError: `foobar` is undefined/not defined
+- I created an event listener to add new input fields in the add recipe page. This listener adds a new  input field under ingredients and instructions when the previous field is populated allowing for ingredients and instructions to be added individually. The event listener has a blur function to remove any created field if it is not populated. This removal only works if you tab to the next input field and on sumbission of the form adds empty list items to the recipe. This also occurs on the edit recipe page as it uses the same function.
 
     ![screenshot](documentation/bug01.png)
 
-    - To fix this, I _____________________.
+  - To fix this, I _____________________.
 
-- JS `'let'` or `'const'` or `'template literal syntax'` or `'arrow function syntax (=>)'` is available in ES6 (use `'esversion: 11'`) or Mozilla JS extensions (use moz).
+- When entering the edit recipe page the first item in a list overlaps the label for that list until that list item is selected for editing.
 
     ![screenshot](documentation/bug02.png)
 
-    - To fix this, I _____________________.
+  - To fix this, I _____________________.
 
 - Python `'ModuleNotFoundError'` when trying to import module from imported package
 
     ![screenshot](documentation/bug03.png)
 
-    - To fix this, I _____________________.
+  - To fix this, I _____________________.
 
 - Django `TemplateDoesNotExist` at /appname/path appname/template_name.html
 
     ![screenshot](documentation/bug04.png)
 
-    - To fix this, I _____________________.
+  - To fix this, I _____________________.
 
 - Python `E501 line too long` (93 > 79 characters)
 
     ![screenshot](documentation/bug04.png)
 
-    - To fix this, I _____________________.
+  - To fix this, I _____________________.
 
 ## Unfixed Bugs
 
@@ -683,19 +671,19 @@ Some examples:
 
     ![screenshot](documentation/unfixed-bug01.png)
 
-    - Attempted fix: I tried to add additional media queries to handle this, but things started becoming too small to read.
+  - Attempted fix: I tried to add additional media queries to handle this, but things started becoming too small to read.
 
 - For PP3, when using a helper `clear()` function, any text above the height of the terminal does not clear, and remains when you scroll up.
 
     ![screenshot](documentation/unfixed-bug02.png)
 
-    - Attempted fix: I tried to adjust the terminal size, but it only resizes the actual terminal, not the allowable area for text.
+  - Attempted fix: I tried to adjust the terminal size, but it only resizes the actual terminal, not the allowable area for text.
 
 - When validating HTML with a semantic `section` element, the validator warns about lacking a header `h2-h6`. This is acceptable.
 
     ![screenshot](documentation/unfixed-bug03.png)
 
-    - Attempted fix: this is a known warning and acceptable, and my section doesn't require a header since it's dynamically added via JS.
+  - Attempted fix: this is a known warning and acceptable, and my section doesn't require a header since it's dynamically added via JS.
 
 🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
