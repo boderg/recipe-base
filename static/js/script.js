@@ -31,7 +31,8 @@ function addInputEventListener(parentElement) {
         // Check if the target is an input field
         if (event.target.tagName.toLowerCase() === 'input') {
 
-            // Check if the value is not empty, the last key pressed was not backspace, and the input field doesn't already have a sibling input field
+            // Check if the value is not empty, the last key pressed was not backspace, 
+            // and the input field doesn't already have a sibling input field
             if (event.target.value.length === 1 &&
                 lastKeyPressed !== 'Backspace' &&
                 !(event.target.nextElementSibling &&
