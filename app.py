@@ -199,6 +199,7 @@ def edit_recipe(recipe_id):
         }
         mongo.db.recipes.update_one({"_id": ObjectId(recipe_id)}, {"$set": edit})
         flash("Recipe Successfully Updated")
+        return redirect(url_for("get_recipes"))
 
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
