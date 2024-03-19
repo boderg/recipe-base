@@ -1,3 +1,4 @@
+#Imports
 import os
 from flask import (
     Flask, flash, render_template, 
@@ -10,9 +11,11 @@ if os.path.exists("env.py"):
     import env
 
 
-app = Flask(__name__)
+# Flask app
+app = Flask(__name__, template_folder="templates")
 
 
+# Configuration for MongoDB
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
@@ -21,24 +24,27 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
+# Route for the home page
 @app.route("/")
 def home():
     return render_template("home.html")
 
 
+# Route for the recipes page
 @app.route("/get_recipes")
 def get_recipes():
     recipes = list(mongo.db.recipes.find())
     return render_template("recipes.html", recipes=recipes)
 
 
+# Route for the search function
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
     recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
     return render_template("recipes.html", recipes=recipes)
 
-
+# Route for the register page
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -46,15 +52,17 @@ def register():
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
 
+        # if the username already exists
         if existing_user:
             flash("Username already exists")
             return redirect(url_for("register"))
-        
+
         # check if passwords match
         if request.form.get("password") != request.form.get("password2"):
             flash("Passwords do not match")
             return redirect(url_for("register"))
 
+        # create a new user
         register = {
             "first_name": request.form.get("first_name"),
             "last_name": request.form.get("last_name"),
@@ -71,6 +79,7 @@ def register():
     return render_template("register.html")
 
 
+# Route for the login page
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -98,15 +107,18 @@ def login():
     return render_template("login.html")
 
 
+# Route to add no cache headers
 @app.after_request
 def add_no_cache_headers(response):
     if 'Cache-Control' not in response.headers:
-        response.headers["Cache-Control"] = "no-store, no-cache, must-revalidate, post-check=0, pre-check=0, max-age=0"
+        response.headers["Cache-Control"] = (
+            "no-store, no-cache, must-revalidate, post-check=0, pre-check=0, max-age=0")
         response.headers["Pragma"] = "no-cache"
         response.headers["Expires"] = "-1"
     return response
 
 
+# Route to logout
 @app.route("/logout")
 def logout():
     # remove user from session cookies
@@ -115,20 +127,29 @@ def logout():
     return redirect(url_for("login"))
 
 
+# Route to view the user's profile
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     if session.get("user"):
+
+        # grab the session user's username from db
         if session["user"] == username:
             user = mongo.db.users.find_one({"username": session["user"]})
-            return render_template("profile.html", username=username, user=user)
+            return render_template(
+                "profile.html", username=username, user=user)
+
+        # if the user is not the session user
         else:
             flash("You can only view your own profile")
             return redirect(url_for("profile", username=session['user']))
+
+    # if there is no session user
     else:
         flash("Please login to view your profile")
         return render_template("login.html")
 
 
+# Route to edit the user's profile
 @app.route("/edit_profile/<username>", methods=["GET", "POST"])
 def edit_profile(username):
     if request.method == "POST":
@@ -151,6 +172,7 @@ def edit_profile(username):
     return render_template("edit_profile.html", username=username, user=user)
 
 
+# Route to delete the user's profile
 @app.route("/delete_profile/<username>")
 def delete_profile(username):
     mongo.db.users.delete_one({"username": session["user"]})
@@ -159,6 +181,7 @@ def delete_profile(username):
     return redirect(url_for("login"))
 
 
+# Route to add a recipe
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
     if request.method == "POST":
@@ -185,6 +208,7 @@ def add_recipe():
     return render_template("add_recipe.html", categories=categories)
 
 
+# Route to edit a recipe
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
     if request.method == "POST":
@@ -212,6 +236,7 @@ def edit_recipe(recipe_id):
     return render_template("edit_recipe.html", recipe=recipe, categories=categories)
 
 
+# Route to delete a recipe
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
     mongo.db.recipes.delete_one({"_id": ObjectId(recipe_id)})
@@ -219,26 +244,33 @@ def delete_recipe(recipe_id):
     return redirect(url_for("get_recipes"))
 
 
+# Route to view a single recipe
 @app.route("/recipe/<recipe_id>")
 def recipe(recipe_id):
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    # if there is a session user
     if session.get("user"):
         return render_template("single_recipe.html", recipe=recipe)
+    # if there is no session user
     else:
         flash("Please login to view the recipe")
         return render_template("recipes.html", recipe=recipe)
 
 
+# Route to view the categories
 @app.route("/get_categories")
 def get_categories():
     categories = list(mongo.db.categories.find().sort("category_name", 1))
+    # if there is a session user
     if session.get("user"):
         return render_template("categories.html", categories=categories)
+    # if there is no session user
     else:
         flash("Please login to view the categories")
         return render_template("login.html", categories=categories)
 
 
+# Route to add a category
 @app.route("/add_category", methods=["GET", "POST"])
 def add_category():
     if request.method == "POST":
@@ -252,12 +284,12 @@ def add_category():
     return render_template("add_category.html")
 
 
+# Route to edit a category
 @app.route("/edit_category/<category_id>", methods=["GET", "POST"])
 def edit_category(category_id):
     if request.method == "POST":
         edit = {
-            "category_name": request.form.get("category_name")
-        }
+            "category_name": request.form.get("category_name")}
         mongo.db.categories.replace_one({"_id": ObjectId(category_id)}, edit)
         flash("Category Successfully Updated")
         return redirect(url_for("get_categories"))
@@ -266,6 +298,7 @@ def edit_category(category_id):
     return render_template("edit_category.html", category=category)
 
 
+# Route to delete a category
 @app.route("/delete_category/<category_id>")
 def delete_category(category_id):
     mongo.db.categories.delete_one({"_id": ObjectId(category_id)})
@@ -273,26 +306,32 @@ def delete_category(category_id):
     return redirect(url_for("get_categories"))
 
 
+# Route to view a single category
 @app.route("/single_category/<category_id>")
 def single_category(category_id):
     category = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
     recipes = list(mongo.db.recipes.find({"category_name": category["category_name"]}))
+    # if there is a session user
     if session.get("user"):
         return render_template("single_category.html", category=category, recipes=recipes)
+    # if there is no session user
     else:
         return render_template("login.html", category=category, recipes=recipes)
     
 
+# Route if the page is not found
 @app.errorhandler(404)
 def page_not_found(error):
     return render_template("404.html"), 404
 
 
+# Route if there is an internal server error
 @app.errorhandler(500)
 def internal_server_error(error):
     return render_template("500.html"), 500
 
 
+# Main function to run the app
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
