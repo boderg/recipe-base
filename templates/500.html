@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3>Ooops! You've stepped out of the kitchen!</h3>
+<hr>
+
+<div class="row">
+    <div class="col s12 m8 offset-m2" method="post" action="{{ url_for('add_category') }}">
+        <div class="card-panel">
+            <div class="row">
+                <div class="col s12 center-align error404">
+                    <h4>Those recipes won't write themselves!</h4>
+                    <h5>Lets's get you back in there!</h5>
+                </div>
+                <div class="col s12 center-align">
+                    <a href="{{ url_for('get_recipes') }}" class="btn">Back to the Kitchen!</a>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 center-align error404">
+            <p>'** error 500 internal server problem! **'</p>
+        </div>
+    </div>
+</div>
+
+
+        
+
+{% endblock %}
