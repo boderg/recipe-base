@@ -84,38 +84,40 @@ Explain your colours and the colour scheme.
 - `#4A4A4F` used for secondary text.
 - `#009FE3` used for secondary highlights.
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+I used [cssgradient.io](https://cssgradient.io/gradient-backgrounds/) as they have an eye catching button section.
 
-Consider adding a link and screenshot for your colour scheme using "coolors".
-https://coolors.co/generate
+- I used cssgradient.io to style the buttons on the site. These give a kind of metallic look.
+- The colours used for the buttons were translated to the borders on the site.
+- I chose the remaining colours by eye to fit with the aesthetic of the site as they worked well with the border and button colours.
 
-When you add a colour to the palette, the URL is dynamically updated, making it easier for you to return back to your colour palette later if needed.
+Here is a screenshot of the button chosen that influenced the colour direction of the site.
 
-Example:
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-I used [coolors.co](https://coolors.co/e84610-009fe3-4a4a4f-445261-d63649-e6ecf0-000000) to generate my colour palette.
-
-![screenshot](documentation/coolors.png)
-
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-If you've used CSS `:root` variables, consider also including a code snippet here!
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+| Button chosen | Button site |
+| :---: | :---: |
+| ![screenshot](documentation/ux/colour-scheme/button.png) | ![screenshot](documentation/ux/colour-scheme/css-gradient-buttons.png) |
 
 I've used CSS `:root` variables to easily update the global colour scheme by changing only one value, instead of everywhere in the CSS file.
 
 ```css
 :root {
-    /* P = Primary | S = Secondary */
-    --p-text: #000000;
-    --p-highlight: #E84610;
-    --s-text: #4A4A4F;
-    --s-highlight: #009FE3;
-    --white: #FFFFFF;
-    --black: #000000;
+    --transparent: #00000000;
+    --white: #ffffffff;
+    --text-main: #403b4aff;
+    --text-hover: #007662ff;
+    --sidenav-hover-bg: #00000033;
+    --icons: #403b4a;
+    --icons-hover: #e7e9bb;
+    --input-active: #f8ebff;
+    --footer: #00000014;
+    --modal-footer: #80c3b277;
+    --delete: #ff0000;
+    --body-gradient: linear-gradient(to top, #e7e9bb77, #403b4a77 100%);
+    --card-reveal: linear-gradient( #f8ebff 10%, #80c3b2 100%);
+    --card-panel: linear-gradient( #f8ebff 10%, #80c3b2 100%) padding-box,
+                linear-gradient(135deg, #e7e9bb 10%, #403b4a 100%) border-box;
+    --border-gradient: linear-gradient(var(--white), var(--white)) padding-box,
+                linear-gradient(135deg, #e7e9bb 10%, #403b4a 100%) border-box;
+    --button-gradient: linear-gradient(135deg, #403b4a 0%, #e7e9bb  51%, #403b4a  100%);
 }
 ```
 
