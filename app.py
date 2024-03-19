@@ -39,12 +39,6 @@ def search():
     return render_template("recipes.html", recipes=recipes)
 
 
-@app.route("/recipe/<recipe_id>")
-def recipe(recipe_id):
-    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
-    return render_template("single_recipe.html", recipe=recipe)
-
-
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -104,6 +98,15 @@ def login():
     return render_template("login.html")
 
 
+@app.after_request
+def add_no_cache_headers(response):
+    if 'Cache-Control' not in response.headers:
+        response.headers["Cache-Control"] = "no-store, no-cache, must-revalidate, post-check=0, pre-check=0, max-age=0"
+        response.headers["Pragma"] = "no-cache"
+        response.headers["Expires"] = "-1"
+    return response
+
+
 @app.route("/logout")
 def logout():
     # remove user from session cookies
@@ -114,13 +117,16 @@ def logout():
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
-    user = mongo.db.users.find_one(
-        {"username": session["user"]})
-    
-    if session["user"]:
-        return render_template("profile.html", username=username, user=user)
-
-    return redirect(url_for("login"))
+    if session.get("user"):
+        if session["user"] == username:
+            user = mongo.db.users.find_one({"username": session["user"]})
+            return render_template("profile.html", username=username, user=user)
+        else:
+            flash("You can only view your own profile")
+            return redirect(url_for("profile", username=session['user']))
+    else:
+        flash("Please login to view your profile")
+        return render_template("login.html")
 
 
 @app.route("/edit_profile/<username>", methods=["GET", "POST"])
@@ -213,10 +219,24 @@ def delete_recipe(recipe_id):
     return redirect(url_for("get_recipes"))
 
 
+@app.route("/recipe/<recipe_id>")
+def recipe(recipe_id):
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    if session.get("user"):
+        return render_template("single_recipe.html", recipe=recipe)
+    else:
+        flash("Please login to view the recipe")
+        return render_template("recipes.html", recipe=recipe)
+
+
 @app.route("/get_categories")
 def get_categories():
     categories = list(mongo.db.categories.find().sort("category_name", 1))
-    return render_template("categories.html", categories=categories)
+    if session.get("user"):
+        return render_template("categories.html", categories=categories)
+    else:
+        flash("Please login to view the categories")
+        return render_template("login.html", categories=categories)
 
 
 @app.route("/add_category", methods=["GET", "POST"])
@@ -257,7 +277,10 @@ def delete_category(category_id):
 def single_category(category_id):
     category = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
     recipes = list(mongo.db.recipes.find({"category_name": category["category_name"]}))
-    return render_template("single_category.html", category=category, recipes=recipes)
+    if session.get("user"):
+        return render_template("single_category.html", category=category, recipes=recipes)
+    else:
+        return render_template("login.html", category=category, recipes=recipes)
 
 
 if __name__ == "__main__":
