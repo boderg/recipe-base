@@ -1,40 +1,75 @@
-# [RECIPE BASE](https://boderg-recipe-base-6a6e035e0009.herokuapp.com)
+# [RECIPE BASE](https://boderg-recipe-base-6a6e035e0009.herokuapp.com "Click to view the deployed site")
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+- Recipe Base is a recipe sharing database where users can add their recipes, view, edit and delete their recipes.
+- Recipe Base is for anyone who wants an online space to save their recipes instead of cluttering up their kitchen with lots of books or bits of paper stuffed in folders.
+- Recipe Base is for anyone who wishes to share their recipes with others.
+- Recipe Base is for anyone who wants to find new and exciting recipes saved by others.
+- All recipes on the site can be categorised and searched for by category or by ingredient.
+- All recipes can be viewed by anyone, however, you must be logged in as a signed up user to view the full recipe.
+- Signed in users can only edit their own recipes and profiles, so users can be sure their recipes won't be deleted by others.
+- Non registered users are restricted to only ingredients for recipes and have no access to full recipes, categories or profiles.
 
-In this section, you will include a few paragraphs providing an overview of your project.
-Essentially, this part is your "sales pitch".
+## Mockup Screenshot
 
-At this stage, you should have a name for your project so use it!
-Don't introduce the project as a "portfolio project" for the diploma.
+Here is a mockup of my site using the Am I Responsive website.
 
-In this section, describe what the project hopes to accomplish, who it is intended to target, and how it will be useful to the target audience.
+![screenshot](documentation/mockups/mockup.png)
 
-Consider adding a mockup image using the "Am I Responsive" website.
-Here's your deployed site as an example:
-https://ui.dev/amiresponsive?url=https://boderg-recipe-base-6a6e035e0009.herokuapp.com
+## Table of Contents
 
-Screenshots for the README and testing should not be inside of `assets/` or `static/` image folders.
-(reminder: `assets/` and `static/` are for files used on the live site, not documentation)
-Consider adding a new folder called `documentation`, and add the amiresponsive screenshot inside of that folder.
-To add the image into your README, use this format:
-(assuming you have a new folder called `documentation` with an image called "mockup.png")
+<details>
+<summary>Click here for Table of Contents</summary>
 
-![screenshot](documentation/mockup.png)
+[Mockup Screenshot](#mockup-screenshot)
 
-Note: Markdown files (.md) should not contain HTML elements like `img`, `br`, `div`, `a`, etc, only Markdown formatting.
-Find out more about using Markdown elements here:
-https://pandao.github.io/editor.md/en.html
+[UX](#ux)
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+- [Colour Scheme](#colour-scheme)
+- [Typography](#typography)
+
+[User Stories](#user-stories)
+
+- [New site Users](#new-site-users)
+- [Returning Site Users](#returning-site-users)
+
+[Wireframes](#wireframes)
+
+- [Mobile Wireframes](#mobile-wireframes)
+- [Tablet Wireframes](#tablet-wireframes)
+- [Desktop Wireframes](#desktop-wireframes)
+
+[Features](#features)
+
+- [Existing Features](#existing-features)
+- [Future Features](#future-features)
+
+[Testing](#testing)
+
+[Deployment](#deployment)
+
+- [Local Deployment](#local-deployment)
+
+  - [Cloning](#cloning)
+  - [Forking](#forking)
+
+- [Local vs Deployment](#local-vs-deployment)
+
+[Credits](#credits)
+
+- [Content and Code](#content-and-code)
+
+- [Media](#media)
+
+- [Acknowledgments](#acknowledgements)
+
+</details>
 
 ## UX
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-In this section, you will briefly explain your design processes.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+- The design for Recipe Base started as a series of wireframes covering mobile, tablet and desktop formats to determine the initial design and layout of the site.
+- A flowchart and database ERD were then designed to work out the flow of the site.
+- Recipe Base was designed with registered users in mind offering a safe storage of their saved recipes.
+- A classy look and feel was given to the site to help it stand out but also be easy on the eye.
 
 ### Colour Scheme
 
