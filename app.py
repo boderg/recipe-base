@@ -281,6 +281,11 @@ def single_category(category_id):
         return render_template("single_category.html", category=category, recipes=recipes)
     else:
         return render_template("login.html", category=category, recipes=recipes)
+    
+
+@app.errorhandler(404)
+def page_not_found(error):
+    return render_template("404.html"), 404
 
 
 if __name__ == "__main__":

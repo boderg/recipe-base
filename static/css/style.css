@@ -424,6 +424,18 @@ a.btn {
     }
 }
 
+/* 404 */
+
+.error404 h4 {
+    font-family: 'Cormorant Infant', sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.error404 h5 {
+    font-family: 'Karma', serif;
+}
+
 @media only screen and (max-width: 600px) {
     .chefs {
         height: 200px;
