@@ -412,16 +412,26 @@ a.btn {
     color: red;
 }
 
-/* 404 Error */
+/* 404 and 500 Errors */
 
-.error404 h4 {
+.error404 h4,
+.error500 h4{
     font-family: 'Cormorant Infant', sans-serif;
     font-weight: 700;
     font-style: italic;
+    color: var(--text-main);
 }
 
-.error404 h5 {
+.error404 h5,
+.error500 h5{
     font-family: 'Karma', serif;
+    color: var(--text-main);
+}
+
+.error404 p,
+.error500 p{
+    font-family: 'Karma', serif;
+    color: var(--text-main);
 }
 
 /* @media queries */
