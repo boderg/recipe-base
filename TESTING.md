@@ -622,33 +622,35 @@ This can be used for both "fixed" and "unresolved" issues.
 
 - I created an event listener to add new input fields in the add recipe page. This listener adds a new  input field under ingredients and instructions when the previous field is populated allowing for ingredients and instructions to be added individually. The event listener has a blur function to remove any created field if it is not populated. This removal only works if you tab to the next input field and on sumbission of the form adds empty list items to the recipe. This also occurs on the edit recipe page as it uses the same function.
 
-    ![screenshot](documentation/bug01.png)
+![screenshot](documentation/bug01.png)
 
-  - To fix this, I _____________________.
+- To fix this, I _____________________.
 
 - When entering the edit recipe page the first item in a list overlaps the label for that list until that list item is selected for editing.
 
-    ![screenshot](documentation/bug02.png)
+![screenshot](documentation/bug02.png)
 
-  - To fix this, I _____________________.
+- To fix this, I _____________________.
 
-- Python `'ModuleNotFoundError'` when trying to import module from imported package
+- Jinja2 `'Undefined Error'` while trying to set a delete button with a confirmation modal on my categories page I was getting this error saying that 'category' was not defined. I tried to fix at first by adding a jinja2 for loop to the modal but this resulted in multiple delete buttons as in image 2.
 
-    ![screenshot](documentation/bug03.png)
+| Error | Failed solution | Solution |
+| :---: | :---: | :---: |
+| ![screenshot](documentation/bugs/jinja2-undefined-category.png) | ![screenshot](documentation/bugs/failed-solution.png) | ![screenshot](documentation/bugs/delete-modal-in-for-loop.png) |
 
-  - To fix this, I _____________________.
+- To fix this, I moved the modal structure inside of the jinja2 for loop.
 
 - Django `TemplateDoesNotExist` at /appname/path appname/template_name.html
 
-    ![screenshot](documentation/bug04.png)
+![screenshot](documentation/bug04.png)
 
-  - To fix this, I _____________________.
+- To fix this, I _____________________.
 
 - Python `E501 line too long` (93 > 79 characters)
 
-    ![screenshot](documentation/bug04.png)
+![screenshot](documentation/bug04.png)
 
-  - To fix this, I _____________________.
+- To fix this, I _____________________.
 
 ## Unfixed Bugs
 
