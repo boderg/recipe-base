@@ -636,9 +636,9 @@ This can be used for both "fixed" and "unresolved" issues.
 
 | Error | Failed solution | Solution |
 | :---: | :---: | :---: |
-| ![screenshot](documentation/bugs/jinja2-undefined-category.png) | ![screenshot](documentation/bugs/failed-solution.png) | ![screenshot](documentation/bugs/delete-modal-in-for-loop.png) |
+| ![screenshot](documentation/bugs/jinja2-undefined-category.png) | ![screenshot](documentation/bugs/failed-solution.png) | ![screenshot](documentation/bugs/modal-inside-jinja-for-loop.png) |
 
-- To fix this, I moved the modal structure inside of the jinja2 for loop.
+- To fix this, I moved the modal structure inside of the jinja2 for loop and appended the modal id with the category id.
 
 - Django `TemplateDoesNotExist` at /appname/path appname/template_name.html
 
