@@ -4,87 +4,94 @@
 <h3>{{ recipe.recipe_name.title() }}</h3>
 <hr>
 
+
+
 <div class="row">
-    <div class="card col s10 offset-s1 single">
-        <div class="row">
-            <!-- serves -->
-            <div class="col s2 offset-s5 center-align" id="serves">
-                <h4><strong><em>Serves:</em></strong></h4>
-                <p class="para-indent">{{ recipe.serving_size }}</p>
-            </div>
-        </div>
-        <div class="row">
-            <!-- ingredients -->
-            <div class="col s10 m5 offset-s1 offset-m1" id="ingredients">
-                <h4><strong><em>Ingredients:</em></strong></h4>
-                <ol class="ingredient">
-                    {% for ingredient in recipe.main_ingredients %}
-                    <li>{{ ingredient.capitalize() }}</li>
-                    {% endfor %}
-                </ol>
-            </div>
+    <!-- serves -->
+    <div class="card col s6 offset-s3 center-align" id="serves">
+        <h4>Serves: {{ recipe.serving_size }}</h4>
+    </div>
+</div>
+
+<div class="row">
+    <!-- image -->
+    <div class="card col s10 offset-s1 center-align" id="image">
+        <img src="{{ url_for('static', filename='images/kitchen.jpg') }}" alt="kitchen" class="food">
+    </div>
+</div>
+
+<div class="row">
+    <div class="card col s12">
+        <!-- ingredients -->
+        <div class=" col s12 m4" id="ingredients">
+            <h4>Ingredients:</h4>
+            <ol class="ingredient">
+                {% for ingredient in recipe.main_ingredients %}
+                <li>{{ ingredient.capitalize() }}</li>
+                {% endfor %}
+            </ol>
+
             <!-- optional ingredients -->
-            <div class="col s10 m5 offset-s1 offset-m1" id="optional">
-                <h4><strong><em>Optional Ingredients:</em></strong></h4>
-                <ol class="ingredient">
-                    {% for ingredient in recipe.optional_ingredients %}
-                    <li>{{ ingredient.capitalize() }}</li>
-                    {% endfor %}
-                </ol>
-            </div>
+            <h4>Optional Ingredients</h4>
+            <ol class="ingredient">
+                {% for ingredient in recipe.optional_ingredients %}
+                <li>{{ ingredient.capitalize() }}</li>
+                {% endfor %}
+            </ol>
         </div>
-        <div class="row">
-            <!-- preparation time -->
-            <div class="col s10 offset-s1 m5 offset-m1" id="prep">
-                <h4><strong><em>Preparation Time:</em></strong></h4>
-                <p class="para-indent">{{ recipe.preparation_time }}</p>
-                <!-- preparation instructions -->
-                <h4><strong><em>Preparation Instructions:</em></strong></h4>
-                <ol>
-                    {% for method in recipe.preparation_method %}
-                    <li>{{ method.capitalize() }}</li>
-                    {% endfor %}
-                </ol>
-            </div>
-            <!-- cooking time -->
-            <div class="col s10 offset-s1 m5 offset-m1" id="cook">
-                <h5><strong><em>Cooking Time:</em></strong></h5>
-                <p class="para-indent">{{ recipe.cooking_time }}</p>
-                <!-- cooking instructions -->
-                <h4><strong><em>Cooking Instructions:</em></strong></h4>
-                <ol>
-                    {% for method in recipe.cooking_method %}
-                    <li>{{ method.capitalize() }}</li>
-                    {% endfor %}
-                </ol>
-            </div>
+
+        <!-- preparation time -->
+        <div class=" col s12 m4" id="prep">
+            <h4>Preparation Time:</h4>
+            <p class="para-indent">{{ recipe.preparation_time }}</p>
+            <!-- preparation instructions -->
+            <h4>Preparation Instructions:</h4>
+            <ol>
+                {% for method in recipe.preparation_method %}
+                <li>{{ method.capitalize() }}</li>
+                {% endfor %}
+            </ol>
         </div>
-        <div class="row">
-            <!-- created by -->
-            <div class="col s10 offset-s1 center-align" id="details">
-                <h4><strong><em>Created by:</em></strong></h4>
-                <p>{{ recipe.created_by.capitalize() }}</p>
-                <!-- date created -->
-                <h4><strong><em>Date created:</em></strong></h4>
-                <p>{{ recipe.created_on }}</p>
-                <!-- category -->
-                <h4><strong><em>Category:</em></strong></h4>
-                <ol>
-                    {% for category in recipe.category_name %}
-                    <li>{{ category.capitalize() }}</li>
-                    {% endfor %}
-                </ol>
-            </div>
-        </div>
-        <div class="col s12 ed-btn center-align">
-            <a href="#" onclick="window.history.back()" class="btn">Back <i class="fas fa-arrow-left"></i></a>
-            {% if session.user|lower == recipe.created_by|lower %}
-            <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" 
-            class="btn">Edit <i class="fas fa-pen-to-square"></i></a>
-            <a href="#modal-recipe" class="btn delete modal-trigger">Delete <i class="fas fa-trash-can"></i></a>
-            {% endif %}
+
+        <!-- cooking time -->
+        <div class=" col s12 m4" id="cook">
+            <h4>Cooking Time:</h4>
+            <p class="para-indent">{{ recipe.cooking_time }}</p>
+            <!-- cooking instructions -->
+            <h4>Cooking Instructions:</h4>
+            <ol>
+                {% for method in recipe.cooking_method %}
+                <li>{{ method.capitalize() }}</li>
+                {% endfor %}
+            </ol>
         </div>
     </div>
+</div>
+
+<div class="row">
+    <!-- created by -->
+    <div class="card col s6 offset-s3 center-align" id="details">
+        <h5>Created by: {{ recipe.created_by.capitalize() }}</h5>
+        <!-- date created -->
+        <h5>Date created: {{ recipe.created_on }}</h5>
+        <!-- category -->
+        <h5>Category:
+            <ul class="category-list">
+                {% for category in recipe.category_name %}
+                <li>{{ category.capitalize() }}</li>
+                {% endfor %}
+            </ul>
+        </h5>
+    </div>
+</div>
+
+<div class="col s4 offset-s4 ed-btn center-align">
+    <a href="#" onclick="window.history.back()" class="btn">Back <i class="fas fa-arrow-left"></i></a>
+    {% if session.user|lower == recipe.created_by|lower %}
+    <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn">Edit <i
+            class="fas fa-pen-to-square"></i></a>
+    <a href="#modal-recipe" class="btn delete modal-trigger">Delete <i class="fas fa-trash-can"></i></a>
+    {% endif %}
 </div>
 
 <!-- Modal Structure -->
@@ -92,14 +99,15 @@
     <div class="modal-content center-align">
         <h4>Delete Recipe</h4>
         <h5>Are you sure you want to delete this recipe? <br>
-        This action cannot be undone!</h5>
+            This action cannot be undone!</h5>
     </div>
     <div class="modal-footer">
         <div class="center-align">
-        <a href="#!" class="modal-close btn">Cancel <i class="fas fa-ban"></i></a>
-        <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" 
-        class="modal-close btn delete">Delete Recipe <i class="fas fa-trash-can"></i></a>
-    </div>        
+            <a href="#!" class="modal-close btn">Cancel <i class="fas fa-ban"></i></a>
+            <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="modal-close btn delete">Delete
+                Recipe
+                <i class="fas fa-trash-can"></i></a>
+        </div>
     </div>
 </div>
 
