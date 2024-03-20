@@ -70,12 +70,11 @@ hr {
 #navbar {
     background-color: var(--transparent);
     box-shadow: none;
+    margin: 10px 0 0 0;
 }
 
 .nav-wrapper {
     padding: 0 10px;
-    margin: 10px auto 0 auto;
-
 }
 
 .brand-logo {
@@ -246,6 +245,11 @@ nav ul a:hover {
 
 .card-reveal {
     background: var(--card-reveal);
+}
+
+label {
+    font-family: 'Karma', serif;
+    color: var(--text-main);
 }
 
 /* Forms / Inputs / Dropdowns */
@@ -481,3 +485,11 @@ a.btn {
         width: 300px;
     }
 }
+
+/* .row {
+    border: 1px solid red;
+}
+
+.col {
+    border: 1px solid blue;
+} */
