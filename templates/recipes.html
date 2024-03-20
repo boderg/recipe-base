@@ -30,10 +30,10 @@
         <div class="card">
             <div class="card-image">
                 {% if recipe.recipe_image %}
-                <img class="activator" src="{{ recipe.recipe_image.url }}" alt="alt image">
+                <img class="activator food" src="{{ recipe.recipe_image.url }}" alt="alt image">
                 {% else %}
-                <img class="activator" src="{{ url_for('static', filename='images/kitchen.jpg') }}"
-                    alt="Copper Kitchen Utensils">
+                <img class="activator food" src="{{ url_for('static', filename='images/kitchen.jpg') }}"
+                    alt="kitchen">
                 {% endif %}
             </div>
             <!-- recipe name -->
