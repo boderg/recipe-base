@@ -9,20 +9,27 @@
     <div class="col s12 m6 l4">
         <div class="card">
             <div class="card-image">
-                <img src="{{ url_for('static', filename='images/kitchen.jpg') }}" alt="food image">
+                {% if category.category_image %}
+                <img class="activator food" src="{{ category.category_image }}" alt="alt image">
+                {% else %}
+                <img class="activator food" src="{{ url_for('static', filename='images/kitchen.jpg') }}"
+                    alt="kitchen">
+                {% endif %}
             </div>
             <div class="card-content">
                 <span class="card-title">
                     <em>{{ category.category_name.capitalize() }}</em>
                 </span>
-                <a href="{{ url_for('single_category', category_id=category._id) }}" class="btn">View Category 
-                    <i class="fas fa-glasses "></i></a>
                 <div class="card-action">
+                    <a href="{{ url_for('single_category', category_id=category._id) }}" class="btn">View Category 
+                        <i class="fas fa-glasses "></i></a>
                     {% if session.user|lower == "admin"|lower %}
                     <a href="{{ url_for('edit_category', category_id=category._id) }}" 
                     class="btn">Edit <i class="fas fa-pen-to-square"></i></a>
                     <a href="#modal-category-{{ category._id }}" 
                     class="btn delete modal-trigger">Delete <i class="fas fa-trash-can"></i></a>
+                    <div class="divider"></div>
+                    <p>Updated on: {{ category.updated_on }}</p>
                     {% endif %}
                 </div>
             </div>
