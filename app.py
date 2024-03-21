@@ -153,6 +153,9 @@ def profile(username):
 # Route to edit the user's profile
 @app.route("/edit_profile/<username>", methods=["GET", "POST"])
 def edit_profile(username):
+    if not session.get("user"):
+        return redirect(url_for("login"))
+
     if request.method == "POST":
         edit = {
                 "email": request.form.get("email"),
@@ -185,6 +188,10 @@ def delete_profile(username):
 # Route to add a recipe
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
+    if not session.get("user"):
+        flash("Please login to add a recipe")
+        return redirect(url_for("login"))
+
     if request.method == "POST":
         recipe = {
             "category_name": request.form.getlist("category_name"),
@@ -212,6 +219,10 @@ def add_recipe():
 # Route to edit a recipe
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
+    if not session.get("user"):
+        flash("Please login to edit the recipe")
+        return redirect(url_for("login"))
+
     if request.method == "POST":
         edit = {
             "category_name": request.form.getlist("category_name"),
@@ -274,9 +285,13 @@ def get_categories():
 # Route to add a category
 @app.route("/add_category", methods=["GET", "POST"])
 def add_category():
+    if not session.get("user"):
+        return redirect(url_for("login"))
+
     if request.method == "POST":
         category = {
-            "category_name": request.form.get("category_name")
+            "category_name": request.form.get("category_name"),
+            "category_image": request.form.get("category_image")
         }
         mongo.db.categories.insert_one(category)
         flash("New Category Added")
@@ -288,9 +303,15 @@ def add_category():
 # Route to edit a category
 @app.route("/edit_category/<category_id>", methods=["GET", "POST"])
 def edit_category(category_id):
+    if not session.get("user"):
+        return redirect(url_for("login"))
+
     if request.method == "POST":
         edit = {
-            "category_name": request.form.get("category_name")}
+            "category_name": request.form.get("category_name"),
+            "category_image": request.form.get("category_image"),
+            "updated_on": datetime.now().strftime("%d-%m-%Y at %H:%M")
+        }
         mongo.db.categories.replace_one({"_id": ObjectId(category_id)}, edit)
         flash("Category Successfully Updated")
         return redirect(url_for("get_categories"))
@@ -317,6 +338,7 @@ def single_category(category_id):
         return render_template("single_category.html", category=category, recipes=recipes)
     # if there is no session user
     else:
+        flash("Please login to view this recipe")
         return render_template("login.html", category=category, recipes=recipes)
     
 
