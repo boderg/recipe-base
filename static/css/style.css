@@ -484,12 +484,34 @@ a.btn {
     }
 
     .flash-banner {
-        margin: 30px 0 0 0;
+        margin: 60px auto 0 auto;
+        width: 90%;
+    }
+    .flashes {
+        width: 100%;
+    }
+    .flashes h4 {
+        font-size: 175%;
+    }
+    a.brand-logo.btn {
+        font-size: 165%;
+    }
+    .btn {
+        font-size: 100%;
+    }
+    h3 {
+        font-size: 200%;
+    }
+    h1.welcome, h2.welcome {
+        font-size: 300%;
+    }
+    h4.welcome {
+        font-size: 200%;
     }
 }
 
 @media only screen and (max-width: 600px) {
-    .chefs {
+    .chefs, .food{
         height: 200px;
         width: 300px;
     }
