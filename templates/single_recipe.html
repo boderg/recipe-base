@@ -15,8 +15,13 @@
 
 <div class="row">
     <!-- image -->
-    <div class="card col s10 offset-s1 center-align" id="image">
-        <img src="{{ url_for('static', filename='images/kitchen.jpg') }}" alt="kitchen" class="food">
+    <div class="card col s12 m10 offset-m1 center-align" id="image">
+        {% if recipe.recipe_image %}
+        <img class="activator food" src="{{ recipe.recipe_image }}" alt="alt image">
+        {% else %}
+        <img class="activator food" src="{{ url_for('static', filename='images/kitchen.jpg') }}"
+            alt="kitchen">
+        {% endif %}
     </div>
 </div>
 
