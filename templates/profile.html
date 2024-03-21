@@ -9,7 +9,14 @@
             
         <div class="col s12 m4 profile">
             <div class="card">
-                <img src="{{ user.profile_image }}" alt="{{ user.username }}" class="circle responsive-img">
+                <div class="card-image">
+                {% if user.profile_image %}
+                <img class="activator profile-img" src="{{ user.profile_image }}" alt="alt image">
+                {% else %}
+                <img class="activator profile-img" src="{{ url_for('static', filename='images/admin-logo.jpg') }}"
+                    alt="kitchen">
+                {% endif %}
+            </div>
             </div>
         </div>
 
