@@ -66,9 +66,10 @@ hr {
 }
 
 .food {
-    height: 250px;
-    width: 500px;
+    height: 300px;
+    width: auto;
     border-radius: 5px;
+    margin: 10px auto;
 }
 
 /* Navigation */
@@ -156,17 +157,11 @@ nav ul a:hover {
     filter: drop-shadow(0 0 3px #333);
 }
 
-/* Search Bar */
-
-.search {
-    padding: 20px 0 10px 0;
-}
-
 /* Cards / Card Panels */
 
 .card-panel {
-    margin: 60px 0 30px 0;
-    padding: 60px 30px 30px 30px;
+    margin: 30px 0 30px 0;
+    padding: 30px;
 }
 
 .card-panel h3 {
@@ -316,7 +311,6 @@ a.btn {
     color: var(--white);
 }
 
-
 .btn {
     background: var(--button-gradient);
     text-align: center;
@@ -346,6 +340,11 @@ a.btn {
     margin: 0 auto 30px auto;
 }
 
+/* Profile Page */
+
+.profile h5, .profile p {
+    padding: 0 30px;
+}
 
 /* Question Links */
 
@@ -368,7 +367,7 @@ a.btn {
 }
 
 .flashes {
-    width: 75%;
+    width: 70%;
     padding-bottom: 15px;
 }
 
@@ -515,12 +514,12 @@ a.btn {
         height: 200px;
         width: 300px;
     }
-}
 
-/* .row {
+.row {
     border: 1px solid red;
+    margin: 0;
 }
 
 .col {
     border: 1px solid blue;
-} */
+}
