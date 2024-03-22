@@ -640,11 +640,13 @@ This can be used for both "fixed" and "unresolved" issues.
 
 - To fix this, I moved the modal structure inside of the jinja2 for loop and appended the modal id with the category id.
 
-- Django `TemplateDoesNotExist` at /appname/path appname/template_name.html
+- Werkzeug `Build error` could not build endpoint single_recipe with values [recipe_id].
 
-![screenshot](documentation/bug04.png)
+| Error description | Error code | Solution |
+| :---: | :---: | :---: |
+| ![screenshot](documentation/bugs/wekzeug-build-error.png) | ![screenshot](documentation/bugs/werkzeug-build-code.png) | ![screenshot](documentation/bugs/adjusted-code.png) |
 
-- To fix this, I _____________________.
+- To fix this, I renamed all 'single_recipe' entries to 'recipe' in the app routing along with the name of the recipe.html page.
 
 - Python `E501 line too long` (93 > 79 characters)
 
