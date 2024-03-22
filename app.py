@@ -241,7 +241,7 @@ def edit_recipe(recipe_id):
         }
         mongo.db.recipes.update_one({"_id": ObjectId(recipe_id)}, {"$set": edit})
         flash("Recipe Successfully Updated")
-        return redirect(url_for("get_recipes"))
+        return redirect(url_for("recipe", recipe_id=recipe_id))
 
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
@@ -262,7 +262,7 @@ def recipe(recipe_id):
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     # if there is a session user
     if session.get("user"):
-        return render_template("single_recipe.html", recipe=recipe)
+        return render_template("recipe.html", recipe=recipe)
     # if there is no session user
     else:
         flash("Please login to view the recipe")
