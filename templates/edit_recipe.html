@@ -21,7 +21,7 @@
 
                 <!-- serving size -->
                 <div class="col s12">
-                    <label for="serving_size">Edit Serving Size (numbers only)</label>
+                    <label for="serving_size">Serving Size (numbers only)</label>
                 <div class="input-field col s12">
                     <i class="fas fa-utensils prefix"></i>
                     <input id="serving_size" name="serving_size" value="{{ recipe.serving_size }}" type="number" class="validate">
@@ -30,7 +30,7 @@
 
                 <!-- recipe description -->
                 <div class="col s12">
-                    <label for="recipe_description">Edit Recipe Description</label>
+                    <label for="recipe_description">Recipe Description</label>
                 <div class="input-field col s12">
                     <i class="fas fa-comment-dots prefix"></i>
                     <textarea id="recipe_description" name="recipe_description" class="materialize-textarea validate">{{ recipe.recipe_description }}</textarea>
@@ -39,7 +39,7 @@
 
                 <!-- recipe image url -->
                 <div class="col s12">
-                    <label for="recipe_image">Edit Recipe Image URL (optional)</label>
+                    <label for="recipe_image">Recipe Image URL (optional)</label>
                 <div class="input-field col s12">
                     <i class="fas fa-image prefix"></i>
                     <input id="recipe_image" name="recipe_image" value="{{ recipe.recipe_image }}" type="url" class="validate">
@@ -48,7 +48,7 @@
 
                 <!-- add ingredients -->
                 <div class="col s12">
-                    <label for="main_ingredients">Edit Main Ingredients</label>
+                    <label for="main_ingredients">Main Ingredients</label>
                 <div class="input-field col s12" id="list1">
                     <i class="fas fa-list prefix"></i>
                     {% for ingredient in recipe.main_ingredients %}
@@ -62,7 +62,7 @@
 
                 <!-- add optional ingredients -->
                 <div class="col s12">
-                    <label for="optional_ingredients">Edit Optional Ingredients</label>
+                    <label for="optional_ingredients">Optional Ingredients</label>
                 <div class="input-field col s12" id="list2">
                     <i class="fas fa-list prefix"></i>
                     {% for ingredient in recipe.optional_ingredients %}
@@ -76,7 +76,7 @@
 
                 <!-- add preparation instructions -->
                 <div class="col s12">
-                    <label for="preparation_method">Edit Preparation Instructions</label>
+                    <label for="preparation_method">Preparation Instructions</label>
                 <div class="input-field col s12" id="list3">
                     <i class="fas fa-list prefix"></i>
                     {% for instruction in recipe.preparation_method %}
@@ -90,7 +90,7 @@
 
             <!-- add cooking instructions -->
             <div class="col s12">
-                <label for="cooking_method">Edit Cooking Instructions</label>
+                <label for="cooking_method">Cooking Instructions</label>
                 <div class="input-field col s12" id="list4">
                     <i class="fas fa-list prefix"></i>
                     {% for instruction in recipe.cooking_method %}
@@ -105,7 +105,7 @@
 
             <!-- add preparation time -->
             <div class="col s12 l6">
-                <label for="preparation_time">Edit Preparation Time</label>
+                <label for="preparation_time">Preparation Time</label>
                 <div class="input-field col s12 tooltipped" data-position="left" data-tooltip="Enter time value">
                     <legend>
                         <i class="fas fa-clock prefix"></i>
@@ -118,7 +118,7 @@
 
             <!-- add cooking time -->
             <div class="col s12 l6">
-                <label for="cooking_time">Edit Cooking Time</label>
+                <label for="cooking_time">Cooking Time</label>
                 <div class="input-field col s12 tooltipped" data-position="left" data-tooltip="Enter time value">
                         <i class="fas fa-clock prefix"></i>
                         <!-- <label for="cooking_time">Cooking Time</label> -->
