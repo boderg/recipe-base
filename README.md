@@ -5,17 +5,19 @@
 - Recipe Base is for anyone who wishes to share their recipes with others.
 - Recipe Base is for anyone who wants to find new and exciting recipes saved by others.
 - All recipes on the site can be categorised and searched for by category or by ingredient.
-- All recipes can be viewed by anyone, however, you must be logged in as a signed up user to view the full recipe.
+- All recipes can be viewed by anyone, however, you must be logged in as a signed up user to view the full recipe with instructions.
 - Signed in users can only edit their own recipes and profiles, so users can be sure their recipes won't be deleted by others.
 - Non registered users are restricted to only ingredients for recipes and have no access to full recipes, categories or profiles.
 
 ## Mockup Screenshot
 
-Here is a mockup of my site using the Am I Responsive website.
+Here is a mockup of the Recipe Base site using the Am I Responsive website.
 
 ![screenshot](documentation/mockups/mockup.png)
 
 ## UX
+
+Here is the process behind the design of the Recipe Base site.
 
 - The design for Recipe Base started as a series of wireframes covering mobile, tablet and desktop formats to determine the initial design and layout of the site.
 - A flowchart and database ERD were then designed to work out the flow of the site.
@@ -24,30 +26,30 @@ Here is a mockup of my site using the Am I Responsive website.
 
 ### Colour Scheme
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+The colours chosen for the site where as follows;
 
-Explain your colours and the colour scheme.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-- `#000000` used for primary text.
-- `#E84610` used for primary highlights.
-- `#4A4A4F` used for secondary text.
-- `#009FE3` used for secondary highlights.
+- `#e7e9bb and #403b4a` used for main body background, border and button gradients.
+- `#f8ebff and #80c3b2` used for cards and panel background gradients.
+- `#403b4a` used for main text and icons.
+- `#0076662` used for text hover.
+- `#e7e9bb` used for icon hover.
+- `#ffffff` used for button text,
+- `#333333` used for button text shadows.
+- `#ff0000` used for delete button text.
 
 I used [cssgradient.io](https://cssgradient.io/gradient-backgrounds/) as they have an eye catching button section.
 
-- I used cssgradient.io to style the buttons on the site. These give a kind of metallic look.
-- The colours used for the buttons were translated to the borders on the site.
-- I chose the remaining colours by eye to fit with the aesthetic of the site as they worked well with the border and button colours.
+- cssgradient.io was used to style the buttons on the Recipe Base site. The gradient chosen gives a kind of metallic look to the buttons.
+- The colours used for the buttons were translated to the borders and gradients on the Recipe Base site.
+- The remaining colours were then chosen by eye to fit with the aesthetic of the site as they worked well with the borders and button colours.
 
-Here is a screenshot of the button chosen that influenced the colour direction of the site.
+Here are screenshots of the button choice that influenced the colour direction of the Recipe Base site.
 
 | Button chosen | Button site |
 | :---: | :---: |
 | ![screenshot](documentation/ux/colour-scheme/button.png) | ![screenshot](documentation/ux/colour-scheme/css-gradient-buttons.png) |
 
-I've used CSS `:root` variables to easily update the global colour scheme by changing only one value, instead of everywhere in the CSS file.
+CSS `:root` variables were used to easily update the global colour scheme by changing only one value, instead of everywhere in the CSS file.
 
 ```css
 :root {
@@ -74,29 +76,27 @@ I've used CSS `:root` variables to easily update the global colour scheme by cha
 
 ### Typography
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+Fontjoy was used for font pairing and selection for the Recipe Base site.
 
-Explain any fonts and icon libraries used, like Google Fonts and/or Font Awesome.
+| Light background | Dark background |
+| :---: | :---: |
+| ![screenshot](documentation/ux/typeography/fontjoy-pairing-light.png) | ![screenshot](documentation/ux/typeography/fontjoy-pairing-dark.png) |
 
-Consider adding a link to each font used, and the Font Awesome site if used (or similar icon library).
+Here are screenshots of the font selection:
 
-Example:
+Three fonts were decided upon and implemented as follows:
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+- [Cairo](https://fonts.google.com/specimen/Cairo) was used for the primary headers, navigation and buttons.
 
-- [Montserrat](https://fonts.google.com/specimen/Montserrat) was used for the primary headers and titles.
+- [Cormorant Infant](https://fonts.google.com/specimen/Cormorant-Infant) was used for all titles.
 
-- [Lato](https://fonts.google.com/specimen/Lato) was used for all other secondary text.
+- [Karma](https://fonts.google.com/specimen/Karma) was used for all paragraphs and standard text.
 
-- [Font Awesome](https://fontawesome.com) icons were used throughout the site, such as the social media icons in the footer.
+- [Font Awesome](https://fontawesome.com) icons were used throughout the site, such as the social media icons in the footer, button icons and form icons.
 
 ## User Stories
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-In this section, list all of your user stories for the project.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+Here are some of the user stories for the Recipe Base site.
 
 ### New Site Users
 
