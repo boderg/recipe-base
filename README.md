@@ -15,55 +15,6 @@ Here is a mockup of my site using the Am I Responsive website.
 
 ![screenshot](documentation/mockups/mockup.png)
 
-## Table of Contents
-
-<details>
-<summary>Click here for Table of Contents</summary>
-
-[Mockup Screenshot](#mockup-screenshot)
-
-[UX](#ux)
-
-- [Colour Scheme](#colour-scheme)
-- [Typography](#typography)
-
-[User Stories](#user-stories)
-
-- [New site Users](#new-site-users)
-- [Returning Site Users](#returning-site-users)
-
-[Wireframes](#wireframes)
-
-- [Mobile Wireframes](#mobile-wireframes)
-- [Tablet Wireframes](#tablet-wireframes)
-- [Desktop Wireframes](#desktop-wireframes)
-
-[Features](#features)
-
-- [Existing Features](#existing-features)
-- [Future Features](#future-features)
-
-[Testing](#testing)
-
-[Deployment](#deployment)
-
-- [Local Deployment](#local-deployment)
-
-  - [Cloning](#cloning)
-  - [Forking](#forking)
-
-- [Local vs Deployment](#local-vs-deployment)
-
-[Credits](#credits)
-
-- [Content and Code](#content-and-code)
-
-- [Media](#media)
-
-- [Acknowledgments](#acknowledgements)
-
-</details>
-
 ## UX
 
 - The design for Recipe Base started as a series of wireframes covering mobile, tablet and desktop formats to determine the initial design and layout of the site.
