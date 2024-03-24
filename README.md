@@ -37,7 +37,7 @@ The colours chosen for the site where as follows;
 - `#333333` used for button text shadows.
 - `#ff0000` used for delete button text.
 
-I used [cssgradient.io](https://cssgradient.io/gradient-backgrounds/) as they have an eye catching button section.
+[cssgradient.io](https://cssgradient.io/gradient-backgrounds/) was used for colour and gradient choices.
 
 - cssgradient.io was used to style the buttons on the Recipe Base site. The gradient chosen gives a kind of metallic look to the buttons.
 - The colours used for the buttons were translated to the borders and gradients on the Recipe Base site.
