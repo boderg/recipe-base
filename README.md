@@ -262,19 +262,19 @@ IMPORTANT: Remember to always include a screenshot of each individual feature!
 
 - **Title for feature #1**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+  - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
 
 ![screenshot](documentation/feature01.png)
 
 - **Title for feature #2**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+  - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
 
 ![screenshot](documentation/feature02.png)
 
 - **Title for feature #3**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+  - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
 
 ![screenshot](documentation/feature03.png)
 
@@ -298,54 +298,38 @@ Consider adding any helpful links or notes to help remind you in the future, if 
 🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 - Title for future feature #1
-    - Any additional notes about this feature.
+  - Any additional notes about this feature.
 - Title for future feature #2
-    - Any additional notes about this feature.
+  - Any additional notes about this feature.
 - Title for future feature #3
-    - Any additional notes about this feature.
+  - Any additional notes about this feature.
 
 ## Tools & Technologies Used
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-In this section, you should explain the various tools and technologies used to develop the project.
-Make sure to put a link (where applicable) to the source, and explain what each was used for.
-Some examples have been provided, but this is just a sample only, your project might've used others.
-Feel free to delete any unused items below as necessary.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+The following are the tools and technologies that were used in the creation of the Recipe Base site.
 
 - [HTML](https://en.wikipedia.org/wiki/HTML) used for the main site content.
 - [CSS](https://en.wikipedia.org/wiki/CSS) used for the main site design and layout.
 - [CSS :root variables](https://www.w3schools.com/css/css3_variables.asp) used for reusable styles throughout the site.
-- [CSS Flexbox](https://www.w3schools.com/css/css3_flexbox.asp) used for an enhanced responsive layout.
-- [CSS Grid](https://www.w3schools.com/css/css_grid.asp) used for an enhanced responsive layout.
 - [JavaScript](https://www.javascript.com) used for user interaction on the site.
 - [Python](https://www.python.org) used as the back-end programming language.
+- [VSCode](https://code.visualstudio.com/) used for local IDE for development.
 - [Git](https://git-scm.com) used for version control. (`git add`, `git commit`, `git push`)
 - [GitHub](https://github.com) used for secure online code storage.
 - [GitHub Pages](https://pages.github.com) used for hosting the deployed front-end site.
-- [Gitpod](https://gitpod.io) used as a cloud-based IDE for development.
-- [Codeanywhere](https://codeanywhere.com) used as a cloud-based IDE for development.
-- [Bootstrap](https://getbootstrap.com) used as the front-end CSS framework for modern responsiveness and pre-built components.
 - [Materialize](https://materializecss.com) used as the front-end CSS framework for modern responsiveness and pre-built components.
 - [Flask](https://flask.palletsprojects.com) used as the Python framework for the site.
-- [Django](https://www.djangoproject.com) used as the Python framework for the site.
 - [MongoDB](https://www.mongodb.com) used as the non-relational database management with Flask.
-- [SQLAlchemy](https://www.sqlalchemy.org) used as the relational database management with Flask.
-- [PostgreSQL](https://www.postgresql.org) used as the relational database management.
-- [ElephantSQL](https://www.elephantsql.com) used as the Postgres database.
 - [Heroku](https://www.heroku.com) used for hosting the deployed back-end site.
-- [Cloudinary](https://cloudinary.com) used for online static file storage.
-- [Stripe](https://stripe.com) used for online secure payments of ecommerce products/services.
-- [AWS S3](https://aws.amazon.com/s3) used for online static file storage.
+- [Google Fonts](https://fonts.google.com/) used to search a suitable font and obtain a download link for that font.
+- [Font Awesome](https://fontawesome.com/) used to add GitHub icon to the footer and modal and search icon to the search button.
 
 ## Database Design
 
 My project uses a non-relational database with MongoDB, and therefore the database architecture
 doesn't have actual relationships like a relational database would.
 
-My database is called **task_manager**.
+My database is called **recipe_base**.
 
 It contains 3 collections:
 
@@ -355,7 +339,7 @@ It contains 3 collections:
     | _id | ObjectId() | |
     | category_name | String | |
 
-- **tasks**
+- **recipes**
     | Key | Type | Notes |
     | --- | --- | --- |
     | _id | ObjectId() | |
@@ -467,7 +451,7 @@ Or:
 - In the Terminal/CLI, connect to Heroku using this command: `heroku login -i`
 - Set the remote for Heroku: `heroku git:remote -a app_name` (replace *app_name* with your app name)
 - After performing the standard Git `add`, `commit`, and `push` to GitHub, you can now type:
-	- `git push heroku main`
+ 	- `git push heroku main`
 
 The project should now be connected and deployed to Heroku!
 
@@ -554,9 +538,9 @@ In order to do this, [Flask-Migrate](https://flask-migrate.readthedocs.io) was u
 
 - `pip3 install Flask-Migrate`
 - Import the newly installed package on your main `__init__.py` file:
-	- `from flask_migrate import Migrate`
+ 	- `from flask_migrate import Migrate`
 - Define **Migrate** in the same file after **app** and **db** are defined:
-	- `migrate = Migrate(app, db)`
+ 	- `migrate = Migrate(app, db)`
 - Initiate the migration changes in the terminal:
 
 ```shell
