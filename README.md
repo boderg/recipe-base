@@ -491,13 +491,7 @@ Use this space to discuss any differences between the local version you've devel
 
 ## Credits
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-In this section you need to reference where you got your content, media, and extra help from.
-It is common practice to use code from other repositories and tutorials,
-however, it is important to be very specific about these sources to avoid plagiarism.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+I would like to acknowledge all applicable content that has aided the creation of Recipe Base as outlined in the sections below.
 
 ### Content
 
@@ -543,15 +537,16 @@ by sending yourself the following command: `!freemedia`.
 
 | Source | Location | Type | Notes |
 | --- | --- | --- | --- |
-| [Pexels](https://www.pexels.com) | entire site | image | favicon on all pages |
-| [Lorem Picsum](https://picsum.photos) | home page | image | hero image background |
-| [Unsplash](https://unsplash.com) | product page | image | sample of fake products |
-| [Pixabay](https://pixabay.com) | gallery page | image | group of photos for gallery |
-| [Wallhere](https://wallhere.com) | footer | image | background wallpaper image in the footer |
-| [This Person Does Not Exist](https://thispersondoesnotexist.com) | testimonials | image | headshots of fake testimonial images |
-| [Audio Micro](https://www.audiomicro.com/free-sound-effects) | game page | audio | free audio files to generate the game sounds |
-| [Videvo](https://www.videvo.net/) | home page | video | background video on the hero section |
-| [TinyPNG](https://tinypng.com) | entire site | image | tool for image compression |
+| [Unsplash](https://unsplash.com/photos/gray-freestanding-range-oven-uGak0qtrphM?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) | Recipes and Categories Pages | Photo by - Becca Tapert | Used as a placeholder image on recipe and category cards |
+| [Unsplash](https://unsplash.com/photos/raw-meat-on-white-ceramic-plate-YlAmh_X_SsE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) | Categories Page | Photo by - Eiliv Aceron | Used as a title image on the meat categories card |
+| [Unsplash](https://unsplash.com/photos/headless-fishes-with-sliced-of-lemons-on-brown-wooden-chopping-board-BvXUtQhTQzk?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) | Categories Page | Photo by - Jeremy Stewart | Used as a title image on the fish categories card |
+| [Unsplash](https://unsplash.com/photos/two-rice-bowls-s7FuT9HYoxM?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) | Categories Page | Photo by - Luigi Pozzoli | Used as a title image on the rice categories card |
+| [Unsplash](https://unsplash.com/photos/soup-in-blue-and-white-ceramic-bowl-uBnIROT_p5M?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) | Categories Page | Photo by - Sven Brandsma | Used as a title image on the soup categories card |
+| [Unsplash](https://unsplash.com/photos/two-sliced-breads-with-avocado-on-top-QcUJLRMDryQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) | Categories Page | Photo by - Anna Pelzer | Used as a title image on the vegan categories card |
+| [Unsplash](https://unsplash.com/photos/cooked-food-on-black-frying-pan-gUU4MF87Ipw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) | Categories Page | Photo by - Christina Rumpf | Used as a title image on the vegetarian categories card |
+| [Free Images](https://www.freeimages.com/vector/grumpy-chef-4851986) | Home Page | SVG by openclipart.org | Used as a home page image |
+| [Free Images](https://www.freeimages.com/vector/chef-with-tray-5501732) | Home Page | SVG by Johnny Automatic | Used as a home page image |
+| [Night Cafe](https://creator.nightcafe.studio) | Profile Page |AI image generated using my account | Used as a profile placeholder image |
 
 ### Acknowledgements
 
