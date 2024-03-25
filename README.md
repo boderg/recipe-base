@@ -100,27 +100,27 @@ Here are some of the user stories for the Recipe Base site.
 
 ### New Site Users
 
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
+- As a new site user, I would like to view recipes, so that I can get some inspiration for different meals.
+- As a new site user, I would like to have an option to sign up easily, so that I can actively join a community.
+- As a new site user, I would like to be able to search for different ingredients , so that I can change up my mealtime variety.
+- As a new site user, I would like to be able to search for recipes with similar ingredients, so that I can see variations of of a meal.
+- As a new site user, I would like to see what the site is about, so that I can so that I can make an informed choice as to whether I should sign up or not.
 
 ### Returning Site Users
 
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
+- As a returning site user, I would like to be able to log in, so that I can access features available to signed up users.
+- As a returning site user, I would like to have a place to save my own recipes, so that I can retrieve them when I need to.
+- As a returning site user, I would like to have a place to save my recipes, so that I can share my creations with others.
+- As a returning site user, I would like to be able to view recipes by food type, so that I can find variations for a particular food type.
+- As a returning site user, I would like to be able to edit a recipe, so that I can adjust any changes I have made to my recipe.
 
 ### Site Admin
 
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
+- As a site administrator, I should be able to access the site, so that I can make changes to food categories.
+- As a site administrator, I should be able to access, so that I can create new food categories.
+- As a site administrator, I should be able to access the site, so that I can categorise recipes that have not been categorised by the owner, making them more easily accessible in searches.
+- As a site administrator, I should be able to access the site, so that I can delete fake entries (if created).
+- As a site administrator, I should be able to access the site, so that I can remove fake or malicious accounts.
 
 ## Wireframes
 
