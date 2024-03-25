@@ -13,7 +13,9 @@
 
 Here is a mockup of the Recipe Base site using the Am I Responsive website.
 
-![screenshot](documentation/mockups/mockup.png)
+| Mockup |
+| :---: |
+| ![screenshot](documentation/mockups/mockup.png) |
 
 ## UX
 
@@ -323,6 +325,7 @@ The following are the tools and technologies that were used in the creation of t
 - [Heroku](https://www.heroku.com) used for hosting the deployed back-end site.
 - [Google Fonts](https://fonts.google.com/) used to search a suitable font and obtain a download link for that font.
 - [Font Awesome](https://fontawesome.com/) used to add GitHub icon to the footer and modal and search icon to the search button.
+- [Lucid Chart](https://www.lucidchart.com/pages/) used to create the database model and website flowchart.
 
 ## Database Design
 
@@ -333,29 +336,25 @@ My database is called **recipe_base**.
 
 It contains 3 collections:
 
-- **categories**
-    | Key | Type | Notes |
-    | --- | --- | --- |
-    | _id | ObjectId() | |
-    | category_name | String | |
+- **users**
 
 - **recipes**
-    | Key | Type | Notes |
-    | --- | --- | --- |
-    | _id | ObjectId() | |
-    | category_name | String | selected from *categories* collection |
-    | task_name | String | |
-    | task_description | String | |
-    | is_urgent | String | |
-    | due_date | String | |
-    | created_by | String | selected from the *users* collection |
 
-- **users**
-    | Key | Type | Notes |
-    | --- | --- | --- |
-    | _id | ObjectId() | |
-    | username | String | |
-    | password | String | uses Secure Hash Algorithm (SHA) |
+- **categories**
+
+These are outlined in the diagrams below:
+
+| Database Model |
+| :---: |
+| ![screenshot](documentation/database-design/recipe-base-db-model.png) |
+
+## Website Flow
+
+A flowchart was created for the Recipe Base site to outline the general flow of the site and to give a graphical representation to show what is accesible to different types of user and how the site pages connect with each other.
+
+| Website Flowchart |
+| :---: |
+| ![screenshot](documentation/database-design/recipe-base-flowchart.png) |
 
 ## Testing
 
