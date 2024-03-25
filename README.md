@@ -20,6 +20,7 @@ Here is a mockup of the Recipe Base site using the Am I Responsive website.
 Here is the process behind the design of the Recipe Base site.
 
 - The design for Recipe Base started as a series of wireframes covering mobile, tablet and desktop formats to determine the initial design and layout of the site.
+- User stories were created to determine how a user might want to interact with the site.
 - A flowchart and database ERD were then designed to work out the flow of the site.
 - Recipe Base was designed with registered users in mind offering a safe storage of their saved recipes.
 - A classy look and feel was given to the site to help it stand out but also be easy on the eye.
