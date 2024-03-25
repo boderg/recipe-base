@@ -358,40 +358,15 @@ A flowchart was created for the Recipe Base site to outline the general flow of 
 
 ## Testing
 
-For all testing, please refer to the [TESTING.md](TESTING.md) file.
+For all testing of Recipe Base, please refer to the [TESTING.md](TESTING.md) file.
 
 ## Deployment
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-**IMPORTANT:**
-
-- Be sure to remove all instances of ElephantSQL/PostgreSQL/Flask-Migrate if you've only used a non-relational database with MongoDB
-- Be sure to remove all instances of MongoDB if you've only used a relational database with ElephantSQL/PostgreSQL
-- ⚠️ DO NOT update the environment variables to your own! These should NOT be included in this file; just demo values! ⚠️
-- ⚠️ DO NOT update the environment variables to your own! These should NOT be included in this file; just demo values! ⚠️
-- ⚠️ DO NOT update the environment variables to your own! These should NOT be included in this file; just demo values! ⚠️
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-The live deployed application can be found deployed on [Heroku](https://boderg-recipe-base-6a6e035e0009.herokuapp.com).
-
-### ElephantSQL Relational Database
-
-This project uses [ElephantSQL](https://www.elephantsql.com) for the PostgreSQL Database.
-
-To obtain your own Postgres Database, sign-up with your GitHub account, then follow these steps:
-
-- Click **Create New Instance** to start a new database.
-- Provide a name (this is commonly the name of the project: PLACEHOLDER-NAME).
-- Select the **Tiny Turtle (Free)** plan.
-- You can leave the **Tags** blank.
-- Select the **Region** and **Data Center** closest to you.
-- Once created, click on the new database name, where you can view the database URL and Password.
+The live deployed Recipe Base application can be found deployed on [Heroku](https://boderg-recipe-base-6a6e035e0009.herokuapp.com).
 
 ### MongoDB Non-Relational Database
 
-This project uses [MongoDB](https://www.mongodb.com) for the Non-Relational Database.
+The Recipe Base project uses [MongoDB](https://www.mongodb.com) for the Non-Relational Database.
 
 To obtain your own MongoDB Database URI, sign-up on their site, then follow these steps:
 
@@ -430,7 +405,7 @@ You can install this project's **requirements** (where applicable) using:
 
 - `pip3 install -r requirements.txt`
 
-If you have your own packages that have been installed, then the requirements file needs updated using:
+If you have your own packages that have been installed, then the requirements file needs to be updated using:
 
 - `pip3 freeze --local > requirements.txt`
 
@@ -450,13 +425,13 @@ Or:
 - In the Terminal/CLI, connect to Heroku using this command: `heroku login -i`
 - Set the remote for Heroku: `heroku git:remote -a app_name` (replace *app_name* with your app name)
 - After performing the standard Git `add`, `commit`, and `push` to GitHub, you can now type:
- 	- `git push heroku main`
+- `git push heroku main`
 
 The project should now be connected and deployed to Heroku!
 
 ### Local Deployment
 
-This project can be cloned or forked in order to make a local copy on your own system.
+The Recipe Base project can be cloned or forked in order to make a local copy on your own system.
 
 For either method, you will need to install any applicable packages found within the *requirements.txt* file.
 
