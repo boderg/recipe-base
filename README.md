@@ -124,92 +124,121 @@ Here are some of the user stories for the Recipe Base site.
 
 ## Wireframes
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-In this section, display your wireframe screenshots using a Markdown `table`.
-Instructions on how to do Markdown `tables` start on line #213 on this site: https://pandao.github.io/editor.md/en.html
-
-Alternatively, dropdowns are a way to condense several wireframes into a collapsible menu to save space.
-Dropdowns in Markdown are considered some of the only acceptable HTML components that are allowed for assessment purposes.
-
-**IMPORTANT**! **IMPORTANT**! **IMPORTANT**!
-The example below uses the `details` and `summary` code elements.
-However, for these scripts to work, I've had to add spaces within the `< >` elements.
-
-You MUST remove these spaces for it to work properly on your own README/TESTING files.
-Remove the spaces within the `< >` brackets for the `details` and `summary` code elements,
-for the Mobile, Tablet, and Desktop wireframes.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
 To follow best practice, wireframes were developed for mobile, tablet, and desktop sizes.
-I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wireframes.
+I've used [Balsamiq](https://balsamiq.com/wireframes) to design the Recipe Base site wireframes.
 
-### Mobile Wireframes
+<details>
+<summary>Click here to view the wireframes for the Recipe Base site.</summary>
 
-< details >
-< summary > Click here to see the Mobile Wireframes < / summary >
+### Home Page Wireframes
 
-Home
-  - ![screenshot](documentation/wireframes/mobile-home.png)
+| Mobile | Tablet | Desktop |
+| :---: | :---: | :---: |
+| ![screenshot](documentation/wireframes/recipe-base-mobile/home.png) | ![screenshot](documentation/wireframes/recipe-base-tablet%20/home.png) | ![screenshot](documentation/wireframes/recipe-base-desktop/home.png) |
 
-About
-  - ![screenshot](documentation/wireframes/mobile-about.png)
+### Registration Page Wireframes
 
-Contact
-  - ![screenshot](documentation/wireframes/mobile-contact.png)
+| Mobile | Tablet | Desktop |
+| :---: | :---: | :---: |
+| ![screenshot](documentation/wireframes/recipe-base-mobile/register.png) | ![screenshot](documentation/wireframes/recipe-base-tablet%20/register.png) | ![screenshot](documentation/wireframes/recipe-base-desktop/register.png) |
 
-Gallery
-  - ![screenshot](documentation/wireframes/mobile-gallery.png)
+### Log In Page Wireframes
 
-etc.
-  - repeat for any remaining mobile wireframes
+| Mobile | Tablet | Desktop |
+| :---: | :---: | :---: |
+| ![screenshot](documentation/wireframes/recipe-base-mobile/log-in.png) | ![screenshot](documentation/wireframes/recipe-base-tablet%20/log-in.png) | ![screenshot](documentation/wireframes/recipe-base-desktop/log-in.png) |
 
-< / details >
+### Recipes Page Wireframes
 
-### Tablet Wireframes
+| Mobile | Tablet | Desktop |
+| :---: | :---: | :---: |
+| ![screenshot](documentation/wireframes/recipe-base-mobile/recipes.png) | ![screenshot](documentation/wireframes/recipe-base-tablet%20/recipes.png) | ![screenshot](documentation/wireframes/recipe-base-desktop/recipes.png) |
 
-< details >
-< summary > Click here to see the Tablet Wireframes < / summary >
+### Recipe Page Wireframes
 
-Home
-  - ![screenshot](documentation/wireframes/tablet-home.png)
+| Mobile | Tablet | Desktop |
+| :---: | :---: | :---: |
+| ![screenshot](documentation/wireframes/recipe-base-mobile/recipe.png) | ![screenshot](documentation/wireframes/recipe-base-tablet%20/recipe.png) | ![screenshot](documentation/wireframes/recipe-base-desktop/recipe.png) |
 
-About
-  - ![screenshot](documentation/wireframes/tablet-about.png)
+### Categories Page Wireframes
 
-Contact
-  - ![screenshot](documentation/wireframes/tablet-contact.png)
+| Mobile | Tablet | Desktop |
+| :---: | :---: | :---: |
+| ![screenshot](documentation/wireframes/recipe-base-mobile/categories.png) | ![screenshot](documentation/wireframes/recipe-base-tablet%20/categories.png) | ![screenshot](documentation/wireframes/recipe-base-desktop/categories.png) |
 
-Gallery
-  - ![screenshot](documentation/wireframes/tablet-gallery.png)
+### Category Page Wireframes
 
-etc.
-  - repeat for any remaining tablet wireframes
+| Mobile | Tablet | Desktop |
+| :---: | :---: | :---: |
+| ![screenshot](documentation/wireframes/recipe-base-mobile/category.png) | ![screenshot](documentation/wireframes/recipe-base-tablet%20/category.png) | ![screenshot](documentation/wireframes/recipe-base-desktop/category.png) |
 
-< / details >
+### Profile Page Wireframes
 
-### Desktop Wireframes
+| Mobile | Tablet | Desktop |
+| :---: | :---: | :---: |
+| ![screenshot](documentation/wireframes/recipe-base-mobile/profile.png) | ![screenshot](documentation/wireframes/recipe-base-tablet%20/profile.png) | ![screenshot](documentation/wireframes/recipe-base-desktop/profile.png) |
 
-< details >
-< summary > Click here to see the Desktop Wireframes < / summary >
+### Add Recipe Page Wireframes
 
-Home
-  - ![screenshot](documentation/wireframes/desktop-home.png)
+| Mobile | Tablet | Desktop |
+| :---: | :---: | :---: |
+| ![screenshot](documentation/wireframes/recipe-base-mobile/add-recipe.png) | ![screenshot](documentation/wireframes/recipe-base-tablet%20/add-recipe.png) | ![screenshot](documentation/wireframes/recipe-base-desktop/add-recipe.png) |
 
-About
-  - ![screenshot](documentation/wireframes/desktop-about.png)
+### Add Category Page Wireframes
 
-Contact
-  - ![screenshot](documentation/wireframes/desktop-contact.png)
+| Mobile | Tablet | Desktop |
+| :---: | :---: | :---: |
+| ![screenshot](documentation/wireframes/recipe-base-mobile/add-category.png) | ![screenshot](documentation/wireframes/recipe-base-tablet%20/add-category.png) | ![screenshot](documentation/wireframes/recipe-base-desktop/add-category.png) |
 
-Gallery
-  - ![screenshot](documentation/wireframes/desktop-gallery.png)
+### Edit Recipe Page Wireframes
 
-etc.
-  - repeat for any remaining desktop wireframes
+| Mobile | Tablet | Desktop |
+| :---: | :---: | :---: |
+| ![screenshot](documentation/wireframes/recipe-base-mobile/edit-recipe.png) | ![screenshot](documentation/wireframes/recipe-base-tablet%20/edit-recipe.png) | ![screenshot](documentation/wireframes/recipe-base-desktop/edit-recipe.png) |
 
-< / details >
+### Edit Category Page Wireframes
+
+| Mobile | Tablet | Desktop |
+| :---: | :---: | :---: |
+| ![screenshot](documentation/wireframes/recipe-base-mobile/edit-category.png) | ![screenshot](documentation/wireframes/recipe-base-tablet%20/edit-category.png) | ![screenshot](documentation/wireframes/recipe-base-desktop/edit-category.png) |
+
+### Edit Profile Page Wireframes
+
+| Mobile | Tablet | Desktop |
+| :---: | :---: | :---: |
+| ![screenshot](documentation/wireframes/recipe-base-mobile/edit-profile.png) | ![screenshot](documentation/wireframes/recipe-base-tablet%20/edit-profile.png) | ![screenshot](documentation/wireframes/recipe-base-desktop/edit-profile.png) |
+
+### Flash Messages Wireframes
+
+| Mobile | Tablet | Desktop |
+| :---: | :---: | :---: |
+| ![screenshot](documentation/wireframes/recipe-base-mobile/flash-banner.png) | ![screenshot](documentation/wireframes/recipe-base-tablet%20/flash-baner.png) | ![screenshot](documentation/wireframes/recipe-base-desktop/flash-banner.png) |
+
+### Delete Modal (Page Bottom) Wireframes
+
+| Mobile | Tablet | Desktop |
+| :---: | :---: | :---: |
+| ![screenshot](documentation/wireframes/recipe-base-mobile/delete-modal.png) | ![screenshot](documentation/wireframes/recipe-base-tablet%20/delete-modal.png) | ![screenshot](documentation/wireframes/recipe-base-desktop/delete-modal.png) |
+
+### Side Navigation Wireframes
+
+| Mobile | Tablet |
+| :---: | :---: |
+| ![screenshot](documentation/wireframes/recipe-base-mobile/side-navigation.png) | ![screenshot](documentation/wireframes/recipe-base-tablet%20/side-navigation.png) |
+
+### Error 404 Page Wireframes
+
+| Mobile | Tablet | Desktop |
+| :---: | :---: | :---: |
+| ![screenshot](documentation/wireframes/recipe-base-mobile/404.png) | ![screenshot](documentation/wireframes/recipe-base-tablet%20/404.png) | ![screenshot](documentation/wireframes/recipe-base-desktop/404.png) |
+
+### Error 500 Page Wireframes
+
+| Mobile | Tablet | Desktop |
+| :---: | :---: | :---: |
+| ![screenshot](documentation/wireframes/recipe-base-mobile/500.png) | ![screenshot](documentation/wireframes/recipe-base-tablet%20/500.png) | ![screenshot](documentation/wireframes/recipe-base-desktop/500.png) |
+
+</details>
 
 ## Features
 
