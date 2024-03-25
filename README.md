@@ -379,7 +379,7 @@ To obtain your own MongoDB Database URI, sign-up on their site, then follow thes
 
 ### Heroku Deployment
 
-This project uses [Heroku](https://www.heroku.com), a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
+The Recipe Base project uses [Heroku](https://www.heroku.com), a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
 
 Deployment steps are as follows, after account setup:
 
@@ -437,54 +437,6 @@ For either method, you will need to install any applicable packages found within
 
 - `pip3 install -r requirements.txt`.
 
-If you are using SQLAlchemy for your project, you need to create a local PostgreSQL database.
-In this example, the example database name is **db-name**.
-
-```shell
-workspace (branch) $ set_pg
-workspace (branch) $ psql
-
-... connection to postgres ...
-
-postgres=# CREATE DATABASE db-name;
-CREATE DATABASE
-postgres=# \c db-name;
-You are now connected to database "db-name" as user "foobar".
-db-name=# \q
-```
-
-Once that database is created, you must migrate the database changes from your models.py file.
-This example uses **app-name** for the name of the primary Flask application.
-
-```shell
-workspace (branch) $ python3
-
-... connection to Python CLI ...
-
->>> from app-name import db
->>> db.create_all()
->>> exit()
-```
-
-To confirm that the database table(s) have been created, you can use the following:
-
-```shell
-workspace (branch) $ psql -d db-name
-
-... connection to postgres ...
-
-postgres=# \dt
-
-	List of relations
-Schema | Name | Type | Owner
--------+------+------+--------
-public | blah1 | table | foobar
-public | blah2 | table | foobar
-public | blah3 | table | foobar
-
-db-name=# \q
-```
-
 You will need to create a new file called `env.py` at the root-level,
 and include the same environment variables listed above from the Heroku deployment steps, plus a few extras.
 
@@ -498,51 +450,19 @@ os.environ.setdefault("MONGO_DBNAME", "user's own value")
 os.environ.setdefault("MONGO_URI", "user's own value")
 os.environ.setdefault("PORT", "5000")
 os.environ.setdefault("SECRET_KEY", "user's own value")
-
-# local environment only (do not include these in production/deployment!)
-os.environ.setdefault("DB_URL", "user's own value")
-os.environ.setdefault("DEBUG", "True")
-os.environ.setdefault("DEVELOPMENT", "True")
-```
-
-If using Flask-Migrate, make sure to include the following steps as well.
-
-During the course of development, it became necessary to update the PostgreSQL data models.
-In order to do this, [Flask-Migrate](https://flask-migrate.readthedocs.io) was used.
-
-- `pip3 install Flask-Migrate`
-- Import the newly installed package on your main `__init__.py` file:
- 	- `from flask_migrate import Migrate`
-- Define **Migrate** in the same file after **app** and **db** are defined:
- 	- `migrate = Migrate(app, db)`
-- Initiate the migration changes in the terminal:
-
-```shell
-workspace (branch) $ flask db init
-
-	... generating migrations ...
-
-workspace (branch) $ set_pg
-workspace (branch) $ flask db migrate -m "Add a commit message for this migration"
-
-	... migrating changes ...
-
-workspace (branch) $ flask db upgrade
-
-	... updating database ...
 ```
 
 #### Cloning
 
-You can clone the repository by following these steps:
+You can clone the Recipe Base repository by following these steps:
 
-1. Go to the [GitHub repository](https://github.com/boderg/recipe-base) 
-2. Locate the Code button above the list of files and click it 
+1. Go to the [Recipe Base GitHub repository](https://github.com/boderg/recipe-base)
+2. Locate the Code button above the list of files and click it
 3. Select if you prefer to clone using HTTPS, SSH, or GitHub CLI and click the copy button to copy the URL to your clipboard
 4. Open Git shell or Terminal
 5. Change the current working directory to the one where you want the cloned directory
 6. In your IDE Terminal, type the following command to clone my repository:
-	- `git clone https://github.com/boderg/recipe-base.git`
+  -`git clone https://github.com/boderg/recipe-base.git`
 7. Press Enter to create your local clone.
 
 Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
@@ -557,7 +477,7 @@ A tutorial on how to do that can be found [here](https://www.gitpod.io/docs/conf
 By forking the GitHub Repository, we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original owner's repository.
 You can fork this repository by using the following steps:
 
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/boderg/recipe-base)
+1. Log in to GitHub and locate the [Recipe Base GitHub Repository](https://github.com/boderg/recipe-base)
 2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
 3. Once clicked, you should now have a copy of the original repository in your own GitHub account!
 
