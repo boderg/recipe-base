@@ -245,24 +245,12 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design the Recipe Base 
 
 ## Features
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-In this section, you should go over the different parts of your project,
-and describe each in a sentence or so.
-
-You will need to explain what value each of the features provides for the user,
-focusing on who this website is for, what it is that they want to achieve,
-and how your project is the best way to help them achieve these things.
-
-For some/all of your features, you may choose to reference the specific project files that implement them.
-
-IMPORTANT: Remember to always include a screenshot of each individual feature!
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
 Here are features of the Recipe Base site:
 
 ### Existing Features
+
+<details>
+<summary>Click here to view existing features</summary>
 
 | Feature Title | Feature Description | Feature Screenshot |
 | :---: | :---: | :---: |
@@ -271,7 +259,7 @@ Here are features of the Recipe Base site:
 | Dynamic Navigation Bar  | This performs the navigation for the site and the nav buttons change dynamically according to what type of user is on the site. This is implemented by Jinja2 statements in the base.html file. | ![screenshot](documentation/feature01.png) |
 | Feature Cards | These are dynamic links that display differently to registered and non registered users. If a non registered user is on the site they open modals and the register page prompting sign up. If a user is signed in they direct the user to the add recipe and recipes pages. This is implemented by Jinja2 statements in the home.html file. | ![screenshot](documentation/feature01.png) |
 | Footer | This is where the links to social sites and my GitHub are to be found. | ![screenshot](documentation/feature01.png) |
-| Search Bar | This is where registered users can search for recipes by title, ingredient or description. This uses a "" search type. Users can press enter or click the 'Search' button to submit a search. The 'Reset' button restores the recipes page to normal. | ![screenshot](documentation/feature01.png) |
+| Search Bar | This is where registered users can search for recipes by title, ingredient or description. This uses an 'Inclusive' search type to show more results. Users can press enter or click the 'Search' button to submit a search. The 'Reset' button restores the recipes page to normal. | ![screenshot](documentation/feature01.png) |
 | Recipe Cards | This where a simple view of the recipe is held. Clicking the elipsis will open the restricted quick view of a recipe. Clicking the 'Full View' button will open the full recipe which is only accessible to registered signed in users. | ![screenshot](documentation/feature01.png) |
 | Recipe Page Buttons | This is where signed in users can navigate to edit or delete their own recipes. The 'Back' button goes back to the recipes page, the 'Edit' button goes to the edit recipe page and the 'Delete' button allows for deletion of the recipe via a delete modal pop up. | ![screenshot](documentation/feature01.png) |
 | Add Recipe Form | This is where signed in users can add their own recipes. | ![screenshot](documentation/feature01.png) |
@@ -296,16 +284,20 @@ Here are features of the Recipe Base site:
 
 The signed in and admin user only features are all implemented with Jinja2 statements in the navigation sections of the base.html file along with the if `session.get("user"):` statements in the functions of the app.py file.
 
+</details>
+
 ### Future Features
 
 Some future features that would be a good addition could be:
 
-- Title for future feature #1
-  - Any additional notes about this feature.
-- Title for future feature #2
-  - Any additional notes about this feature.
-- Title for future feature #3
-  - Any additional notes about this feature.
+- Profile View
+  - Allow signed in users to view the profiles of of other recipe creators.
+- Contact Form
+  - Allow signed in users to contact site admin to make suggestions or changes to recipes, categories and profiles.
+- Community Messaging
+  - Add a message board for signed in users to contact each other to share tips and tricks etc.
+- Rating System
+  - Add a rating system so users can rate recipes and the top 3 each month will be displayed on the home page.
 
 ## Tools & Technologies Used
 
