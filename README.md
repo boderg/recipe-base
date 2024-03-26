@@ -260,44 +260,45 @@ IMPORTANT: Remember to always include a screenshot of each individual feature!
 
 🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
+Here are features of the Recipe Base site:
+
 ### Existing Features
 
-- **Title for feature #1**
+| Feature Title | Feature Description | Feature Screenshot |
+| :---: | :---: | :---: |
+| Home Page | This is the site landing page which gives an indication as to what the site is for. | ![screenshot](documentation/feature01.png) |
+| Brand logo | This doubles as a home button and returns users to the home page.| ![screenshot](documentation/feature01.png) |
+| Dynamic Navigation Bar  | This performs the navigation for the site and the nav buttons change dynamically according to what type of user is on the site. This is implemented by Jinja2 statements in the base.html file. | ![screenshot](documentation/feature01.png) |
+| Feature Cards | These are dynamic links that display differently to registered and non registered users. If a non registered user is on the site they open modals and the register page prompting sign up. If a user is signed in they direct the user to the add recipe and recipes pages. This is implemented by Jinja2 statements in the home.html file. | ![screenshot](documentation/feature01.png) |
+| Footer | This is where the links to social sites and my GitHub are to be found. | ![screenshot](documentation/feature01.png) |
+| Search Bar | This is where registered users can search for recipes by title, ingredient or description. This uses a "" search type. Users can press enter or click the 'Search' button to submit a search. The 'Reset' button restores the recipes page to normal. | ![screenshot](documentation/feature01.png) |
+| Recipe Cards | This where a simple view of the recipe is held. Clicking the elipsis will open the restricted quick view of a recipe. Clicking the 'Full View' button will open the full recipe which is only accessible to registered signed in users. | ![screenshot](documentation/feature01.png) |
+| Recipe Page Buttons | This is where signed in users can navigate to edit or delete their own recipes. The 'Back' button goes back to the recipes page, the 'Edit' button goes to the edit recipe page and the 'Delete' button allows for deletion of the recipe via a delete modal pop up. | ![screenshot](documentation/feature01.png) |
+| Add Recipe Form | This is where signed in users can add their own recipes. | ![screenshot](documentation/feature01.png) |
+| Edit Recipe Form | This is where signed in users can edit a recipe they have added to the database. Lines are auto populated with the data from the recipe selected. This is implemented using Jinja2 expressions in the value fields of the inputs in the html code. | ![screenshot](documentation/feature01.png) |
+| Plus / Minus Icons | These allow signed in users to add and remove input fields as they add or edit their recipes. This is implemented by two simple JavaScript functions ('addItem' and 'removeItem') in the script.js file. | ![screenshot](documentation/feature01.png) |
+| Dropdown Selector | This is where signed in users can select the various food categories that their recipe might fall under. This selection choice aids with the searching of recipes. | ![screenshot](documentation/feature01.png) |
+| Add Recipe Buttons | This is where signed in users submit their recipe to the database. The 'Add Recipe' button submits to the database and the 'Cancel' button returns the user back to the recipes page cancelling the add recipe function. | ![screenshot](documentation/feature01.png) |
+| Edit Recipe Buttons | This is where signed in users can submit their edited recipe to the database. The 'Update Recipe' button submits the edits to the database and the 'Cancel' button returns the the user back to the recipes page cancelling the edit recipe function. | ![screenshot](documentation/feature01.png) |
+| Category Cards | This is where a simple view of the food category is held. Clicking the 'View Category' button takes the user to that categories page displaying any recipes in that category as defined by the dropdown selector in the add recipes form. | ![screenshot](documentation/feature01.png) |
+| Additional Category Card Features | These features are only accessible to the Recipe Base administrator. The 'Edit' button allows for editing of the category name and image and the 'Delete' button allows for deletion of the category via a delete modal pop up. The 'Updated on' allows the admin to see when the card was last updated. | ![screenshot](documentation/feature01.png) |
+| Edit Category Buttons | The 'Update Category' button submits the category updates to the database. The 'Cancel' button returns the admin back to the categories page cancelling the edit category function. | ![screenshot](documentation/feature01.png) |
+| Add Category | This is a navigation function only available to the Recipe Base administrator and allows the admin to add categories. | ![screenshot](documentation/feature01.png) |
+| Add Category Buttons | The 'Add Category' button submits the new category to the database. The 'Cancel' button returns the admin to the categories page cancelling the add category function. | ![screenshot](documentation/feature01.png) |
+| Edit Profile Button | This button allows signed in users to edit their profile details by takign the user to an edit profile page.  | ![screenshot](documentation/feature01.png) |
+| Edit Profile Form | This is where signed in users can edit their name, email and bio. They can also add a new url for their profile image. | ![screenshot](documentation/feature01.png) |
+| Edit Profile Form Buttons | This is where the user sumbits their edits to the database. The 'Update Profile' button submits the edits to the database, the 'Cancel' button returns the user to the profile page cancelling the function and the 'Delete Profile' button allows for deletion of their profile via a delete modal pop up.  | ![screenshot](documentation/feature01.png) |
+| Log Out | This is where the user can log out of the site. | ![screenshot](documentation/feature01.png) |
+| Register Form | This is where the user can sign up to the site enabling them to access signed in only features. | ![screenshot](documentation/feature01.png) |
+| Log In Form | This is where a signed up user can log in to their account and access signed in only features. | ![screenshot](documentation/feature01.png) |
+| Sign Up Link | This allows for non registered users to quickly navigate to the Register page. | ![screenshot](documentation/feature01.png) |
+| Log In Link | This allows for signed up users to quickly navigate to the Log In page. | ![screenshot](documentation/feature01.png) |
 
-  - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
-
-![screenshot](documentation/feature01.png)
-
-- **Title for feature #2**
-
-  - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
-
-![screenshot](documentation/feature02.png)
-
-- **Title for feature #3**
-
-  - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
-
-![screenshot](documentation/feature03.png)
-
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Repeat as necessary for as many features as your site contains.
-
-Hint: the more, the merrier!
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+The signed in and admin user only features are all implemented with Jinja2 statements in the navigation sections of the base.html file along with the if `session.get("user"):` statements in the functions of the app.py file.
 
 ### Future Features
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Do you have additional ideas that you'd like to include on your project in the future?
-Fantastic! List them here!
-It's always great to have plans for future improvements!
-Consider adding any helpful links or notes to help remind you in the future, if you revisit the project in a couple years.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+Some future features that would be a good addition could be:
 
 - Title for future feature #1
   - Any additional notes about this feature.
