@@ -1,3 +1,5 @@
+/* jshint esversion: 11, jquery: true */
+
 // Materialize functionality
 
 $(document).ready(function () {
