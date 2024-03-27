@@ -21,7 +21,6 @@
         <title>Recipe Base</title>
     </head>
 
-
     <body>
 
         <header>
@@ -67,10 +66,10 @@
                 <li><a href="{{ url_for('login') }}"><i class="fas fa-right-to-bracket prefix"></i>Log In</a></li>
                 {% endif %}
             </ul>
-
         </header>
+
         <!-- flash-banner -->
-        <div class="flash-banner">
+        <section class="flash-banner">
             {% with messages = get_flashed_messages() %}
             {% if messages %}
             {% for message in messages %}
@@ -80,12 +79,14 @@
             {% endfor %}
             {% endif %}
             {% endwith %}
-        </div>
+        </section>
+
         <!-- main content -->
         <main class="container">
             {% block content %}
             {% endblock %}
         </main>
+
         <!-- footer -->
         <footer class="page-footer">
             <div class="container footer">
@@ -123,6 +124,7 @@
             </div>
         </footer>
 
+        <!-- modals -->
         <div id="modal1" class="modal">
             <div class="modal-content">
                 <h4>Save your recipes</h4>
