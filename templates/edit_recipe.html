@@ -66,7 +66,7 @@
                 <div class="input-field col s12" id="list2">
                     <i class="fas fa-list prefix"></i>
                     {% for ingredient in recipe.optional_ingredients %}
-                    <input id="optional_ingredients" name="optional_ingredients" value="{{ ingredient }}" type="text" class="validate">
+                    <input id="optional_ingredients_{{ loop.index }}" name="optional_ingredients" value="{{ ingredient }}" type="text" class="validate">
                     {% endfor %}
                     <i class="fas fa-plus tooltipped" data-position="left" data-tooltip="Use the '+' and '-' buttons to add or remove lines."
                     onclick="addItem('list2', 'optional_ingredients')"></i>
@@ -80,7 +80,7 @@
                 <div class="input-field col s12" id="list3">
                     <i class="fas fa-list prefix"></i>
                     {% for instruction in recipe.preparation_method %}
-                    <input id="preparation_method" name="preparation_method" value="{{ instruction }}" type="text" class="validate">
+                    <input id="preparation_method_{{ loop.index }}" name="preparation_method" value="{{ instruction }}" type="text" class="validate">
                     {% endfor %}
                     <i class="fas fa-plus tooltipped" data-position="left" data-tooltip="Use the '+' and '-' buttons to add or remove lines." 
                     onclick="addItem('list3', 'preparation_method')"></i>
@@ -94,7 +94,7 @@
                 <div class="input-field col s12" id="list4">
                     <i class="fas fa-list prefix"></i>
                     {% for instruction in recipe.cooking_method %}
-                    <input id="cooking_method" name="cooking_method" value="{{ instruction }}" type="text"
+                    <input id="cooking_method_{{ loop.index }}" name="cooking_method" value="{{ instruction }}" type="text"
                         class="validate" >
                     {% endfor %}
                     <i class="fas fa-plus tooltipped" data-position="left" data-tooltip="Use the '+' and '-' buttons to add or remove lines."
