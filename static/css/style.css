@@ -285,6 +285,12 @@ label {
     color: var(--text-main) !important;
 }
 
+input.select-dropdown.dropdown-trigger {
+    color: var(--text-main);
+    font-family: 'Karma', serif;
+    font-style: italic;
+}
+
 ::placeholder {
     color: var(--text-main);
     font-family: 'Karma', serif;
