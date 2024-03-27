@@ -48,8 +48,8 @@
 
                 <!-- add ingredients -->
                 <div class="col s12">
-                    <label for="main_ingredients">Main Ingredients</label>
-                <div class="input-field col s12" id="list1">
+                    <label>Main Ingredients</label>
+                    <div class="input-field col s12" id="list1">
                     <i class="fas fa-list prefix"></i>
                     {% for ingredient in recipe.main_ingredients %}
                     <label for="main_ingredients_{{ loop.index }}"></label>
@@ -63,7 +63,7 @@
 
                 <!-- add optional ingredients -->
                 <div class="col s12">
-                    <label for="optional_ingredients">Optional Ingredients</label>
+                    <label>Optional Ingredients</label>
                 <div class="input-field col s12" id="list2">
                     <i class="fas fa-list prefix"></i>
                     {% for ingredient in recipe.optional_ingredients %}
@@ -78,7 +78,7 @@
 
                 <!-- add preparation instructions -->
                 <div class="col s12">
-                    <label for="preparation_method">Preparation Instructions</label>
+                    <label>Preparation Instructions</label>
                 <div class="input-field col s12" id="list3">
                     <i class="fas fa-list prefix"></i>
                     {% for instruction in recipe.preparation_method %}
@@ -93,7 +93,7 @@
 
             <!-- add cooking instructions -->
             <div class="col s12">
-                <label for="cooking_method">Cooking Instructions</label>
+                <label>Cooking Instructions</label>
                 <div class="input-field col s12" id="list4">
                     <i class="fas fa-list prefix"></i>
                     {% for instruction in recipe.cooking_method %}
@@ -112,7 +112,6 @@
                 <label for="preparation_time">Preparation Time</label>
                 <div class="input-field col s12 tooltipped" data-position="left" data-tooltip="Enter time value">
                         <i class="fas fa-clock prefix"></i>
-                        <!-- <label for="preparation_time">Preparation Time</label> -->
                         <input id="preparation_time" name="preparation_time" value="{{ recipe.preparation_time }}"
                             type="time" step="60" class="validate">
                 </div>
@@ -123,7 +122,6 @@
                 <label for="cooking_time">Cooking Time</label>
                 <div class="input-field col s12 tooltipped" data-position="left" data-tooltip="Enter time value">
                         <i class="fas fa-clock prefix"></i>
-                        <!-- <label for="cooking_time">Cooking Time</label> -->
                         <input id="cooking_time" name="cooking_time" value="{{ recipe.cooking_time }}" type="time"
                             step="60" class="validate">
                 </div>
@@ -144,7 +142,6 @@
                         {% endif %}
                         {% endfor %}
                     </select>
-                    <!-- <label for="category_name">Select your recipe's food categories from the dropdown. Pick all options that apply.</label> -->
                 </div>
             </div>
 
