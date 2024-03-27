@@ -283,7 +283,7 @@ Here are features of the Recipe Base site:
 | Log In Link | This allows for signed up users to quickly navigate to the Log In page. | ![screenshot](documentation/existing-features/login-link.png) |
 |Flash Banners| These flash up on the screen when an action ahs been performed such as on login, logout, recipe and category additions and updates and profile updates | ![screenshot](documentation/existing-features/recipe-success-flash.png) ![screenshot](documentation/existing-features/category-success-flash.png) |
 
-The signed in and admin user only features are all implemented with Jinja2 statements in the navigation sections of the base.html file along with the if `session.get("user"):` statements in the functions of the app.py file.
+The signed in and admin user only features are all implemented with Jinja2 statements in the navigation sections of the base.html file along with the `if session.get("user"):` statements in the functions of the app.py file.
 
 </details>
 
@@ -477,7 +477,7 @@ You can fork this repository by using the following steps:
 
 ### Local VS Deployment
 
-There are no discernable differences between the development Recipe Base site and the Heroku deployed recipe Base site.
+There are no discernable differences between the development Recipe Base site and the Heroku deployed Recipe Base site.
 
 ## Credits
 
@@ -515,6 +515,6 @@ I would like to acknowledge all applicable content that has aided the creation o
 - I would like to thank my Code Institute mentor, [Chris Quinn](https://github.com/10xOXR) for their support throughout the development of this project.
 - I would like to thank my previous Code Institute mentor, [Tim Nelson](https://github.com/TravelTimN) for their encouragement to continue my journey after my one project course had finished.
 - I would like to thank [Code Institute](https://codeinstitute.net) for giving me the opportunity to complete the 4P course.
-- I would like to thank the [Code Institute](https://codeinstitute.net) facilitator team [Amy Richardson](https://github.com/amylour) for their advice.
+- I would like to thank my [Code Institute](https://codeinstitute.net) facilitator [Amy Richardson](https://github.com/amylour) for their advice.
 - I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) for the moral support and general information that helps with my studies.
 - I would like to thank my family, for their support and understanding, for believing in me, and allowing me to make this transition into software development.
