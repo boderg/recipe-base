@@ -129,11 +129,11 @@
 
                 <!-- select categories -->
                 <div class="col s12">
-                <label for="category_name">Select your recipe's food categories from the dropdown. Pick all options that apply.</label>
+                <label for="category_name">Select your recipe's food categories from the dropdown.</label>
                 <div class="input-field col s12">
                     <i class="fas fa-folder-open prefix"></i>
                     <select multiple title="category_name" name="category_name" id="category_name">
-                        <option value="category_name" disabled selected></option>
+                        <option value="" disabled selected>Select all that apply</option>
                         {% for category in categories %}
                         {% if category.category_name == recipe.category_name %}
                             <option value="{{ category.category_name }}">{{ category.category_name.capitalize() }}</option>
