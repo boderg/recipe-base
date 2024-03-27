@@ -52,7 +52,8 @@
                 <div class="input-field col s12" id="list1">
                     <i class="fas fa-list prefix"></i>
                     {% for ingredient in recipe.main_ingredients %}
-                    <input id="main_ingredients_{{ loop.index }}" name="main_ingredients" value="{{ ingredient }}" type="text" class="validate">
+                    <label for="main_ingredients_{{ loop.index }}"></label>
+                    <input id="main_ingredients_{{ loop.index }}" name="main_ingredients[]" value="{{ ingredient }}" type="text" class="validate">
                     {% endfor %}
                     <i class="fas fa-plus tooltipped" data-position="left" data-tooltip="Use the '+' and '-' buttons to add or remove lines." 
                     onclick="addItem('list1', 'main_ingredients')"></i>
@@ -66,7 +67,8 @@
                 <div class="input-field col s12" id="list2">
                     <i class="fas fa-list prefix"></i>
                     {% for ingredient in recipe.optional_ingredients %}
-                    <input id="optional_ingredients_{{ loop.index }}" name="optional_ingredients" value="{{ ingredient }}" type="text" class="validate">
+                    <label for="optional_ingredients_{{ loop.index }}"></label>
+                    <input id="optional_ingredients_{{ loop.index }}" name="optional_ingredients[]" value="{{ ingredient }}" type="text" class="validate">
                     {% endfor %}
                     <i class="fas fa-plus tooltipped" data-position="left" data-tooltip="Use the '+' and '-' buttons to add or remove lines."
                     onclick="addItem('list2', 'optional_ingredients')"></i>
@@ -80,7 +82,8 @@
                 <div class="input-field col s12" id="list3">
                     <i class="fas fa-list prefix"></i>
                     {% for instruction in recipe.preparation_method %}
-                    <input id="preparation_method_{{ loop.index }}" name="preparation_method" value="{{ instruction }}" type="text" class="validate">
+                    <label for="preparation_method_{{ loop.index }}"></label>
+                    <input id="preparation_method_{{ loop.index }}" name="preparation_method[]" value="{{ instruction }}" type="text" class="validate">
                     {% endfor %}
                     <i class="fas fa-plus tooltipped" data-position="left" data-tooltip="Use the '+' and '-' buttons to add or remove lines." 
                     onclick="addItem('list3', 'preparation_method')"></i>
@@ -94,7 +97,8 @@
                 <div class="input-field col s12" id="list4">
                     <i class="fas fa-list prefix"></i>
                     {% for instruction in recipe.cooking_method %}
-                    <input id="cooking_method_{{ loop.index }}" name="cooking_method" value="{{ instruction }}" type="text"
+                    <label for="cooking_method_{{ loop.index }}"></label>
+                    <input id="cooking_method_{{ loop.index }}" name="cooking_method[]" value="{{ instruction }}" type="text"
                         class="validate" >
                     {% endfor %}
                     <i class="fas fa-plus tooltipped" data-position="left" data-tooltip="Use the '+' and '-' buttons to add or remove lines."
