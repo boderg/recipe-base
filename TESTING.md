@@ -29,7 +29,7 @@ All pages were validated by URI and the results are as follows:
 | Add Category | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fboderg-recipe-base-6a6e035e0009.herokuapp.com%2Fadd_category) | ![screenshot](documentation/validation/html/add-category.png) | Pass: No Errors  |
 | Edit Category | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fboderg-recipe-base-6a6e035e0009.herokuapp.com%2Fedit_category%2F65fb090abb5a2091ffa80827) | ![screenshot](documentation/validation/html/edit-category.png) | Pass: No Errors  |
 | Profile | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fboderg-recipe-base-6a6e035e0009.herokuapp.com%2Fprofile%2Fadmin) | ![screenshot](documentation/validation/html/profile.png) | Pass: No Errors  |
-| Edit Profile | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fboderg-recipe-base-6a6e035e0009.herokuapp.com%2Fedit_profile%2Fadmin) | ![screenshot](documentation/validation/html) | Pass: No Errors  |
+| Edit Profile | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fboderg-recipe-base-6a6e035e0009.herokuapp.com%2Fedit_profile%2Fadmin) | ![screenshot](documentation/validation/html/edit-profile.png) | Pass: No Errors  |
 | Log In | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fboderg-recipe-base-6a6e035e0009.herokuapp.com%2Flogin) | ![screenshot](documentation/validation/html/login-no-error.png) | Pass: No Errors  |
 | Register | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fboderg-recipe-base-6a6e035e0009.herokuapp.com%2Fregister) | ![screenshot](documentation/validation/html/register-no-error.png) | Pass: No Errors  |
 
