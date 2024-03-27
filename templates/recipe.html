@@ -82,13 +82,12 @@
         <!-- date created -->
         <h5>Date created: {{ recipe.created_on }}</h5>
         <!-- category -->
-        <h5>Category:
-            <ul class="category-list">
-                {% for category in recipe.category_name %}
-                <li>{{ category.capitalize() }}</li>
-                {% endfor %}
-            </ul>
-        </h5>
+        <h5>Category:</h5>
+        <ul class="category-list">
+            {% for category in recipe.category_name %}
+            <li><h6>{{ category.capitalize() }}</h6></li>
+            {% endfor %}
+        </ul>
     </div>
 </div>
 
