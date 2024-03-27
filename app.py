@@ -349,7 +349,7 @@ def single_category(category_id):
         flash("Please login to view this recipe")
         return render_template(
             "login.html", category=category, recipes=recipes)
-    
+
 
 # Route if the page is not found
 @app.errorhandler(404)
