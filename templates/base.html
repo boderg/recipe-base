@@ -70,7 +70,7 @@
 
         </header>
         <!-- flash-banner -->
-        <section class="flash-banner">
+        <div class="flash-banner">
             {% with messages = get_flashed_messages() %}
             {% if messages %}
             {% for message in messages %}
@@ -80,7 +80,7 @@
             {% endfor %}
             {% endif %}
             {% endwith %}
-        </section>
+        </div>
         <!-- main content -->
         <main class="container">
             {% block content %}
