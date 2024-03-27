@@ -5,7 +5,8 @@ from flask import (
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
-from werkzeug.security import generate_password_hash, check_password_hash
+from werkzeug.security import (
+    generate_password_hash, check_password_hash)
 from datetime import datetime
 if os.path.exists("env.py"):
     import env
@@ -93,7 +94,8 @@ def login():
             if check_password_hash(
                 existing_user["password"], request.form.get("password")):
                 session["user"] = request.form.get("username").lower()
-                flash("Welcome, {}".format(request.form.get("username").capitalize()))
+                flash("Welcome, {}".format(request.form.get(
+                    "username").capitalize()))
                 return redirect(url_for("profile", username=session["user"]))
             else:
                 # invalid password match
@@ -113,7 +115,7 @@ def login():
 def add_no_cache_headers(response):
     if 'Cache-Control' not in response.headers:
         response.headers["Cache-Control"] = (
-            "no-store, no-cache, must-revalidate, post-check=0, pre-check=0, max-age=0")
+            "no-store, no-cache, must-revalidate, post-check=0, pre-check=0")
         response.headers["Pragma"] = "no-cache"
         response.headers["Expires"] = "-1"
     return response
@@ -198,7 +200,8 @@ def add_recipe():
             "recipe_name": request.form.get("recipe_name"),
             "recipe_description": request.form.get("recipe_description"),
             "main_ingredients": request.form.getlist("main_ingredients"),
-            "optional_ingredients": request.form.getlist("optional_ingredients"),
+            "optional_ingredients": request.form.getlist(
+                "optional_ingredients"),
             "preparation_time": request.form.get("preparation_time"),
             "preparation_method": request.form.getlist("preparation_method"),
             "cooking_time": request.form.get("cooking_time"),
@@ -229,7 +232,8 @@ def edit_recipe(recipe_id):
             "recipe_name": request.form.get("recipe_name"),
             "recipe_description": request.form.get("recipe_description"),
             "main_ingredients": request.form.getlist("main_ingredients"),
-            "optional_ingredients": request.form.getlist("optional_ingredients"),
+            "optional_ingredients": request.form.getlist(
+                "optional_ingredients"),
             "preparation_time": request.form.get("preparation_time"),
             "preparation_method": request.form.getlist("preparation_method"),
             "cooking_time": request.form.get("cooking_time"),
@@ -239,13 +243,15 @@ def edit_recipe(recipe_id):
             "recipe_image": request.form.get("recipe_image"),
             "created_on": datetime.now().strftime("%d-%m-%Y at %H:%M")
         }
-        mongo.db.recipes.update_one({"_id": ObjectId(recipe_id)}, {"$set": edit})
+        mongo.db.recipes.update_one(
+            {"_id": ObjectId(recipe_id)}, {"$set": edit})
         flash("Recipe Successfully Updated")
         return redirect(url_for("recipe", recipe_id=recipe_id))
 
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
-    return render_template("edit_recipe.html", recipe=recipe, categories=categories)
+    return render_template(
+        "edit_recipe.html", recipe=recipe, categories=categories)
 
 
 # Route to delete a recipe
@@ -332,14 +338,17 @@ def delete_category(category_id):
 @app.route("/single_category/<category_id>")
 def single_category(category_id):
     category = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
-    recipes = list(mongo.db.recipes.find({"category_name": category["category_name"]}))
+    recipes = list(mongo.db.recipes.find(
+        {"category_name": category["category_name"]}))
     # if there is a session user
     if session.get("user"):
-        return render_template("single_category.html", category=category, recipes=recipes)
+        return render_template(
+            "single_category.html", category=category, recipes=recipes)
     # if there is no session user
     else:
         flash("Please login to view this recipe")
-        return render_template("login.html", category=category, recipes=recipes)
+        return render_template(
+            "login.html", category=category, recipes=recipes)
     
 
 # Route if the page is not found
