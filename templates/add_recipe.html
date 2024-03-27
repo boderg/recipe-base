@@ -119,7 +119,7 @@
                 <div class="input-field col s12">
                     <i class="fas fa-folder-open prefix"></i>
                     <select multiple title="category_name" name="category_name">
-                        <option value="" disabled selected></option>
+                        <option value="" disabled selected aria-label="select categories"></option>
                         {% for category in categories %}
                             <option value="{{ category.category_name }}">{{ category.category_name.capitalize() }}</option>
                         {% endfor %}
