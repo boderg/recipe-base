@@ -169,39 +169,32 @@ The results of these tests are as follows and listed by browser:
 
 ## Responsiveness
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+The Recipe Base deployed project has been tested on multiple devices to check for responsiveness issues.
 
-Use this space to discuss testing the live/deployed site on various device sizes.
+The results are as follows:
 
-The minimum requirement is for the following 3 tests:
-- Mobile
-- Tablet
-- Desktop
+<details>
+<summary>Click to view the results</summary>
 
-**IMPORTANT**: You must provide screenshots of the tested responsiveness, to "prove" that you've actually tested them.
+### Mobile (Dev Tools - iPhone 12/13 Pro Max)
 
-Using the "amiresponsive" mockup image (or similar) does not suffice the requirements.
-Consider using some of the built-in device sizes in the Developer Tools.
+| Page | Screenshot | Notes |
+| :---: | :---: | :---: |
+| Home | ![screenshot](documentation/responsive/mobile-dev-tools/home.png) | Works as expected |
+| Recipes | ![screenshot](documentation/responsive/mobile-dev-tools/recipes.png) | Works as expected |
+| Recipe | ![screenshot](documentation/responsive/mobile-dev-tools/recipe.png) | Works as expected |
+| Add Recipe | ![screenshot](documentation/responsive/mobile-dev-tools/add-recipe.png) | Works as expected |
+| Edit Recipe | ![screenshot](documentation/responsive/mobile-dev-tools/edit-recipe.png) | Works as expected |
+| Categories | ![screenshot](documentation/responsive/mobile-dev-tools/categories.png) | Works as expected |
+| Category | ![screenshot](documentation/responsive/mobile-dev-tools/category.png) | Works as expected |
+| Add Category | ![screenshot](documentation/responsive/mobile-dev-tools/add-category.png) | Works as expected |
+| Edit Category | ![screenshot](documentation/responsive/mobile-dev-tools/edit-category.png) | Works as expected |
+| Profile | ![screenshot](documentation/responsive/mobile-dev-tools/profile.png) | Works as expected |
+| Edit Profile | ![screenshot](documentation/responsive/mobile-dev-tools/edit-profile.png) | Works as expected |
+| Log In | ![screenshot](documentation/responsive/mobile-dev-tools/login.png) | Works as expected |
+| Register | ![screenshot](documentation/responsive/mobile-dev-tools/sign-up.png) | Works as expected |
+| Sidenav | ![screenshot](documentation/responsive/mobile-dev-tools/sidenav.png) | Works as expected |
 
-If you have tested the project on your actual mobile phone or tablet, consider also including screenshots of these as well.
-It showcases a higher level of manual tests, and can be seen as a positive inclusion!
-
-Sample responsiveness testing documentation:
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-I've tested my deployed project on multiple devices to check for responsiveness issues.
-
-| Device | Home | About | Contact | etc | Notes |
-| --- | --- | --- | --- | --- | --- |
-| Mobile (DevTools) | ![screenshot](documentation/responsive-mobile-home.png) | ![screenshot](documentation/responsive-mobile-about.png) | ![screenshot](documentation/responsive-mobile-contact.png) | ![screenshot](documentation/responsive-mobile-etc.png) | Works as expected |
-| Tablet (DevTools) | ![screenshot](documentation/responsive-tablet-home.png) | ![screenshot](documentation/responsive-tablet-about.png) | ![screenshot](documentation/responsive-tablet-contact.png) | ![screenshot](documentation/responsive-tablet-etc.png) | Works as expected |
-| Desktop | ![screenshot](documentation/responsive-desktop-home.png) | ![screenshot](documentation/responsive-desktop-about.png) | ![screenshot](documentation/responsive-desktop-contact.png) | ![screenshot](documentation/responsive-desktop-etc.png) | Works as expected |
-| XL Monitor | ![screenshot](documentation/responsive-xl-home.png) | ![screenshot](documentation/responsive-xl-about.png) | ![screenshot](documentation/responsive-xl-contact.png) | ![screenshot](documentation/responsive-xl-etc.png) | Scaling starts to have minor issues |
-| 4K Monitor | ![screenshot](documentation/responsive-4k-home.png) | ![screenshot](documentation/responsive-4k-about.png) | ![screenshot](documentation/responsive-4k-contact.png) | ![screenshot](documentation/responsive-4k-etc.png) | Noticeable scaling issues |
-| Google Pixel 7 Pro | ![screenshot](documentation/responsive-pixel-home.png) | ![screenshot](documentation/responsive-pixel-about.png) | ![screenshot](documentation/responsive-pixel-contact.png) | ![screenshot](documentation/responsive-pixel-etc.png) | Works as expected |
-| iPhone 14 | ![screenshot](documentation/responsive-iphone-home.png) | ![screenshot](documentation/responsive-iphone-about.png) | ![screenshot](documentation/responsive-iphone-contact.png) | ![screenshot](documentation/responsive-iphone-etc.png) | Works as expected |
-| repeat for any other tested browsers | x | x | x | x | x |
 
 ## Lighthouse Audit
 
