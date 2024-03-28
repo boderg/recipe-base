@@ -151,19 +151,19 @@ The results of these tests are as follows and listed by browser:
 
 | Page | Screenshot | Notes |
 | :---: | :---: | :---: |
-| Home | ![screenshot](documentation/browsers) | Works as expected |
-| Recipes | ![screenshot](documentation/browsers) | Works as expected |
-| Recipe | ![screenshot](documentation/browsers) | Works as expected |
-| Add Recipe | ![screenshot](documentation/browsers) | Works as expected |
-| Edit Recipe | ![screenshot](documentation/browsers) | Works as expected |
-| Categories | ![screenshot](documentation/browsers) | Works as expected |
-| Category | ![screenshot](documentation/browsers) | Works as expected |
-| Add Category | ![screenshot](documentation/browsers) | Works as expected |
-| Edit Category | ![screenshot](documentation/browsers) | Works as expected |
-| Profile | ![screenshot](documentation/browsers) | Works as expected |
-| Edit Profile | ![screenshot](documentation/browsers) | Works as expected |
-| Log In | ![screenshot](documentation/browsers) | Works as expected |
-| Register | ![screenshot](documentation/browsers) | Works as expected |
+| Home | ![screenshot](documentation/browsers/safari/) | Works as expected |
+| Recipes | ![screenshot](documentation/browsers/safari/) | Works as expected |
+| Recipe | ![screenshot](documentation/browsers/safari/) | Works as expected |
+| Add Recipe | ![screenshot](documentation/browsers/safari/) | Works as expected |
+| Edit Recipe | ![screenshot](documentation/browsers/safari/) | Works as expected |
+| Categories | ![screenshot](documentation/browsers/safari/) | Works as expected |
+| Category | ![screenshot](documentation/browsers/safari/) | Works as expected |
+| Add Category | ![screenshot](documentation/browsers/safari/) | Works as expected |
+| Edit Category | ![screenshot](documentation/browsers/safari/) | Works as expected |
+| Profile | ![screenshot](documentation/browsers/safari/) | Works as expected |
+| Edit Profile | ![screenshot](documentation/browsers/safari/) | Works as expected |
+| Log In | ![screenshot](documentation/browsers/safari/) | Works as expected |
+| Register | ![screenshot](documentation/browsers/safari/) | Works as expected |
 
 </details>
 
