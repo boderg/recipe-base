@@ -35,7 +35,7 @@
         <div class="col s12 profile">
             <div class="card">
                 <p>{{ user.username.capitalize() }}'s Bio:</p>
-                <p>{{ user.bio.capitalize() }}</p>
+                <p>{{ user.bio.capitalize() if user.bio else '' }}</p>
                 <div class="divider"></div>
                 <p>Last updated on: {{ user.updated_on }}</p>
             </div>
