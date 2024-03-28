@@ -250,6 +250,9 @@ The results are as follows:
 | Log In | ![screenshot](documentation/responsive/ultrawide/login.png) | Works as expected |
 | Register | ![screenshot](documentation/responsive/ultrawide/sign-up.png) | Works as expected |
 
+The only issue noted is the navbar cannot be made narrower using the standrd materialize framework without affecting the smaller screens.<br>
+This would be something that can be worked on via css as a future development.
+
 ### Samsung Galaxy S10 plus
 
 | Page | Screenshot | Notes |
@@ -273,31 +276,23 @@ The results are as follows:
 
 ## Lighthouse Audit
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Use this space to discuss testing the live/deployed site's Lighthouse Audit reports.
-Avoid testing the local version (especially if developing in Gitpod), as this can have knock-on effects of performance.
-
-If you don't have Lighthouse in your Developer Tools,
-it can be added as an [extension](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk).
-
-Don't just test the home page (unless it's a single-page application).
-Make sure to test the Lighthouse Audit results for all of your pages.
-
-**IMPORTANT**: You must provide screenshots of the results, to "prove" that you've actually tested them.
-
-Sample Lighthouse testing documentation:
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-I've tested my deployed project using the Lighthouse Audit tool to check for any major issues.
+The deployed Recipe Base project has been tested using the Lighthouse Audit tool to check for any major issues.
 
 | Page | Mobile | Desktop | Notes |
 | --- | --- | --- | --- |
-| Home | ![screenshot](documentation/lighthouse-home-mobile.png) | ![screenshot](documentation/lighthouse-home-desktop.png) | Some minor warnings |
-| About | ![screenshot](documentation/lighthouse-about-mobile.png) | ![screenshot](documentation/lighthouse-about-desktop.png) | Some minor warnings |
-| Gallery | ![screenshot](documentation/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse-gallery-desktop.png) | Slow response time due to large images |
-| x | x | x | repeat for any other tested pages/sizes |
+| Home | ![screenshot](documentation/lighthouse/mobile/home.png) | ![screenshot](documentation/lighthouse/desktop/home.png) | Slightly slower mobile performnce due to materialize css and js. |
+| Recipes | ![screenshot](documentation/lighthouse/mobile/recipes.png) | ![screenshot](documentation/lighthouse/desktop/recipes.png) | Slightly slower mobile performnce due to materialize css and js. |
+| Recipe | ![screenshot](documentation/lighthouse/mobile/recipe.png) | ![screenshot](documentation/lighthouse/desktop/recipe.png) | Slightly lower optimisation on mobile. |
+| Add Recipe | ![screenshot](documentation/lighthouse/mobile/add-recipe.png) | ![screenshot](documentation/lighthouse/desktop/add-recipe.png) | x |
+| Edit Recipe | ![screenshot](documentation/lighthouse/mobile/edit-recipe.png) | ![screenshot](documentation/lighthouse/desktop/edit-recipe.png) | x |
+| Categories | ![screenshot](documentation/lighthouse/mobile/categories.png) | ![screenshot](documentation/lighthouse/desktop/categories.png) | x |
+| Category | ![screenshot](documentation/lighthouse/mobile/category.png) | ![screenshot](documentation/lighthouse/desktop/category.png) | x |
+| Add Category | ![screenshot](documentation/lighthouse/mobile/add-category.png) | ![screenshot](documentation/lighthouse/desktop/add-category.png) | Slightly lower optimisation on both mobile and desktop |
+| Edit category | ![screenshot](documentation/lighthouse/mobile/edit-category.png) | ![screenshot](documentation/lighthouse/desktop/edit-category.png) | x |
+| Profile | ![screenshot](documentation/lighthouse/mobile/profile.png) | ![screenshot](documentation/lighthouse/desktop/profile.png) | x |
+| Edit Profile | ![screenshot](documentation/lighthouse/mobile/edit-profile.png) | ![screenshot](documentation/lighthouse/desktop/edit-profile.png) | x |
+| Log In | ![screenshot](documentation/lighthouse/mobile/login.png) | ![screenshot](documentation/lighthouse/desktop/login.png) | x |
+| Sign Up | ![screenshot](documentation/lighthouse/mobile/sign-up.png) | ![screenshot](documentation/lighthouse/desktop/sign-up.png) | x |
 
 ## Defensive Programming
 
