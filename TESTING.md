@@ -151,19 +151,19 @@ The results of these tests are as follows and listed by browser:
 
 | Page | Screenshot | Notes |
 | :---: | :---: | :---: |
-| Home | ![screenshot](documentation/browsers/safari/) | Works as expected |
-| Recipes | ![screenshot](documentation/browsers/safari/) | Works as expected |
-| Recipe | ![screenshot](documentation/browsers/safari/) | Works as expected |
-| Add Recipe | ![screenshot](documentation/browsers/safari/) | Works as expected |
-| Edit Recipe | ![screenshot](documentation/browsers/safari/) | Works as expected |
-| Categories | ![screenshot](documentation/browsers/safari/) | Works as expected |
-| Category | ![screenshot](documentation/browsers/safari/) | Works as expected |
-| Add Category | ![screenshot](documentation/browsers/safari/) | Works as expected |
-| Edit Category | ![screenshot](documentation/browsers/safari/) | Works as expected |
-| Profile | ![screenshot](documentation/browsers/safari/) | Works as expected |
-| Edit Profile | ![screenshot](documentation/browsers/safari/) | Works as expected |
-| Log In | ![screenshot](documentation/browsers/safari/) | Works as expected |
-| Register | ![screenshot](documentation/browsers/safari/) | Works as expected |
+| Home | ![screenshot](documentation/browsers/safari/home.png) | Works as expected |
+| Recipes | ![screenshot](documentation/browsers/safari/recipes.png) | Works as expected |
+| Recipe | ![screenshot](documentation/browsers/safari/recipe.png) | Works as expected |
+| Add Recipe | ![screenshot](documentation/browsers/safari/add-recipe.png) | Works as expected |
+| Edit Recipe | ![screenshot](documentation/browsers/safari/edit-recipe.png) | Works as expected |
+| Categories | ![screenshot](documentation/browsers/safari/categories.png) | Works as expected |
+| Category | ![screenshot](documentation/browsers/safari/category.png) | Works as expected |
+| Add Category | ![screenshot](documentation/browsers/safari/add-category.png) | Works as expected |
+| Edit Category | ![screenshot](documentation/browsers/safari/edit-category.png) | Works as expected |
+| Profile | ![screenshot](documentation/browsers/safari/profile.png) | Works as expected |
+| Edit Profile | ![screenshot](documentation/browsers/safari/edit-profile.png) | Works as expected |
+| Log In | ![screenshot](documentation/browsers/safari/login.png) | Works as expected |
+| Register | ![screenshot](documentation/browsers/safari/sign-up.png) | Works as expected |
 
 </details>
 
