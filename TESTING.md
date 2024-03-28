@@ -79,19 +79,19 @@ The results of these tests are as follows and listed by browser:
 
 | Page | Screenshot | Notes |
 | :---: | :---: | :---: |
-| Home | ![screenshot](documentation/browsers) | Works as expected |
-| Recipes | ![screenshot](documentation/browsers) | Works as expected |
-| Recipe | ![screenshot](documentation/browsers) | Works as expected |
-| Add Recipe | ![screenshot](documentation/browsers) | Works as expected |
-| Edit Recipe | ![screenshot](documentation/browsers) | Works as expected |
-| Categories | ![screenshot](documentation/browsers) | Works as expected |
-| Category | ![screenshot](documentation/browsers) | Works as expected |
-| Add Category | ![screenshot](documentation/browsers) | Works as expected |
-| Edit Category | ![screenshot](documentation/browsers) | Works as expected |
-| Profile | ![screenshot](documentation/browsers) | Works as expected |
-| Edit Profile | ![screenshot](documentation/browsers) | Works as expected |
-| Log In | ![screenshot](documentation/browsers) | Works as expected |
-| Register | ![screenshot](documentation/browsers) | Works as expected |
+| Home | ![screenshot](documentation/browsers/brave/home.png) | Works as expected |
+| Recipes | ![screenshot](documentation/browsers/brave/recipes.png) | Works as expected |
+| Recipe | ![screenshot](documentation/browsers/brave/recipe.png) | Works as expected |
+| Add Recipe | ![screenshot](documentation/browsers/brave/add-recipe.png) | Works as expected |
+| Edit Recipe | ![screenshot](documentation/browsers/brave/edit-recipe.png) | Works as expected |
+| Categories | ![screenshot](documentation/browsers/brave/categories.png) | Works as expected |
+| Category | ![screenshot](documentation/browsers/brave/category.png) | Works as expected |
+| Add Category | ![screenshot](documentation/browsers/brave/add-category.png) | Works as expected |
+| Edit Category | ![screenshot](documentation/browsers/brave/edit-category.png) | Works as expected |
+| Profile | ![screenshot](documentation/browsers/brave/profile.png) | Works as expected |
+| Edit Profile | ![screenshot](documentation/browsers/brave/edit-profile.png) | Works as expected |
+| Log In | ![screenshot](documentation/browsers/brave/log-in.png) | Works as expected |
+| Register | ![screenshot](documentation/browsers/brave/sign-up.png) | Works as expected |
 
 ### Chrome
 
