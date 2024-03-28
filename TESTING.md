@@ -250,6 +250,24 @@ The results are as follows:
 | Log In | ![screenshot](documentation/responsive/ultrawide/login.png) | Works as expected |
 | Register | ![screenshot](documentation/responsive/ultrawide/sign-up.png) | Works as expected |
 
+### Samsung Galaxy S10 plus
+
+| Page | Screenshot | Notes |
+| :---: | :---: | :---: |
+| Home | ![screenshot](documentation/responsive/galaxy-s10/home.jpg) | Works as expected |
+| Recipes | ![screenshot](documentation/responsive/galaxy-s10/recipes.jpg) | Works as expected |
+| Recipe | ![screenshot](documentation/responsive/galaxy-s10/recipe.jpg) | Works as expected |
+| Add Recipe | ![screenshot](documentation/responsive/galaxy-s10/add-recipe.jpg) | Works as expected |
+| Edit Recipe | ![screenshot](documentation/responsive/galaxy-s10/edit-recipe.jpg) | Works as expected |
+| Categories | ![screenshot](documentation/responsive/galaxy-s10/categories.jpg) | Works as expected |
+| Category | ![screenshot](documentation/responsive/galaxy-s10/category.jpg) | Works as expected |
+| Add Category | ![screenshot](documentation/responsive/galaxy-s10/add-category.jpg) | Works as expected |
+| Edit Category | ![screenshot](documentation/responsive/galaxy-s10/edit-category.jpg) | Works as expected |
+| Profile | ![screenshot](documentation/responsive/galaxy-s10/profile.jpg) | Works as expected |
+| Edit Profile | ![screenshot](documentation/responsive/galaxy-s10/edit-profile.jpg) | Works as expected |
+| Log In | ![screenshot](documentation/responsive/galaxy-s10/login.jpg) | Works as expected |
+| Register | ![screenshot](documentation/responsive/galaxy-s10/sign-up.jpg) | Works as expected |
+| Sidenav | ![screenshot](documentation/responsive/galaxy-s10/sidenav.jpg) | Works as expected |
 
 </details>
 
