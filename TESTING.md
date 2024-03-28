@@ -232,6 +232,7 @@ The results are as follows:
 | Log In | ![screenshot](documentation/responsive/desktop/login.png) | Works as expected |
 | Register | ![screenshot](documentation/responsive/desktop/sign-up.png) | Works as expected |
 
+</details>
 
 ## Lighthouse Audit
 
