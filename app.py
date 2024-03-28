@@ -121,17 +121,6 @@ def login():
     return render_template("login.html")
 
 
-# Route to add no cache headers
-@app.after_request
-def add_no_cache_headers(response):
-    if 'Cache-Control' not in response.headers:
-        response.headers["Cache-Control"] = (
-            "no-store, no-cache, must-revalidate, post-check=0, pre-check=0")
-        response.headers["Pragma"] = "no-cache"
-        response.headers["Expires"] = "-1"
-    return response
-
-
 # Route to logout
 @app.route("/logout")
 def logout():
