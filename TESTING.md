@@ -62,41 +62,110 @@ The recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com) was used t
 
 ## Browser Compatibility
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+The Recipe Base site has been tested using the following browsers:
 
-Use this space to discuss testing the live/deployed site on various browsers.
-
-Consider testing at least 3 different browsers, if available on your system.
-
-Recommended browsers to consider:
-- [Chrome](https://www.google.com/chrome)
-- [Firefox (Developer Edition)](https://www.mozilla.org/firefox/developer)
-- [Edge](https://www.microsoft.com/edge)
-- [Safari](https://support.apple.com/downloads/safari)
 - [Brave](https://brave.com/download)
-- [Opera](https://www.opera.com/download)
+- [Chrome](https://www.google.com/chrome)
+- [Edge](https://www.microsoft.com/edge)
+- [Firefox (Developer Edition)](https://www.mozilla.org/firefox/developer)
+- [Safari](https://support.apple.com/downloads/safari)
 
-**IMPORTANT**: You must provide screenshots of the tested browsers, to "prove" that you've actually tested them.
+The results of these tests are as follows and listed by browser:
 
-Please note, there are services out there that can test multiple browser compatibilities at the same time.
-Some of these are paid services, but some are free.
-If you use these, you must provide a link to the source used for attribution, and multiple screenshots of the results.
+<details>
+<summary>Click to view the results</summary>
 
-Sample browser testing documentation:
+### Brave
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+| Page | Screenshot | Notes |
+| :---: | :---: | :---: |
+| Home | ![screenshot](documentation/browsers) | Works as expected |
+| Recipes | ![screenshot](documentation/browsers) | Works as expected |
+| Recipe | ![screenshot](documentation/browsers) | Works as expected |
+| Add Recipe | ![screenshot](documentation/browsers) | Works as expected |
+| Edit Recipe | ![screenshot](documentation/browsers) | Works as expected |
+| Categories | ![screenshot](documentation/browsers) | Works as expected |
+| Category | ![screenshot](documentation/browsers) | Works as expected |
+| Add Category | ![screenshot](documentation/browsers) | Works as expected |
+| Edit Category | ![screenshot](documentation/browsers) | Works as expected |
+| Profile | ![screenshot](documentation/browsers) | Works as expected |
+| Edit Profile | ![screenshot](documentation/browsers) | Works as expected |
+| Log In | ![screenshot](documentation/browsers) | Works as expected |
+| Register | ![screenshot](documentation/browsers) | Works as expected |
 
-I've tested my deployed project on multiple browsers to check for compatibility issues.
+### Chrome
 
-| Browser | Home | About | Contact | etc | Notes |
-| --- | --- | --- | --- | --- | --- |
-| Chrome | ![screenshot](documentation/browser-chrome-home.png) | ![screenshot](documentation/browser-chrome-about.png) | ![screenshot](documentation/browser-chrome-contact.png) | ![screenshot](documentation/browser-chrome-etc.png) | Works as expected |
-| Firefox | ![screenshot](documentation/browser-firefox-home.png) | ![screenshot](documentation/browser-firefox-about.png) | ![screenshot](documentation/browser-firefox-contact.png) | ![screenshot](documentation/browser-firefox-etc.png) | Works as expected |
-| Edge | ![screenshot](documentation/browser-edge-home.png) | ![screenshot](documentation/browser-edge-about.png) | ![screenshot](documentation/browser-chrome-edge.png) | ![screenshot](documentation/browser-edge-etc.png) | Works as expected |
-| Safari | ![screenshot](documentation/browser-safari-home.png) | ![screenshot](documentation/browser-safari-about.png) | ![screenshot](documentation/browser-safari-contact.png) | ![screenshot](documentation/browser-safari-etc.png) | Minor CSS differences |
-| Brave | ![screenshot](documentation/browser-brave-home.png) | ![screenshot](documentation/browser-brave-about.png) | ![screenshot](documentation/browser-brave-contact.png) | ![screenshot](documentation/browser-brave-etc.png) | Works as expected |
-| Opera | ![screenshot](documentation/browser-opera-home.png) | ![screenshot](documentation/browser-opera-about.png) | ![screenshot](documentation/browser-opera-contact.png) | ![screenshot](documentation/browser-opera-etc.png) | Minor differences |
-| repeat for any other tested browsers | x | x | x | x | x |
+| Page | Screenshot | Notes |
+| :---: | :---: | :---: |
+| Home | ![screenshot](documentation/browsers) | Works as expected |
+| Recipes | ![screenshot](documentation/browsers) | Works as expected |
+| Recipe | ![screenshot](documentation/browsers) | Works as expected |
+| Add Recipe | ![screenshot](documentation/browsers) | Works as expected |
+| Edit Recipe | ![screenshot](documentation/browsers) | Works as expected |
+| Categories | ![screenshot](documentation/browsers) | Works as expected |
+| Category | ![screenshot](documentation/browsers) | Works as expected |
+| Add Category | ![screenshot](documentation/browsers) | Works as expected |
+| Edit Category | ![screenshot](documentation/browsers) | Works as expected |
+| Profile | ![screenshot](documentation/browsers) | Works as expected |
+| Edit Profile | ![screenshot](documentation/browsers) | Works as expected |
+| Log In | ![screenshot](documentation/browsers) | Works as expected |
+| Register | ![screenshot](documentation/browsers) | Works as expected |
+
+### Edge
+
+| Page | Screenshot | Notes |
+| :---: | :---: | :---: |
+| Home | ![screenshot](documentation/browsers) | Works as expected |
+| Recipes | ![screenshot](documentation/browsers) | Works as expected |
+| Recipe | ![screenshot](documentation/browsers) | Works as expected |
+| Add Recipe | ![screenshot](documentation/browsers) | Works as expected |
+| Edit Recipe | ![screenshot](documentation/browsers) | Works as expected |
+| Categories | ![screenshot](documentation/browsers) | Works as expected |
+| Category | ![screenshot](documentation/browsers) | Works as expected |
+| Add Category | ![screenshot](documentation/browsers) | Works as expected |
+| Edit Category | ![screenshot](documentation/browsers) | Works as expected |
+| Profile | ![screenshot](documentation/browsers) | Works as expected |
+| Edit Profile | ![screenshot](documentation/browsers) | Works as expected |
+| Log In | ![screenshot](documentation/browsers) | Works as expected |
+| Register | ![screenshot](documentation/browsers) | Works as expected |
+
+### Firefox Developer Edition
+
+| Page | Screenshot | Notes |
+| :---: | :---: | :---: |
+| Home | ![screenshot](documentation/browsers) | Works as expected |
+| Recipes | ![screenshot](documentation/browsers) | Works as expected |
+| Recipe | ![screenshot](documentation/browsers) | Works as expected |
+| Add Recipe | ![screenshot](documentation/browsers) | Works as expected |
+| Edit Recipe | ![screenshot](documentation/browsers) | Works as expected |
+| Categories | ![screenshot](documentation/browsers) | Works as expected |
+| Category | ![screenshot](documentation/browsers) | Works as expected |
+| Add Category | ![screenshot](documentation/browsers) | Works as expected |
+| Edit Category | ![screenshot](documentation/browsers) | Works as expected |
+| Profile | ![screenshot](documentation/browsers) | Works as expected |
+| Edit Profile | ![screenshot](documentation/browsers) | Works as expected |
+| Log In | ![screenshot](documentation/browsers) | Works as expected |
+| Register | ![screenshot](documentation/browsers) | Works as expected |
+
+### Safari
+
+| Page | Screenshot | Notes |
+| :---: | :---: | :---: |
+| Home | ![screenshot](documentation/browsers) | Works as expected |
+| Recipes | ![screenshot](documentation/browsers) | Works as expected |
+| Recipe | ![screenshot](documentation/browsers) | Works as expected |
+| Add Recipe | ![screenshot](documentation/browsers) | Works as expected |
+| Edit Recipe | ![screenshot](documentation/browsers) | Works as expected |
+| Categories | ![screenshot](documentation/browsers) | Works as expected |
+| Category | ![screenshot](documentation/browsers) | Works as expected |
+| Add Category | ![screenshot](documentation/browsers) | Works as expected |
+| Edit Category | ![screenshot](documentation/browsers) | Works as expected |
+| Profile | ![screenshot](documentation/browsers) | Works as expected |
+| Edit Profile | ![screenshot](documentation/browsers) | Works as expected |
+| Log In | ![screenshot](documentation/browsers) | Works as expected |
+| Register | ![screenshot](documentation/browsers) | Works as expected |
+
+</details>
 
 ## Responsiveness
 
