@@ -50,6 +50,7 @@ def search():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
+
         # check if username already exists in db
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
@@ -86,11 +87,13 @@ def register():
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
+
         # check if username exists in db
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
 
         if existing_user:
+
             # ensure hashed password matches user input
             if check_password_hash(
                     existing_user["password"], request.form.get("password")):
@@ -98,6 +101,7 @@ def login():
                 flash("Welcome, {}".format(request.form.get(
                     "username").capitalize()))
                 return redirect(url_for("profile", username=session["user"]))
+
             else:
                 # invalid password match
                 flash("Incorrect Username and/or Password")
@@ -125,6 +129,7 @@ def add_no_cache_headers(response):
 # Route to logout
 @app.route("/logout")
 def logout():
+
     # remove user from session cookies
     flash("You have been logged out")
     session.pop("user")
@@ -267,9 +272,11 @@ def delete_recipe(recipe_id):
 @app.route("/recipe/<recipe_id>")
 def recipe(recipe_id):
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+
     # if there is a session user
     if session.get("user"):
         return render_template("recipe.html", recipe=recipe)
+
     # if there is no session user
     else:
         flash("Please login to view the recipe")
@@ -280,9 +287,11 @@ def recipe(recipe_id):
 @app.route("/get_categories")
 def get_categories():
     categories = list(mongo.db.categories.find().sort("category_name", 1))
+
     # if there is a session user
     if session.get("user"):
         return render_template("categories.html", categories=categories)
+
     # if there is no session user
     else:
         flash("Please login to view the categories")
@@ -341,10 +350,12 @@ def single_category(category_id):
     category = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
     recipes = list(mongo.db.recipes.find(
         {"category_name": category["category_name"]}))
+
     # if there is a session user
     if session.get("user"):
         return render_template(
             "single_category.html", category=category, recipes=recipes)
+
     # if there is no session user
     else:
         flash("Please login to view this recipe")
