@@ -195,6 +195,24 @@ The results are as follows:
 | Register | ![screenshot](documentation/responsive/mobile-dev-tools/sign-up.png) | Works as expected |
 | Sidenav | ![screenshot](documentation/responsive/mobile-dev-tools/sidenav.png) | Works as expected |
 
+### Tablet (Dev Tools - iPad Air)
+
+| Page | Screenshot | Notes |
+| :---: | :---: | :---: |
+| Home | ![screenshot](documentation/responsive/tablet-dev-tools/home.png) | Works as expected |
+| Recipes | ![screenshot](documentation/responsive/tablet-dev-tools/recipes.png) | Works as expected |
+| Recipe | ![screenshot](documentation/responsive/tablet-dev-tools/recipe.png) | Works as expected |
+| Add Recipe | ![screenshot](documentation/responsive/tablet-dev-tools/add-recipe.png) | Works as expected |
+| Edit Recipe | ![screenshot](documentation/responsive/tablet-dev-tools/edit-recipe.png) | Works as expected |
+| Categories | ![screenshot](documentation/responsive/tablet-dev-tools/categories.png) | Works as expected |
+| Category | ![screenshot](documentation/responsive/tablet-dev-tools/category.png) | Works as expected |
+| Add Category | ![screenshot](documentation/responsive/tablet-dev-tools/add-category.png) | Works as expected |
+| Edit Category | ![screenshot](documentation/responsive/tablet-dev-tools/edit-category.png) | Works as expected |
+| Profile | ![screenshot](documentation/responsive/tablet-dev-tools/profile.png) | Works as expected |
+| Edit Profile | ![screenshot](documentation/responsive/tablet-dev-tools/edit-profile.png) | Works as expected |
+| Log In | ![screenshot](documentation/responsive/tablet-dev-tools/login.png) | Works as expected |
+| Register | ![screenshot](documentation/responsive/tablet-dev-tools/sign-up.png) | Works as expected |
+| Sidenav | ![screenshot](documentation/responsive/tablet-dev-tools/sidenav.png) | Works as expected |
 
 ## Lighthouse Audit
 
