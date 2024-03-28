@@ -232,6 +232,25 @@ The results are as follows:
 | Log In | ![screenshot](documentation/responsive/desktop/login.png) | Works as expected |
 | Register | ![screenshot](documentation/responsive/desktop/sign-up.png) | Works as expected |
 
+### Desktop 34" Ultrawide 1440p
+
+| Page | Screenshot | Notes |
+| :---: | :---: | :---: |
+| Home | ![screenshot](documentation/responsive/ultrawide/home.png) | Works as expected |
+| Recipes | ![screenshot](documentation/responsive/ultrawide/recipes.png) | Works as expected |
+| Recipe | ![screenshot](documentation/responsive/ultrawide/recipe.png) | Works as expected |
+| Add Recipe | ![screenshot](documentation/responsive/ultrawide/add-recipe.png) | Works as expected |
+| Edit Recipe | ![screenshot](documentation/responsive/ultrawide/edit-recipe.png) | Works as expected |
+| Categories | ![screenshot](documentation/responsive/ultrawide/categories.png) | Works as expected |
+| Category | ![screenshot](documentation/responsive/ultrawide/category.png) | Works as expected |
+| Add Category | ![screenshot](documentation/responsive/ultrawide/add-category.png) | Works as expected |
+| Edit Category | ![screenshot](documentation/responsive/ultrawide/edit-category.png) | Works as expected |
+| Profile | ![screenshot](documentation/responsive/ultrawide/profile.pngultrawide/) | Works as expected |
+| Edit Profile | ![screenshot](documentation/responsive/ultrawide/edit-profile.png) | Works as expected |
+| Log In | ![screenshot](documentation/responsive/ultrawide/login.png) | Works as expected |
+| Register | ![screenshot](documentation/responsive/ultrawide/sign-up.png) | Works as expected |
+
+
 </details>
 
 ## Lighthouse Audit
