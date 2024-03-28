@@ -1,3 +1,8 @@
+# The Code Institute tutorial for task manager
+# was used as a reference to build this project.
+# This code has been adapted and added to in order
+# to create the Recipe Base website.
+
 # Imports
 import os
 from flask import (
