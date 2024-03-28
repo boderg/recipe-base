@@ -214,6 +214,25 @@ The results are as follows:
 | Register | ![screenshot](documentation/responsive/tablet-dev-tools/sign-up.png) | Works as expected |
 | Sidenav | ![screenshot](documentation/responsive/tablet-dev-tools/sidenav.png) | Works as expected |
 
+### Desktop 27" 1080p
+
+| Page | Screenshot | Notes |
+| :---: | :---: | :---: |
+| Home | ![screenshot](documentation/responsive/desktop/home.png) | Works as expected |
+| Recipes | ![screenshot](documentation/responsive/desktop/recipes.png) | Works as expected |
+| Recipe | ![screenshot](documentation/responsive/desktop/recipes.png) | Works as expected |
+| Add Recipe | ![screenshot](documentation/responsive/desktop/add-recipe.png) | Works as expected |
+| Edit Recipe | ![screenshot](documentation/responsive/desktop/edit-recipe.png) | Works as expected |
+| Categories | ![screenshot](documentation/responsive/desktop/categories.png) | Works as expected |
+| Category | ![screenshot](documentation/responsive/desktop/category.png) | Works as expected |
+| Add Category | ![screenshot](documentation/responsive/desktop/add-category.png) | Works as expected |
+| Edit Category | ![screenshot](documentation/responsive/desktop/edit-category.png) | Works as expected |
+| Profile | ![screenshot](documentation/responsive/desktop/profile.png) | Works as expected |
+| Edit Profile | ![screenshot](documentation/responsive/desktop/edit-profile.png) | Works as expected |
+| Log In | ![screenshot](documentation/responsive/desktop/login.png) | Works as expected |
+| Register | ![screenshot](documentation/responsive/desktop/sign-up.png) | Works as expected |
+
+
 ## Lighthouse Audit
 
 🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
