@@ -97,19 +97,19 @@ The results of these tests are as follows and listed by browser:
 
 | Page | Screenshot | Notes |
 | :---: | :---: | :---: |
-| Home | ![screenshot](documentation/browsers) | Works as expected |
-| Recipes | ![screenshot](documentation/browsers) | Works as expected |
-| Recipe | ![screenshot](documentation/browsers) | Works as expected |
-| Add Recipe | ![screenshot](documentation/browsers) | Works as expected |
-| Edit Recipe | ![screenshot](documentation/browsers) | Works as expected |
-| Categories | ![screenshot](documentation/browsers) | Works as expected |
-| Category | ![screenshot](documentation/browsers) | Works as expected |
-| Add Category | ![screenshot](documentation/browsers) | Works as expected |
-| Edit Category | ![screenshot](documentation/browsers) | Works as expected |
-| Profile | ![screenshot](documentation/browsers) | Works as expected |
-| Edit Profile | ![screenshot](documentation/browsers) | Works as expected |
-| Log In | ![screenshot](documentation/browsers) | Works as expected |
-| Register | ![screenshot](documentation/browsers) | Works as expected |
+| Home | ![screenshot](documentation/browsers/chrome/home.png) | Works as expected |
+| Recipes | ![screenshot](documentation/browsers/chrome/recipes.png) | Works as expected |
+| Recipe | ![screenshot](documentation/browsers/chrome/recipe.png) | Works as expected |
+| Add Recipe | ![screenshot](documentation/browsers/chrome/add-recipe.png) | Works as expected |
+| Edit Recipe | ![screenshot](documentation/browsers/chrome/edit-recipe.png) | Works as expected |
+| Categories | ![screenshot](documentation/browsers/chrome/categories.png) | Works as expected |
+| Category | ![screenshot](documentation/browsers/chrome/category.png) | Works as expected |
+| Add Category | ![screenshot](documentation/browsers/chrome/add-category.png) | Works as expected |
+| Edit Category | ![screenshot](documentation/browsers/chrome/edit-category.png) | Works as expected |
+| Profile | ![screenshot](documentation/browsers/chrome/profile.png) | Works as expected |
+| Edit Profile | ![screenshot](documentation/browsers/chrome/edit-profile.png) | Works as expected |
+| Log In | ![screenshot](documentation/browsers/chrome/login.png) | Works as expected |
+| Register | ![screenshot](documentation/browsers/chrome/sign-up.png) | Works as expected |
 
 ### Edge
 
