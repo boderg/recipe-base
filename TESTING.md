@@ -17,9 +17,6 @@ The recommended [HTML W3C Validator](https://validator.w3.org) was used to valid
 
 All non registered user pages were validated by URI and registered user pages were validated by direct code input due to the validator not being to sign in to the site to access user only pages. The results are as follows:
 
-<details>
-<summary>Click to view the results</summary>
-
 | Page | W3C URL | Screenshot | Notes |
 | --- | --- | --- | --- |
 | Home | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fboderg-recipe-base-6a6e035e0009.herokuapp.com%2F&__cf_chl_tk=jjLBKKIgrm.vlGx.8N.YKWzzkh4l.surR6kFpalgz0o-1711531247-0.0.1.1-1791) | ![screenshot](documentation/validation/html/home-warning.png) ![screenshot](documentation/validation/html/home-no-warning.png) | 'Section lacks header h2-h6' warning. <br> This error is due to the flash banner section being injected only when needed so the checker can't find the flash banner section. <br> Corrected by changing the flash banner section to a div in the base html. |
@@ -35,8 +32,6 @@ All non registered user pages were validated by URI and registered user pages we
 | Edit Profile | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fboderg-recipe-base-6a6e035e0009.herokuapp.com%2Fedit_profile%2Fadmin) | ![screenshot](documentation/validation/html/edit-profile.png) | Pass: No Errors  |
 | Log In | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fboderg-recipe-base-6a6e035e0009.herokuapp.com%2Flogin) | ![screenshot](documentation/validation/html/login-no-error.png) | Pass: No Errors  |
 | Register | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fboderg-recipe-base-6a6e035e0009.herokuapp.com%2Fregister) | ![screenshot](documentation/validation/html/register-no-error.png) | Pass: No Errors  |
-
-</details>
 
 ### CSS
 
@@ -361,74 +356,109 @@ Use the table below as a basic start, and expand on it using the logic above.
 
 🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
-Defensive programming was manually tested with the below user acceptance testing:
+Defensive programming for Recipe Base was manually tested with the below user acceptance testing:
+
+<details>
+<summary>Click here to view the defensive testing results table for Recipe Base</summary>
 
 | Page | Expectation | Test | Result | Fix | Screenshot |
 | --- | --- | --- | --- | --- | --- |
-| Home | | | | | |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/feature01.png) |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/feature02.png) |
-| About | | | | | |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/feature03.png) |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/feature04.png) |
-| Gallery | | | | | |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/feature05.png) |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/feature06.png) |
-| Contact | | | | | |
+| Home (non authorised users) | | | | | |
+| | Brand logo is expected to act as a home button and open the home page. | Tested the feature by clickimg the Brand logo button. | The feature behaved as expected, returned to the home page. | Test concluded and passed. | ![screenshot](documentation/) |
+| | The 'Save your Recipes' card is expected to open a modal with information and a link to sign up to the site.  | Tested the feature by clicking on the 'Save your Recipes' card. | The feature behaved as expected, and opened the expected modal. | Test concluded and passed | ![screenshot](documentation/) |
+| | The 'Why Join Us?' card is expected to open a modal with information and a link to sign up to the site. | Tested the feature by clicking on the 'Why Join Us?' card. | The feature behaved as expected, and opened the expected modal. | Test concluded and passed. | ![screenshot](documentation/) |
+| | The 'Join the Community' card is expected to open the Sign Up page. | Tested the feature by clicking on the 'Join the Community' card. | The feature behaved as expected, and opened the Sign Up page. | Test concluded and passed. | ![screenshot](documentation/) |
+
+
+| Home (authorised users) | | | | | |
+| | The 'Save your Recipes' card is expected to open the Add Recipe page.  | Tested the feature by clicking on the 'Save your Recipes' card. | The feature behaved as expected, and opened the Add Recipe page. | Test concluded and passed | ![screenshot](documentation/) |
+| | The 'Why Join Us?' card is expected to open the Recipes page. | Tested the feature by clicking on the 'Why Join Us?' card. | The feature behaved as expected, and opened the Recipes page. | Test concluded and passed. | ![screenshot](documentation/) |
+| | The 'Join the Community' card is expected to open the Recipes page. | Tested the feature by clicking on the 'Why Join Us?' card. | The feature behaved as expected, and opened the Recipes page. | Test concluded and passed. | ![screenshot](documentation/) |
+
+
+| Recipes | | | | | |
+| | The Search button is expected to return results based on keyword entries in the search bar from words contained in the titles, ingredients and description. | Tested the feature by enetring different words. | The feature behaved as expected, and returned recipes if those words were present in either the titles, ingredients or description and returned 'No recipes found' if the words were not present. | Test concluded and passed | ![screenshot](documentation/feature01.png) |
+| | The Rest button is expected to reset the Recipes page back to it's normal designed display. | Tested the feature by clicking the Reset Button. | The feature behaved as expected and restored the normal display of the Recipes page. | Test concluded and passed. | ![screenshot](documentation/feature02.png) |
+| | The Elipsis on the recipe cards is expected open the card reveal and show only the recipe ingredients and category. | Tested the feature by clicking on the Elipsis. | The feature behaved as expected, and opened the card reveal to display the recipe ingredients and the category.  | Test concluded and passed | ![screenshot](documentation/feature03.png) |
+| | The View Full Recipe button is expected to open the page that relates to the recipe to which card the button is on. | Tested the feature by clicking on different View Full Recipe buttons on different cards. | The feature behaved as expected, and opens each recipes relevant recipe page. | Test concluded and passed. | ![screenshot](documentation/feature04.png) |
+
+
+| Recipe | | | | | |
+| | The Back button is expected to return to the Recipes page. | Tested the feature by Clicking the Back button. | The feature behaved as expected, and returned to the Recipes page. | Test concluded and passed | ![screenshot](documentation/feature03.png) |
+| | The Edit button is expected to open the Edit Recipe page for the recipe that is open. | Tested the feature by clicking the Edit button. | The feature behaved as expected, and opened the Edit page for the relevant recipe. | Test concluded and passed. | ![screenshot](documentation/feature04.png) |
+| | The Delete button is expected to open a delete modal to confirm deletion of the recipe that is open. | Tested the feature by clicking on the Delete button. | The feature behaved as expected, and opened the  delete modal. | Test concluded and passed. | ![screenshot](documentation/feature04.png) |
+
+
+| Add Recipe | | | | | |
+| | The Plus / Minus symbols are expected to add and remove new lines. | Tested the feature by clicking on the buttons. | The feature behaved as expected, and added a line when the plus symbol was clicked and removed a line when the minus symbol was clicked. | Test concluded and passed | ![screenshot](documentation/feature05.png) |
+| | The Dropdown Select is expected to open a dropdown selction of category checkboxes. | Tested the feature by clicking on the Dropdown Selector. | The feature behaved as expected, and opened the dropdown selection of category checkboxes. | Test concluded and passed. | ![screenshot](documentation/feature06.png) |
+| | The Add Recipe button is expected to add the completed recipe form details to create a new recipe. | Tested the feature by completing the form and clicking the button. | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/feature05.png) |
+| | The Cancel button is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/feature06.png) |
+
+
+| Edit Recipe | | | | | |
 | | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/feature07.png) |
 | | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/feature08.png) |
-| repeat for all remaining pages | x | x | x | x | x |
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
-Another way of performing defensive testing is a simple Pass/Fail for each test.
-The assessors prefer the above method, with the full test explained, but this is also acceptable in most cases.
+| Categories | | | | | |
+| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/feature07.png) |
+| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/feature08.png) |
 
-When in doubt, use the above method instead, and delete the table below.
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+| Category | | | | | |
+| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/feature07.png) |
+| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/feature08.png) |
 
-| Page | User Action | Expected Result | Pass/Fail | Comments |
-| --- | --- | --- | --- | --- |
-| Home | | | | |
-| | Click on Logo | Redirection to Home page | Pass | |
-| | Click on Home link in navbar | Redirection to Home page | Pass | |
-| Gallery | | | | |
-| | Click on Gallery link in navbar | Redirection to Gallery page | Pass | |
-| | Load gallery images | All images load as expected | Pass | |
-| Contact | | | | |
-| | Click on Contact link in navbar | Redirection to Contact page | Pass | |
-| | Enter first/last name | Field will accept freeform text | Pass | |
-| | Enter valid email address | Field will only accept email address format | Pass | |
-| | Enter message in textarea | Field will accept freeform text | Pass | |
-| | Click the Submit button | Redirects user to form-dump | Pass | User must click 'Back' button to return |
-| Sign Up | | | | |
-| | Click on Sign Up button | Redirection to Sign Up page | Pass | |
-| | Enter valid email address | Field will only accept email address format | Pass | |
-| | Enter valid password (twice) | Field will only accept password format | Pass | |
-| | Click on Sign Up button | Asks user to confirm email page | Pass | Email sent to user |
-| | Confirm email | Redirects user to blank Sign In page | Pass | |
-| Log In | | | | |
-| | Click on the Login link | Redirection to Login page | Pass | |
-| | Enter valid email address | Field will only accept email address format | Pass | |
-| | Enter valid password | Field will only accept password format | Pass | |
-| | Click Login button | Redirects user to home page | Pass | |
-| Log Out | | | | |
-| | Click Logout button | Redirects user to logout page | Pass | Confirms logout first |
-| | Click Confirm Logout button | Redirects user to home page | Pass | |
-| Profile | | | | |
-| | Click on Profile button | User will be redirected to the Profile page | Pass | |
-| | Click on the Edit button | User will be redirected to the edit profile page | Pass | |
-| | Click on the My Orders link | User will be redirected to the My Orders page | Pass | |
-| | Brute forcing the URL to get to another user's profile | User should be given an error | Pass | Redirects user back to own profile |
-| repeat for all remaining pages | x | x | x | x |
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+| Add Category | | | | | |
+| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/feature07.png) |
+| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/feature08.png) |
 
-Repeat for all other tests, as applicable to your own site.
-The aforementioned tests are just an example of a few different project scenarios.
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+| Edit Category | | | | | |
+| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/feature07.png) |
+| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/feature08.png) |
+
+
+| Profile | | | | | |
+| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/feature07.png) |
+| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/feature08.png) |
+
+
+| Edit Profile | | | | | |
+| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/feature07.png) |
+| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/feature08.png) |
+
+
+| Log In | | | | | |
+| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/feature07.png) |
+| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/feature08.png) |
+
+
+| Sign Up | | | | | |
+| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/feature07.png) |
+| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/feature08.png) |
+
+
+| Navigation | | | | | |
+| | Recipes button is expected to take the user to the recipes page with limited access. | Tested the feature by clicking the recipes button. | The feature behaved as expected and opened the recipes page with restricted access. | Test concluded and passed. | ![screenshot](documentation/) |
+| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/feature08.png) |
+
+| Footer | | | | | |
+| | The Social links are expected to open the relevant socila sites in a new tab on the browser. | Tested the each social link by clicking each link. | The social links behaved as expected, and opened their respective pages in a new tab on the browser. | Test concluded and passed. | ![screenshot](documentation/) |
+| | The GitHub link is expected to open the site creators GitHub page in a new tab on the browser. | Tested the feature by clicking on the GitHub link. | The feature behaved as expected and opened the site creators GitHub page in a new tab on the browser. | Test concluded and passed.| ![screenshot](documentation/) |
+
+
+| Sidenav | | | | | |
+| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/feature07.png) |
+| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/feature08.png) |
+
+| Modals | | | | | |
+| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/feature07.png) |
+| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/feature08.png) |
+
+</details>
 
 ## User Story Testing
 
