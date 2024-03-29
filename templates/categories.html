@@ -39,7 +39,7 @@
     <!-- Modal Structure -->
     <div id="modal-category-{{ category._id }}" class="modal bottom-sheet">
         <div class="modal-content center-align">
-            <h4>Delete Category</h4>
+            <h4>Delete Category {{ category.category_name.title() }}</h4>
             <h5>Are you sure you want to delete this category? <br>
                 This action cannot be undone!</h5>
         </div>
