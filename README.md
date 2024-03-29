@@ -406,7 +406,7 @@ If you have your own packages that have been installed, then the requirements fi
 The **Procfile** can be created with the following command:
 
 - `echo web: python app.py > Procfile`
-- *replace **app.py** with the name of your primary Flask app name; the one at the root-level*
+(replace **app.py** with the name of your primary Flask app name; the one at the root-level)
 
 For Heroku deployment, follow these steps to connect your own GitHub repository to the newly created app:
 
@@ -416,10 +416,12 @@ Either:
 
 Or:
 
-- In the Terminal/CLI, connect to Heroku using this command: `heroku login -i`
-- Set the remote for Heroku: `heroku git:remote -a app_name` (replace *app_name* with your app name)
-- After performing the standard Git `add`, `commit`, and `push` to GitHub, you can now type:
-- `git push heroku main`
+- In the Terminal/CLI, connect to Heroku using this command: <br>
+ `heroku login -i`
+- Set the remote for Heroku: <br>
+  `heroku git:remote -a app_name` (replace *app_name* with your app name)
+- After performing the standard Git `add`, `commit`, and `push` to GitHub, you can now type: <br>
+  `git push heroku main`
 
 The project should now be connected and deployed to Heroku!
 
@@ -427,9 +429,9 @@ The project should now be connected and deployed to Heroku!
 
 The Recipe Base project can be cloned or forked in order to make a local copy on your own system.
 
-For either method, you will need to install any applicable packages found within the *requirements.txt* file.
+For either method, you will need to install any applicable packages found within the *requirements.txt* file susing the following code:
 
-- `pip3 install -r requirements.txt`.
+  `pip3 install -r requirements.txt`
 
 You will need to create a new file called `env.py` at the root-level,
 and include the same environment variables listed above from the Heroku deployment steps, plus a few extras.
@@ -455,8 +457,8 @@ You can clone the Recipe Base repository by following these steps:
 3. Select if you prefer to clone using HTTPS, SSH, or GitHub CLI and click the copy button to copy the URL to your clipboard
 4. Open Git shell or Terminal
 5. Change the current working directory to the one where you want the cloned directory
-6. In your IDE Terminal, type the following command to clone my repository:
-  -`git clone https://github.com/boderg/recipe-base.git`
+6. In your IDE Terminal, type the following command to clone my repository: <br>
+  `git clone https://github.com/boderg/recipe-base.git`
 7. Press Enter to create your local clone.
 
 Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
