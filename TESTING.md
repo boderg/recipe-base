@@ -78,7 +78,7 @@ The Recipe Base site has been tested using the following browsers:
 The results of these tests are as follows and listed by browser:
 
 <details>
-<summary>Click to view the results</summary>
+<summary>Click to view the browser compatibility results for Recipe Base</summary>
 
 ### Brave
 
@@ -179,7 +179,7 @@ The Recipe Base deployed project has been tested on multiple devices to check fo
 The results are as follows:
 
 <details>
-<summary>Click to view the results</summary>
+<summary>Click to view the responsive results for Recipe Base</summary>
 
 ### Mobile (Dev Tools - iPhone 12/13 Pro Max)
 
