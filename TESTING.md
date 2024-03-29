@@ -364,102 +364,74 @@ Defensive programming for Recipe Base was manually tested with the below user ac
 | Page | Expectation | Test | Result | Fix | Screenshot |
 | --- | --- | --- | --- | --- | --- |
 | Home (non authorised users) | | | | | |
-| | Brand logo is expected to act as a home button and open the home page. | Tested the feature by clickimg the Brand logo button. | The feature behaved as expected, returned to the home page. | Test concluded and passed. | ![screenshot](documentation/) |
-| | The 'Save your Recipes' card is expected to open a modal with information and a link to sign up to the site.  | Tested the feature by clicking on the 'Save your Recipes' card. | The feature behaved as expected, and opened the expected modal. | Test concluded and passed. | ![screenshot](documentation/) |
-| | The 'Why Join Us?' card is expected to open a modal with information and a link to sign up to the site. | Tested the feature by clicking on the 'Why Join Us?' card. | The feature behaved as expected, and opened the expected modal. | Test concluded and passed. | ![screenshot](documentation/) |
-| | The 'Join the Community' card is expected to open the Sign Up page. | Tested the feature by clicking on the 'Join the Community' card. | The feature behaved as expected, and opened the Sign Up page. | Test concluded and passed. | ![screenshot](documentation/) |
-
-
+| | Brand logo is expected to act as a home button and open the home page. | Tested the feature by clickimg the Brand logo button. | The feature behaved as expected, returned to the home page. | Test concluded and passed. | ![screenshot](documentation/defensive/brand-logo.png) |
+| | The 'Save your Recipes' card is expected to open a modal with information and a link to sign up to the site.  | Tested the feature by clicking on the 'Save your Recipes' card. | The feature behaved as expected, and opened the expected modal. | Test concluded and passed. | ![screenshot](documentation/defensive/save-card.png) |
+| | The 'Why Join Us?' card is expected to open a modal with information and a link to sign up to the site. | Tested the feature by clicking on the 'Why Join Us?' card. | The feature behaved as expected, and opened the expected modal. | Test concluded and passed. | ![screenshot](documentation/defensive/why-card.png) |
+| | The 'Join the Community' card is expected to open the Sign Up page. | Tested the feature by clicking on the 'Join the Community' card. | The feature behaved as expected, and opened the Sign Up page. | Test concluded and passed. | ![screenshot](documentation/defensive/join-card.png) |
 | Home (authorised users) | | | | | |
-| | The 'Save your Recipes' card is expected to open the Add Recipe page.  | Tested the feature by clicking on the 'Save your Recipes' card. | The feature behaved as expected, and opened the Add Recipe page. | Test concluded and passed. | ![screenshot](documentation/) |
-| | The 'Why Join Us?' card is expected to open the Recipes page. | Tested the feature by clicking on the 'Why Join Us?' card. | The feature behaved as expected, and opened the Recipes page. | Test concluded and passed. | ![screenshot](documentation/) |
-| | The 'Join the Community' card is expected to open the Recipes page. | Tested the feature by clicking on the 'Why Join Us?' card. | The feature behaved as expected, and opened the Recipes page. | Test concluded and passed. | ![screenshot](documentation/) |
-
-
+| | The 'Save your Recipes' card is expected to open the Add Recipe page.  | Tested the feature by clicking on the 'Save your Recipes' card. | The feature behaved as expected, and opened the Add Recipe page. | Test concluded and passed. | ![screenshot](documentation/defensive/save-card.png) |
+| | The 'Why Join Us?' card is expected to open the Recipes page. | Tested the feature by clicking on the 'Why Join Us?' card. | The feature behaved as expected, and opened the Recipes page. | Test concluded and passed. | ![screenshot](documentation/defensive/why-card.png) |
+| | The 'Join the Community' card is expected to open the Recipes page. | Tested the feature by clicking on the 'Why Join Us?' card. | The feature behaved as expected, and opened the Recipes page. | Test concluded and passed. | ![screenshot](documentation/defensive/join-card.png) |
+| Home (mobile screens) | | | | | |
+| | The Menu Bars are expected to open the sidenav on smaller screens that cannot accomodate the full nav bar. | Tested the feature by clicking on the Menu Bars.  | The feature behaved as expected, and opened the sidenav on the left of the screen.  | Test concluded and passed. | ![screenshot](documentation/defensive/menu-bars.png) |
 | Recipes | | | | | |
-| | The Search button is expected to return results based on keyword entries in the search bar from words contained in the titles, ingredients and description. | Tested the feature by enetring different words. | The feature behaved as expected, and returned recipes if those words were present in either the titles, ingredients or description and returned 'No recipes found' if the words were not present. | Test concluded and passed. | ![screenshot](documentation/feature01.png) |
-| | The Rest button is expected to reset the Recipes page back to it's normal designed display. | Tested the feature by clicking the Reset Button. | The feature behaved as expected and restored the normal display of the Recipes page. | Test concluded and passed. | ![screenshot](documentation/feature02.png) |
-| | The Elipsis on the recipe cards is expected open the card reveal and show only the recipe ingredients and category. | Tested the feature by clicking on the Elipsis. | The feature behaved as expected, and opened the card reveal to display the recipe ingredients and the category.  | Test concluded and passed. | ![screenshot](documentation/feature03.png) |
-| | The View Full Recipe button is expected to open the page that relates to the recipe to which card the button is on. | Tested the feature by clicking on different View Full Recipe buttons on different cards. | The feature behaved as expected, and opens each recipes relevant recipe page. | Test concluded and passed. | ![screenshot](documentation/feature04.png) |
-
-
+| | The Search button is expected to return results based on keyword entries in the search bar from words contained in the titles, ingredients and description. | Tested the feature by enetring different words. | The feature behaved as expected, and returned recipes if those words were present in either the titles, ingredients or description and returned 'No recipes found' if the words were not present. | Test concluded and passed. | ![screenshot](documentation/defensive/search-bar.png) |
+| | The Rest button is expected to reset the Recipes page back to it's normal designed display. | Tested the feature by clicking the Reset Button. | The feature behaved as expected and restored the normal display of the Recipes page. | Test concluded and passed. | ![screenshot](documentation/defensive/search-bar.png) |
+| | The Elipsis on the recipe cards is expected open the card reveal and show only the recipe ingredients and category. | Tested the feature by clicking on the Elipsis. | The feature behaved as expected, and opened the card reveal to display the recipe ingredients and the category.  | Test concluded and passed. | ![screenshot](documentation/defensive/elipsis.png) |
+| | The View Full Recipe button is expected to open the page that relates to the recipe to which card the button is on. | Tested the feature by clicking on different View Full Recipe buttons on different cards. | The feature behaved as expected, and opens each recipes relevant recipe page. | Test concluded and passed. | ![screenshot](documentation/defensive/view-full.png) |
 | Recipe | | | | | |
-| | The Back button is expected to return to the Recipes page. | Tested the feature by Clicking the Back button. | The feature behaved as expected, and returned to the Recipes page. | Test concluded and passed. | ![screenshot](documentation/feature03.png) |
-| | The Edit button is expected to open the Edit Recipe page for the recipe that is open. | Tested the feature by clicking the Edit button. | The feature behaved as expected, and opened the Edit page for the relevant recipe. | Test concluded and passed. | ![screenshot](documentation/feature04.png) |
-| | The Delete button is expected to open a delete modal to confirm deletion of the recipe that is open. | Tested the feature by clicking on the Delete button. | The feature behaved as expected, and opened the  delete modal. | Test concluded and passed. | ![screenshot](documentation/feature04.png) |
-
-
+| | The Back button is expected to return to the Recipes page. | Tested the feature by Clicking the Back button. | The feature behaved as expected, and returned to the Recipes page. | Test concluded and passed. | ![screenshot](documentation/defensive/recipe-buttons.png) |
+| | The Edit button is expected to open the Edit Recipe page for the recipe that is open. | Tested the feature by clicking the Edit button. | The feature behaved as expected, and opened the Edit page for the relevant recipe. | Test concluded and passed. | ![screenshot](documentation/defensive/recipe-buttons.png) |
+| | The Delete button is expected to open a delete modal to confirm deletion of the recipe that is open. | Tested the feature by clicking on the Delete button. | The feature behaved as expected, and opened the  delete modal. | Test concluded and passed. | ![screenshot](documentation/defensive/recipe-buttons.png) |
 | Add Recipe | | | | | |
-| | The Plus / Minus symbols are expected to add and remove new lines. | Tested the feature by clicking on the buttons. | The feature behaved as expected, and added a line when the plus symbol was clicked and removed a line when the minus symbol was clicked. | Test concluded and passed. | ![screenshot](documentation/feature05.png) |
-| | The Dropdown Select is expected to open a dropdown selction of category checkboxes. | Tested the feature by clicking on the Dropdown Selector. | The feature behaved as expected, and opened the dropdown selection of category checkboxes. | Test concluded and passed. | ![screenshot](documentation/feature06.png) |
-| | The Add Recipe button is expected to add the completed recipe form details to create a new recipe. | Tested the feature by completing the form and clicking the Add Recipe button. | The Add Recipe button behaved as expected, and added the completed form to the recipe database. | Test concluded and passed. | ![screenshot](documentation/feature05.png) |
-| | The Cancel button is expected to return the user back to the Recipes page. | Tested the feature by clicking the Cancel button. | The feature behaved as expected, and returned back to the Recipes page. | Test concluded and passed. | ![screenshot](documentation/feature06.png) |
-
-
+| | The Plus / Minus symbols are expected to add and remove new lines. | Tested the feature by clicking on the buttons. | The feature behaved as expected, and added a line when the plus symbol was clicked and removed a line when the minus symbol was clicked. | Test concluded and passed. | ![screenshot](documentation/defensive/plus-minus-symbols.png) |
+| | The Dropdown Select is expected to open a dropdown selction of category checkboxes. | Tested the feature by clicking on the Dropdown Selector. | The feature behaved as expected, and opened the dropdown selection of category checkboxes. | Test concluded and passed. | ![screenshot](documentation/defensive/dropdowen-selector.png) |
+| | The Add Recipe button is expected to add the completed recipe form details to create a new recipe. | Tested the feature by completing the form and clicking the Add Recipe button. | The Add Recipe button behaved as expected, and added the completed form to the recipe database. | Test concluded and passed. | ![screenshot](documentation/defensive/add-recipe-buttons.png) |
+| | The Cancel button is expected to return the user back to the Recipes page. | Tested the feature by clicking the Cancel button. | The feature behaved as expected, and returned back to the Recipes page. | Test concluded and passed. | ![screenshot](documentation/defensive/add-recipe-buttons.png) |
+| | Form validation is expected to prevent the Add Recipe sumission if there is no data entered. | Tested by completing the form and leaving various blank entries. | The form validation did not act as expected and entered blank entries into the recipe database. | To fix this 'required' was added to the input fields and the empty disabled option removed from the dropdown selectoor. | |
 | Edit Recipe | | | | | |
-| | The Plus / Minus symbols are expected to add and remove new lines. | Tested the feature by clicking on the buttons. | The feature behaved as expected, and added a line when the plus symbol was clicked and removed a line when the minus symbol was clicked. | Test concluded and passed. | ![screenshot](documentation/feature05.png) |
-| | The Dropdown Select is expected to open a dropdown selction of category checkboxes. | Tested the feature by clicking on the Dropdown Selector. | The feature behaved as expected, and opened the dropdown selection of category checkboxes. | Test concluded and passed. | ![screenshot](documentation/feature06.png) |
-| | The Update Recipe button is expected to update the completed recipe form details to edit a current recipe. | Tested the feature by completing the form and clicking the Update Recipe button. | The Update Recipe button behaved as expected, and updated the completed form to the recipe database. | Test concluded and passed. | ![screenshot](documentation/feature05.png) |
-| | The Cancel button is expected to return the user back to the Recipes page. | Tested the feature by clicking the Cancel button. | The feature behaved as expected, and returned back to the Recipes page. | Test concluded and passed. | ![screenshot](documentation/feature06.png) |
-
-
+| | The Plus / Minus symbols are expected to add and remove new lines. | Tested the feature by clicking on the buttons. | The feature behaved as expected, and added a line when the plus symbol was clicked and removed a line when the minus symbol was clicked. | Test concluded and passed. | ![screenshot](documentation/defensive/plus-minus-symbols.png) |
+| | The Dropdown Select is expected to open a dropdown selction of category checkboxes. | Tested the feature by clicking on the Dropdown Selector. | The feature behaved as expected, and opened the dropdown selection of category checkboxes. | Test concluded and passed. | ![screenshot](documentation/defensive/dropdowen-selector.png) |
+| | The Update Recipe button is expected to update the completed recipe form details to edit a current recipe. | Tested the feature by completing the form and clicking the Update Recipe button. | The Update Recipe button behaved as expected, and updated the completed form to the recipe database. | Test concluded and passed. | ![screenshot](documentation/defensive/edit-recipe-buttons.png) |
+| | The Cancel button is expected to return the user back to the Recipes page. | Tested the feature by clicking the Cancel button. | The feature behaved as expected, and returned back to the Recipes page. | Test concluded and passed. | ![screenshot](documentation/defensive/edit-recipe-buttons.png |
+| | Form validation is expected to prevent the Edit Recipe sumission if there is no data entered. | Tested by completing the form and leaving various blank entries. | The form validation did not act as expected and entered blank entries into the recipe database. | To fix this 'required' was added to the input fields and the empty disabled option removed from the dropdown selectoor. | |
 | Categories | | | | | |
-| | View Categories button is expected to open a page with all recipes associated with that category provided the recipe has had a category added. | Tested the feature by clicking on the View Categories button.  | The feature behaved as expected, and opened a page with recipes related to that category or an empty page with 'No Recipes Found' if there were none associated with that category.  | Test concluded and passed. | ![screenshot](documentation/feature07.png) |
-| | Feature is expected to  | Tested the feature by  | The feature  | Test concluded and passed. | ![screenshot](documentation/feature08.png) |
-| | Feature is expected to  | Tested the feature by  | The feature  | Test concluded and passed. | ![screenshot](documentation/feature08.png) |
-
-
+| | The View Categories button is expected to open a page with all recipes associated with that category provided the recipe has had a category added. | Tested the feature by clicking on the View Categories button.  | The feature behaved as expected, and opened a page with recipes related to that category or an empty page with 'No Recipes Found' if there were none associated with that category.  | Test concluded and passed. | ![screenshot](documentation/defensive/categories-buttons.png) |
+| | The Edit button is expected to open the edit categorries form for the selected category.  | Tested the feature by clcking on different Edit buttons on different categories.  | The feature behaved as expected, and opened the relevant category that was selected.  | Test concluded and passed. | ![screenshot](documentation/defensive/categories-buttons.png) |
+| | The Delete button is expected to open a delete modal that is associated with the selected category.  | Tested the feature by clicking on different Delete buttons on different categories.  | The feature behaved as expected, and opened the relevant delete modal associated with the category selected.  | Test concluded and passed. | ![screenshot](documentation/defensive/categories-buttons.png) |
 | Category | | | | | |
-| | Feature is expected to  | Tested the feature by  | The feature behaved as expected, and  | Test concluded and passed. | ![screenshot](documentation/feature07.png) |
-| | Feature is expected to  | Tested the feature by  | The feature  | Test concluded and passed. | ![screenshot](documentation/feature08.png) |
-
-
+| | Back to categories button is expected to return the user back to the categories page.  | Tested the feature by clicking on the Back to Categories button.  | The feature behaved as expected, and returned to the categories page.  | Test concluded and passed. | ![screenshot](documentation/defensive/back-to-categories-button.png) |
+| | Search Bar and buttons not tested.  | This feature was not tested as the Categories page is a modified recipes page holding recipes associated with the selected category.  | The feature is direct copy of the recipes search feature and returns with recipe results.  | | |
 | Add Category | | | | | |
-| | Feature is expected to  | Tested the feature by  | The feature behaved as expected, and  | Test concluded and passed. | ![screenshot](documentation/feature07.png) |
-| | Feature is expected to  | Tested the feature by  | The feature  | Test concluded and passed. | ![screenshot](documentation/feature08.png) |
-
-
+| | The Add Category button is expected to add a new cateegory to the database.  | Tested the feature by completeing the category field and clicking the Add Category button.  | The feature behaved as expected, and added the category, however also allowed an empty for to be submitted.  | Fixed by adding required to the category input field. | ![screenshot](documentation/defensive/add-categories-buttons.png) |
+| | The Cancel button is expected to return the user back to the Categories page. | Tested the feature by clicking the Cancel button. | The feature behaved as expected, and returned back to the Categories page. | Test concluded and passed. | ![screenshot](documentation/defensive/add-categories-buttons.png) |
 | Edit Category | | | | | |
-| | Feature is expected to  | Tested the feature by  | The feature behaved as expected, and  | Test concluded and passed. | ![screenshot](documentation/feature07.png) |
-| | Feature is expected to  | Tested the feature by  | The feature  | Test concluded and passed. | ![screenshot](documentation/feature08.png) |
-
-
+| | The Update Category button is expected to update the cateegory selected to the database.  | Tested the feature by completeing the category field and clicking the Update Category button.  | The feature behaved as expected, and updated the category to the database.  | Test concluded and passed. | ![screenshot](documentation/defensive/edit-categories-button.png) |
+| | The Cancel button is expected to return the user back to the Categories page. | Tested the feature by clicking the Cancel button. | The feature behaved as expected, and returned back to the Categories page. | Test concluded and passed. | ![screenshot](documentation/defensive/edit-categories-button.png) |
 | Profile | | | | | |
-| | Feature is expected to  | Tested the feature by  | The feature behaved as expected, and  | Test concluded and passed. | ![screenshot](documentation/feature07.png) |
-| | Feature is expected to  | Tested the feature by  | The feature  | Test concluded and passed. | ![screenshot](documentation/feature08.png) |
-
-
+| | The Edit Profile button is expected to take the user to the Edit Profile page.  | Tested the feature by clicking on the Edit Profile button. | The feature behaved as expected, and opened the Edit profile page.  | Test concluded and passed. | ![screenshot](documentation/defensive/edit-profile.png) |
 | Edit Profile | | | | | |
-| | Feature is expected to  | Tested the feature by  | The feature behaved as expected, and  | Test concluded and passed. | ![screenshot](documentation/feature07.png) |
-| | Feature is expected to  | Tested the feature by  | The feature  | Test concluded and passed. | ![screenshot](documentation/feature08.png) |
-
-
+| | The Update Profile button is expected to update the changed user data to the database.  | Tested the feature by editing the user data and clicking on the Update Proflie button. | The feature behaved as expected, and updated the user data to the database.  | Test concluded and passed. | ![screenshot](documentation/defensive/edit-profile-buttons.png) |
+| | The Cancel button is expected to return the user back to the Profile page. | Tested the feature by clicking the Cancel button. | The feature behaved as expected, and returned back to the Profile page. | Test concluded and passed. | ![screenshot](documentation/defensive/edit-profile-buttons.png) |
+| | The Delete button is expected to open a delete modal that is associated with the user profile.  | Tested the feature by clicking on Delete button.  | The feature behaved as expected, and opened the relevant delete modal associated with the user.  | Test concluded and passed. | ![screenshot](documentation/defensive/edit-profile-buttons.png) |
 | Log In | | | | | |
-| | Feature is expected to  | Tested the feature by  | The feature behaved as expected, and  | Test concluded and passed. | ![screenshot](documentation/feature07.png) |
-| | Feature is expected to  | Tested the feature by  | The feature  | Test concluded and passed. | ![screenshot](documentation/feature08.png) |
-
-
+| | The Log In button is expected to log the user in to their account on the Recipe base site.  | Tested the feature by entering valid user details and clicking the Log In button. | The feature behaved as expected, and opened in to the authorised user's Profile page.  | Test concluded and passed. | ![screenshot](documentation/defensive/login.png) |
+| | The Sign Up link is expected to take the user to the Sign Up page. | Tested the feature by clicking the Sign Up link. | The feature behaved as expected and opened the Sign Up page. | Test concluded and passed. | ![screenshot](documentation/defensive/sign-up-link.png) |
 | Sign Up | | | | | |
-| | Feature is expected to  | Tested the feature by  | The feature behaved as expected, and  | Test concluded and passed. | ![screenshot](documentation/feature07.png) |
-| | Feature is expected to  | Tested the feature by  | The feature  | Test concluded and passed. | ![screenshot](documentation/feature08.png) |
-
-
-| Navigation | | | | | |
-| | Recipes button is expected to take the user to the recipes page with limited access. | Tested the feature by clicking the recipes button. | The feature behaved as expected and opened the recipes page with restricted access. | Test concluded and passed. | ![screenshot](documentation/) |
-| | Feature is expected to  | Tested the feature by  | The feature  | Test concluded and passed. | ![screenshot](documentation/feature08.png) |
-
+| | The Sign Up button is expected to register new users to the site and add them to the database. | Tested the feature by adding new user details to the form and clicking the Sign Up button. | The feature behaved as expected, and added the new user details to the database and opened the new user's Profile page. | Test concluded and passed. | ![screenshot](documentation/defensive/sign-up.png) |
+| | The Log In link is expected to take the user to the Log In page. | Tested the feature by clicking the Log In link. | The feature behaved as expected and opened the Log In page. | Test concluded and passed. | ![screenshot](documentation/defensive/log-in-link.png) |
+| Navigation Bar | | | | | |
+| | The Navigation buttons are expected to take the user to the requested page. | Tested the feature by clicking the Navigation buttons in turn. | The feature behaved as expected and opened the requested pages with the access that is granted to the signed in user. | Test concluded and passed. | ![screenshot](documentation/defensive/navigation-bar.png) |
+| | The Navigation Bar is also dynamic in that the buttons change dependant on the user that is using the system. | Unregistered User ![screenshot](documentation/defensive/unregistered.png) | Registered User ![screenshot](documentation/defensive/registered.png) |Administrator ![screenshot](documentation/defensive/navigation-bar.png) | |
 | Footer | | | | | |
-| | The Social links are expected to open the relevant socila sites in a new tab on the browser. | Tested the each social link by clicking each link. | The social links behaved as expected, and opened their respective pages in a new tab on the browser. | Test concluded and passed. | ![screenshot](documentation/) |
-| | The GitHub link is expected to open the site creators GitHub page in a new tab on the browser. | Tested the feature by clicking on the GitHub link. | The feature behaved as expected and opened the site creators GitHub page in a new tab on the browser. | Test concluded and passed.| ![screenshot](documentation/) |
-
-
+| | The Social links are expected to open the relevant socila sites in a new tab on the browser. | Tested the each social link by clicking each link. | The social links behaved as expected, and opened their respective pages in a new tab on the browser. | Test concluded and passed. | ![screenshot](documentation/defensive/social-links.png) ![screenshot](documentation/defensive/socials-open.png) |
+| | The GitHub link is expected to open the site creators GitHub page in a new tab on the browser. | Tested the feature by clicking on the GitHub link. | The feature behaved as expected and opened the site creators GitHub page in a new tab on the browser. | Test concluded and passed.| ![screenshot](documentation/defensive/github-link.png) ![screenshot](documentation/defensive/github-open.png) |
 | Sidenav | | | | | |
-| | Feature is expected to  | Tested the feature by  | The feature behaved as expected, and  | Test concluded and passed. | ![screenshot](documentation/feature07.png) |
-| | Feature is expected to  | Tested the feature by  | The feature  | Test concluded and passed. | ![screenshot](documentation/feature08.png) |
-
+| | The Sidenav links are expected to take the user to the requested page. | Tested the feature by clicking the Navigation buttons in turn. | The feature behaved as expected and opened the requested pages with the access that is granted to the signed in user. | Test concluded and passed. | ![screenshot](documentation/defensive/sidenav.png) |
+| | The Sidenav links is also dynamic in that the buttons change dependant on the user that is using the system. | Unregistered User ![screenshot](documentation/defensive/unregistered-side.png) | Registered User ![screenshot](documentation/defensive/registered-side.png) | Administrator ![screenshot](documentation/defensive/sidenav.png) | |
 | Modals | | | | | |
-| | Feature is expected to  | Tested the feature by  | The feature behaved as expected, and  | Test concluded and passed. | ![screenshot](documentation/feature07.png) |
-| | Feature is expected to  | Tested the feature by  | The feature  | Test concluded and passed. | ![screenshot](documentation/feature08.png) |
+| | The Sign Up is expected to take the user to the sign up page if the Sign Up button is clicked.  | Tested the feature by clciking on the Sign Up button.  | The feature behaved as expected, and opened the Sign Up page.  | Test concluded and passed. | ![screenshot](documentation/defensive/sign-up-modal.png) |
+| | The Delete Modal is expected to allow the user to change their mind befor deleting a Recipe or Profile and in the Admin case also a Category.  | Tested the feature by clciking on the modal Cancel button and Delete buttons. | The feature behaved as expected, the Cancel button returned to the main page that item was trying to be deleted from while the Delete button deleted the item and returned to the main page the item was deleted from. | Test concluded and passed. | ![screenshot](documentation/defensive/delete-modal.png) |
 
 </details>
 
