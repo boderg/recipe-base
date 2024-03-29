@@ -283,21 +283,28 @@ This would be something that can be worked on via css as a future development.
 
 The deployed Recipe Base project has been tested using the Lighthouse Audit tool to check for any major issues.
 
+<details>
+<summary>Click here to view the lighthouse results for Recipe Base</summary>
+
 | Page | Mobile | Desktop | Notes |
 | --- | --- | --- | --- |
-| Home | ![screenshot](documentation/lighthouse/mobile/home.png) | ![screenshot](documentation/lighthouse/desktop/home.png) | Slightly slower mobile performnce due to materialize css and js. |
-| Recipes | ![screenshot](documentation/lighthouse/mobile/recipes.png) | ![screenshot](documentation/lighthouse/desktop/recipes.png) | Slightly slower mobile performnce due to materialize css and js. |
-| Recipe | ![screenshot](documentation/lighthouse/mobile/recipe.png) | ![screenshot](documentation/lighthouse/desktop/recipe.png) | Slightly lower optimisation on mobile. |
-| Add Recipe | ![screenshot](documentation/lighthouse/mobile/add-recipe.png) | ![screenshot](documentation/lighthouse/desktop/add-recipe.png) | x |
-| Edit Recipe | ![screenshot](documentation/lighthouse/mobile/edit-recipe.png) | ![screenshot](documentation/lighthouse/desktop/edit-recipe.png) | x |
-| Categories | ![screenshot](documentation/lighthouse/mobile/categories.png) | ![screenshot](documentation/lighthouse/desktop/categories.png) | x |
-| Category | ![screenshot](documentation/lighthouse/mobile/category.png) | ![screenshot](documentation/lighthouse/desktop/category.png) | x |
-| Add Category | ![screenshot](documentation/lighthouse/mobile/add-category.png) | ![screenshot](documentation/lighthouse/desktop/add-category.png) | Slightly lower optimisation on both mobile and desktop |
-| Edit category | ![screenshot](documentation/lighthouse/mobile/edit-category.png) | ![screenshot](documentation/lighthouse/desktop/edit-category.png) | x |
-| Profile | ![screenshot](documentation/lighthouse/mobile/profile.png) | ![screenshot](documentation/lighthouse/desktop/profile.png) | x |
-| Edit Profile | ![screenshot](documentation/lighthouse/mobile/edit-profile.png) | ![screenshot](documentation/lighthouse/desktop/edit-profile.png) | x |
-| Log In | ![screenshot](documentation/lighthouse/mobile/login.png) | ![screenshot](documentation/lighthouse/desktop/login.png) | x |
-| Sign Up | ![screenshot](documentation/lighthouse/mobile/sign-up.png) | ![screenshot](documentation/lighthouse/desktop/sign-up.png) | x |
+| Home | ![screenshot](documentation/lighthouse/mobile/home.png) | ![screenshot](documentation/lighthouse/desktop/home.png) | Slightly slower mobile performnce. |
+| Recipes | ![screenshot](documentation/lighthouse/mobile/recipes.png) | ![screenshot](documentation/lighthouse/desktop/recipes.png) | Slightly slower mobile performnce. |
+| Recipe | ![screenshot](documentation/lighthouse/mobile/recipe.png) | ![screenshot](documentation/lighthouse/desktop/recipe.png) | Slightly slower mobile performnce. |
+| Add Recipe | ![screenshot](documentation/lighthouse/mobile/add-recipe.png) | ![screenshot](documentation/lighthouse/desktop/add-recipe.png) | Slightly slower performnce. |
+| Edit Recipe | ![screenshot](documentation/lighthouse/mobile/edit-recipe.png) | ![screenshot](documentation/lighthouse/desktop/edit-recipe.png) | Slight drop in performance. |
+| Categories | ![screenshot](documentation/lighthouse/mobile/categories.png) | ![screenshot](documentation/lighthouse/desktop/categories.png) | Slower performance. |
+| Category | ![screenshot](documentation/lighthouse/mobile/category.png) | ![screenshot](documentation/lighthouse/desktop/category.png) | Slower mobile performance. |
+| Add Category | ![screenshot](documentation/lighthouse/mobile/add-category.png) | ![screenshot](documentation/lighthouse/desktop/add-category.png) | Slight drop in optimisation. |
+| Edit category | ![screenshot](documentation/lighthouse/mobile/edit-category.png) | ![screenshot](documentation/lighthouse/desktop/edit-category.png) | Slight drop in optimisation. Slight drop in performnce on mobile. |
+| Profile | ![screenshot](documentation/lighthouse/mobile/profile.png) | ![screenshot](documentation/lighthouse/desktop/profile.png) | Slight drop in performance and optimisation on mobile. |
+| Edit Profile | ![screenshot](documentation/lighthouse/mobile/edit-profile.png) | ![screenshot](documentation/lighthouse/desktop/edit-profile.png) | Slight drop in performance and optimisation on mobile. Small drop in optimisation on desktop. |
+| Log In | ![screenshot](documentation/lighthouse/mobile/login.png) | ![screenshot](documentation/lighthouse/desktop/login.png) | Slight drop in mobile performance. Slight drop in optimisation. |
+| Sign Up | ![screenshot](documentation/lighthouse/mobile/sign-up.png) | ![screenshot](documentation/lighthouse/desktop/sign-up.png) | Slight drop in mobile performance. Slight drop in optimisation. |
+
+The main issue that slows down mobile rendering was showing on all pages. This issue was render blocking resources such as cloudfare cdnjs for materialize, image rendering and unused materialize css and js.
+
+</details>
 
 ## Defensive Programming
 
