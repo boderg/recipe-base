@@ -8,6 +8,9 @@ This is where the code for the Recipe Base site has been tested by using the app
 
 Here are the results of those tests:
 
+<details>
+<summary>Click to view the validation results for Recipe Base</summary>
+
 ### HTML
 
 The recommended [HTML W3C Validator](https://validator.w3.org) was used to validate all of the Recipe Base HTML files.
@@ -58,7 +61,9 @@ The recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com) was used t
 
 | File | CI URL | Screenshot | Notes |
 | --- | --- | --- | --- |
-| app.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/boderg/recipe-base/main/app.py) | ![screenshot](documentation/validation/python/python-line-to-long.png) ![screenshot](documentation/validation/python/python.png) | ES01 line too long. <br> W293 blank line contains whitespace.. <br> W292 no new line at end of file. <br> This last one (W293) seems to be a quirk of GitHub. Copying the raw faile from GitHub seems to omit the empty line at the end of the file, however when edit is clicked, the newline is showing in the editor.  |
+| app.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/boderg/recipe-base/main/app.py) | ![screenshot](documentation/validation/python/python-line-to-long.png) ![screenshot](documentation/validation/python/python.png) | ES01 line too long. <br> W293 blank line contains whitespace.. <br> W292 no new line at end of file. <br> This last one (W293) seems to be a quirk of GitHub. Copying the raw faile from GitHub seems to omit the empty line at the end of the file, however when edit is clicked, the newline is showing in the editor. |
+
+</details>
 
 ## Browser Compatibility
 
