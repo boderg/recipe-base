@@ -16,7 +16,7 @@
                 <div class="input-field col s12">
                     <i class="fas fa-pen-clip prefix"></i>
                     <input id="recipe_name" name="recipe_name" value="{{ recipe.recipe_name }}" type="text"
-                        class="validate">
+                        class="validate" required>
                 </div>
             </div>
 
@@ -26,7 +26,7 @@
                 <div class="input-field col s12">
                     <i class="fas fa-utensils prefix"></i>
                     <input id="serving_size" name="serving_size" value="{{ recipe.serving_size }}" type="number"
-                        class="validate">
+                        class="validate" required>
                 </div>
             </div>
 
@@ -35,7 +35,7 @@
                 <label for="recipe_description">Recipe Description</label>
                 <div class="input-field col s12">
                     <i class="fas fa-comment-dots prefix"></i>
-                    <textarea id="recipe_description" name="recipe_description"
+                    <textarea id="recipe_description" name="recipe_description" required
                         class="materialize-textarea validate">{{ recipe.recipe_description }}</textarea>
                 </div>
             </div>
@@ -58,7 +58,7 @@
                     {% for ingredient in recipe.main_ingredients %}
                     <label for="main_ingredients_{{ loop.index }}"></label>
                     <input id="main_ingredients_{{ loop.index }}" name="main_ingredients" value="{{ ingredient }}"
-                        type="text" class="validate">
+                        type="text" class="validate" required>
                     {% endfor %}
                     <i class="fas fa-plus tooltipped" data-position="left"
                         data-tooltip="Use the '+' and '-' buttons to add or remove lines."
@@ -75,7 +75,7 @@
                     {% for ingredient in recipe.optional_ingredients %}
                     <label for="optional_ingredients_{{ loop.index }}"></label>
                     <input id="optional_ingredients_{{ loop.index }}" name="optional_ingredients"
-                        value="{{ ingredient }}" type="text" class="validate">
+                        value="{{ ingredient }}" type="text" class="validate" required>
                     {% endfor %}
                     <i class="fas fa-plus tooltipped" data-position="left"
                         data-tooltip="Use the '+' and '-' buttons to add or remove lines."
@@ -92,7 +92,7 @@
                     {% for instruction in recipe.preparation_method %}
                     <label for="preparation_method_{{ loop.index }}"></label>
                     <input id="preparation_method_{{ loop.index }}" name="preparation_method"
-                        value="{{ instruction }}" type="text" class="validate">
+                        value="{{ instruction }}" type="text" class="validate" required>
                     {% endfor %}
                     <i class="fas fa-plus tooltipped" data-position="left"
                         data-tooltip="Use the '+' and '-' buttons to add or remove lines."
@@ -109,7 +109,7 @@
                     {% for instruction in recipe.cooking_method %}
                     <label for="cooking_method_{{ loop.index }}"></label>
                     <input id="cooking_method_{{ loop.index }}" name="cooking_method" value="{{ instruction }}"
-                        type="text" class="validate">
+                        type="text" class="validate" required>
                     {% endfor %}
                     <i class="fas fa-plus tooltipped" data-position="left"
                         data-tooltip="Use the '+' and '-' buttons to add or remove lines."
@@ -124,7 +124,7 @@
                 <div class="input-field col s12 tooltipped" data-position="left" data-tooltip="Enter time value">
                     <i class="fas fa-clock prefix"></i>
                     <input id="preparation_time" name="preparation_time" value="{{ recipe.preparation_time }}"
-                        type="time" step="60" class="validate">
+                        type="time" step="60" class="validate" required>
                 </div>
             </div>
 
@@ -134,7 +134,7 @@
                 <div class="input-field col s12 tooltipped" data-position="left" data-tooltip="Enter time value">
                     <i class="fas fa-clock prefix"></i>
                     <input id="cooking_time" name="cooking_time" value="{{ recipe.cooking_time }}" 
-                        type="time" step="60" class="validate">
+                        type="time" step="60" class="validate" required>
                 </div>
             </div>
 
@@ -146,8 +146,8 @@
                     <select multiple title="category_name" name="category_name" id="category_name">
                         <option value="" disabled selected>Select all that apply</option>
                         {% for category in categories %}
-                        {% if category.category_name == recipe.category_name %}
-                        <option value="{{ category.category_name }}">{{ category.category_name.capitalize() }}</option>
+                        {% if category.category_name in recipe.category_name %}
+                        <option value="{{ category.category_name }}" selected>{{ category.category_name.capitalize() }}</option>
                         {% else %}
                         <option value="{{ category.category_name }}">{{ category.category_name.capitalize() }}</option>
                         {% endif %}
