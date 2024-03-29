@@ -346,11 +346,11 @@ Consider using the following format for manual test cases:
 
 Expected Outcome / Test Performed / Result Received / Fixes Implemented
 
-- **Expected**: "Feature is expected to do X when the user does Y."
-- **Testing**: "Tested the feature by doing Y."
-- (either) **Result**: "The feature behaved as expected, and it did Y."
-- (or) **Result**: "The feature did not respond to A, B, or C."
-- **Fix**: "I did Z to the code because something was missing."
+- **Expected**: "Feature is expected to ."
+- **Testing**: "Tested the feature by ."
+- (either) **Result**: "The feature behaved as expected, and ."
+- (or) **Result**: "The feature "
+- **Fix**: "Test concluded and passed.."
 
 Use the table below as a basic start, and expand on it using the logic above.
 
@@ -365,85 +365,88 @@ Defensive programming for Recipe Base was manually tested with the below user ac
 | --- | --- | --- | --- | --- | --- |
 | Home (non authorised users) | | | | | |
 | | Brand logo is expected to act as a home button and open the home page. | Tested the feature by clickimg the Brand logo button. | The feature behaved as expected, returned to the home page. | Test concluded and passed. | ![screenshot](documentation/) |
-| | The 'Save your Recipes' card is expected to open a modal with information and a link to sign up to the site.  | Tested the feature by clicking on the 'Save your Recipes' card. | The feature behaved as expected, and opened the expected modal. | Test concluded and passed | ![screenshot](documentation/) |
+| | The 'Save your Recipes' card is expected to open a modal with information and a link to sign up to the site.  | Tested the feature by clicking on the 'Save your Recipes' card. | The feature behaved as expected, and opened the expected modal. | Test concluded and passed. | ![screenshot](documentation/) |
 | | The 'Why Join Us?' card is expected to open a modal with information and a link to sign up to the site. | Tested the feature by clicking on the 'Why Join Us?' card. | The feature behaved as expected, and opened the expected modal. | Test concluded and passed. | ![screenshot](documentation/) |
 | | The 'Join the Community' card is expected to open the Sign Up page. | Tested the feature by clicking on the 'Join the Community' card. | The feature behaved as expected, and opened the Sign Up page. | Test concluded and passed. | ![screenshot](documentation/) |
 
 
 | Home (authorised users) | | | | | |
-| | The 'Save your Recipes' card is expected to open the Add Recipe page.  | Tested the feature by clicking on the 'Save your Recipes' card. | The feature behaved as expected, and opened the Add Recipe page. | Test concluded and passed | ![screenshot](documentation/) |
+| | The 'Save your Recipes' card is expected to open the Add Recipe page.  | Tested the feature by clicking on the 'Save your Recipes' card. | The feature behaved as expected, and opened the Add Recipe page. | Test concluded and passed. | ![screenshot](documentation/) |
 | | The 'Why Join Us?' card is expected to open the Recipes page. | Tested the feature by clicking on the 'Why Join Us?' card. | The feature behaved as expected, and opened the Recipes page. | Test concluded and passed. | ![screenshot](documentation/) |
 | | The 'Join the Community' card is expected to open the Recipes page. | Tested the feature by clicking on the 'Why Join Us?' card. | The feature behaved as expected, and opened the Recipes page. | Test concluded and passed. | ![screenshot](documentation/) |
 
 
 | Recipes | | | | | |
-| | The Search button is expected to return results based on keyword entries in the search bar from words contained in the titles, ingredients and description. | Tested the feature by enetring different words. | The feature behaved as expected, and returned recipes if those words were present in either the titles, ingredients or description and returned 'No recipes found' if the words were not present. | Test concluded and passed | ![screenshot](documentation/feature01.png) |
+| | The Search button is expected to return results based on keyword entries in the search bar from words contained in the titles, ingredients and description. | Tested the feature by enetring different words. | The feature behaved as expected, and returned recipes if those words were present in either the titles, ingredients or description and returned 'No recipes found' if the words were not present. | Test concluded and passed. | ![screenshot](documentation/feature01.png) |
 | | The Rest button is expected to reset the Recipes page back to it's normal designed display. | Tested the feature by clicking the Reset Button. | The feature behaved as expected and restored the normal display of the Recipes page. | Test concluded and passed. | ![screenshot](documentation/feature02.png) |
-| | The Elipsis on the recipe cards is expected open the card reveal and show only the recipe ingredients and category. | Tested the feature by clicking on the Elipsis. | The feature behaved as expected, and opened the card reveal to display the recipe ingredients and the category.  | Test concluded and passed | ![screenshot](documentation/feature03.png) |
+| | The Elipsis on the recipe cards is expected open the card reveal and show only the recipe ingredients and category. | Tested the feature by clicking on the Elipsis. | The feature behaved as expected, and opened the card reveal to display the recipe ingredients and the category.  | Test concluded and passed. | ![screenshot](documentation/feature03.png) |
 | | The View Full Recipe button is expected to open the page that relates to the recipe to which card the button is on. | Tested the feature by clicking on different View Full Recipe buttons on different cards. | The feature behaved as expected, and opens each recipes relevant recipe page. | Test concluded and passed. | ![screenshot](documentation/feature04.png) |
 
 
 | Recipe | | | | | |
-| | The Back button is expected to return to the Recipes page. | Tested the feature by Clicking the Back button. | The feature behaved as expected, and returned to the Recipes page. | Test concluded and passed | ![screenshot](documentation/feature03.png) |
+| | The Back button is expected to return to the Recipes page. | Tested the feature by Clicking the Back button. | The feature behaved as expected, and returned to the Recipes page. | Test concluded and passed. | ![screenshot](documentation/feature03.png) |
 | | The Edit button is expected to open the Edit Recipe page for the recipe that is open. | Tested the feature by clicking the Edit button. | The feature behaved as expected, and opened the Edit page for the relevant recipe. | Test concluded and passed. | ![screenshot](documentation/feature04.png) |
 | | The Delete button is expected to open a delete modal to confirm deletion of the recipe that is open. | Tested the feature by clicking on the Delete button. | The feature behaved as expected, and opened the  delete modal. | Test concluded and passed. | ![screenshot](documentation/feature04.png) |
 
 
 | Add Recipe | | | | | |
-| | The Plus / Minus symbols are expected to add and remove new lines. | Tested the feature by clicking on the buttons. | The feature behaved as expected, and added a line when the plus symbol was clicked and removed a line when the minus symbol was clicked. | Test concluded and passed | ![screenshot](documentation/feature05.png) |
+| | The Plus / Minus symbols are expected to add and remove new lines. | Tested the feature by clicking on the buttons. | The feature behaved as expected, and added a line when the plus symbol was clicked and removed a line when the minus symbol was clicked. | Test concluded and passed. | ![screenshot](documentation/feature05.png) |
 | | The Dropdown Select is expected to open a dropdown selction of category checkboxes. | Tested the feature by clicking on the Dropdown Selector. | The feature behaved as expected, and opened the dropdown selection of category checkboxes. | Test concluded and passed. | ![screenshot](documentation/feature06.png) |
-| | The Add Recipe button is expected to add the completed recipe form details to create a new recipe. | Tested the feature by completing the form and clicking the button. | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/feature05.png) |
-| | The Cancel button is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/feature06.png) |
+| | The Add Recipe button is expected to add the completed recipe form details to create a new recipe. | Tested the feature by completing the form and clicking the Add Recipe button. | The Add Recipe button behaved as expected, and added the completed form to the recipe database. | Test concluded and passed. | ![screenshot](documentation/feature05.png) |
+| | The Cancel button is expected to return the user back to the Recipes page. | Tested the feature by clicking the Cancel button. | The feature behaved as expected, and returned back to the Recipes page. | Test concluded and passed. | ![screenshot](documentation/feature06.png) |
 
 
 | Edit Recipe | | | | | |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/feature07.png) |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/feature08.png) |
+| | The Plus / Minus symbols are expected to add and remove new lines. | Tested the feature by clicking on the buttons. | The feature behaved as expected, and added a line when the plus symbol was clicked and removed a line when the minus symbol was clicked. | Test concluded and passed. | ![screenshot](documentation/feature05.png) |
+| | The Dropdown Select is expected to open a dropdown selction of category checkboxes. | Tested the feature by clicking on the Dropdown Selector. | The feature behaved as expected, and opened the dropdown selection of category checkboxes. | Test concluded and passed. | ![screenshot](documentation/feature06.png) |
+| | The Update Recipe button is expected to update the completed recipe form details to edit a current recipe. | Tested the feature by completing the form and clicking the Update Recipe button. | The Update Recipe button behaved as expected, and updated the completed form to the recipe database. | Test concluded and passed. | ![screenshot](documentation/feature05.png) |
+| | The Cancel button is expected to return the user back to the Recipes page. | Tested the feature by clicking the Cancel button. | The feature behaved as expected, and returned back to the Recipes page. | Test concluded and passed. | ![screenshot](documentation/feature06.png) |
 
 
 | Categories | | | | | |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/feature07.png) |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/feature08.png) |
+| | View Categories button is expected to open a page with all recipes associated with that category provided the recipe has had a category added. | Tested the feature by clicking on the View Categories button.  | The feature behaved as expected, and opened a page with recipes related to that category or an empty page with 'No Recipes Found' if there were none associated with that category.  | Test concluded and passed. | ![screenshot](documentation/feature07.png) |
+| | Feature is expected to  | Tested the feature by  | The feature  | Test concluded and passed. | ![screenshot](documentation/feature08.png) |
+| | Feature is expected to  | Tested the feature by  | The feature  | Test concluded and passed. | ![screenshot](documentation/feature08.png) |
 
 
 | Category | | | | | |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/feature07.png) |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/feature08.png) |
+| | Feature is expected to  | Tested the feature by  | The feature behaved as expected, and  | Test concluded and passed. | ![screenshot](documentation/feature07.png) |
+| | Feature is expected to  | Tested the feature by  | The feature  | Test concluded and passed. | ![screenshot](documentation/feature08.png) |
 
 
 | Add Category | | | | | |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/feature07.png) |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/feature08.png) |
+| | Feature is expected to  | Tested the feature by  | The feature behaved as expected, and  | Test concluded and passed. | ![screenshot](documentation/feature07.png) |
+| | Feature is expected to  | Tested the feature by  | The feature  | Test concluded and passed. | ![screenshot](documentation/feature08.png) |
 
 
 | Edit Category | | | | | |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/feature07.png) |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/feature08.png) |
+| | Feature is expected to  | Tested the feature by  | The feature behaved as expected, and  | Test concluded and passed. | ![screenshot](documentation/feature07.png) |
+| | Feature is expected to  | Tested the feature by  | The feature  | Test concluded and passed. | ![screenshot](documentation/feature08.png) |
 
 
 | Profile | | | | | |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/feature07.png) |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/feature08.png) |
+| | Feature is expected to  | Tested the feature by  | The feature behaved as expected, and  | Test concluded and passed. | ![screenshot](documentation/feature07.png) |
+| | Feature is expected to  | Tested the feature by  | The feature  | Test concluded and passed. | ![screenshot](documentation/feature08.png) |
 
 
 | Edit Profile | | | | | |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/feature07.png) |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/feature08.png) |
+| | Feature is expected to  | Tested the feature by  | The feature behaved as expected, and  | Test concluded and passed. | ![screenshot](documentation/feature07.png) |
+| | Feature is expected to  | Tested the feature by  | The feature  | Test concluded and passed. | ![screenshot](documentation/feature08.png) |
 
 
 | Log In | | | | | |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/feature07.png) |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/feature08.png) |
+| | Feature is expected to  | Tested the feature by  | The feature behaved as expected, and  | Test concluded and passed. | ![screenshot](documentation/feature07.png) |
+| | Feature is expected to  | Tested the feature by  | The feature  | Test concluded and passed. | ![screenshot](documentation/feature08.png) |
 
 
 | Sign Up | | | | | |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/feature07.png) |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/feature08.png) |
+| | Feature is expected to  | Tested the feature by  | The feature behaved as expected, and  | Test concluded and passed. | ![screenshot](documentation/feature07.png) |
+| | Feature is expected to  | Tested the feature by  | The feature  | Test concluded and passed. | ![screenshot](documentation/feature08.png) |
 
 
 | Navigation | | | | | |
 | | Recipes button is expected to take the user to the recipes page with limited access. | Tested the feature by clicking the recipes button. | The feature behaved as expected and opened the recipes page with restricted access. | Test concluded and passed. | ![screenshot](documentation/) |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/feature08.png) |
+| | Feature is expected to  | Tested the feature by  | The feature  | Test concluded and passed. | ![screenshot](documentation/feature08.png) |
 
 | Footer | | | | | |
 | | The Social links are expected to open the relevant socila sites in a new tab on the browser. | Tested the each social link by clicking each link. | The social links behaved as expected, and opened their respective pages in a new tab on the browser. | Test concluded and passed. | ![screenshot](documentation/) |
@@ -451,12 +454,12 @@ Defensive programming for Recipe Base was manually tested with the below user ac
 
 
 | Sidenav | | | | | |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/feature07.png) |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/feature08.png) |
+| | Feature is expected to  | Tested the feature by  | The feature behaved as expected, and  | Test concluded and passed. | ![screenshot](documentation/feature07.png) |
+| | Feature is expected to  | Tested the feature by  | The feature  | Test concluded and passed. | ![screenshot](documentation/feature08.png) |
 
 | Modals | | | | | |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/feature07.png) |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/feature08.png) |
+| | Feature is expected to  | Tested the feature by  | The feature behaved as expected, and  | Test concluded and passed. | ![screenshot](documentation/feature07.png) |
+| | Feature is expected to  | Tested the feature by  | The feature  | Test concluded and passed. | ![screenshot](documentation/feature08.png) |
 
 </details>
 
