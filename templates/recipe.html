@@ -93,7 +93,7 @@
 
 <div class="col s4 offset-s4 ed-btn center-align">
     <a href="#" onclick="window.history.back()" class="btn">Back <i class="fas fa-arrow-left"></i></a>
-    {% if session.user|lower == recipe.created_by|lower %}
+    {% if session.user|lower == recipe.created_by|lower or session.user == "admin" %}
     <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn">Edit <i
             class="fas fa-pen-to-square"></i></a>
     <a href="#modal-recipe" class="btn delete modal-trigger">Delete <i class="fas fa-trash-can"></i></a>
