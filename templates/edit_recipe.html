@@ -162,7 +162,7 @@
                     <button class="btn submit" type="submit">Update Recipe
                         <i class="fas fa-pen-to-square"></i>
                     </button>
-                    <a href="{{ url_for('get_recipes') }}" class="btn">Cancel <i class="fas fa-ban"></i></a>
+                    <a href="{{ url_for('recipe', recipe_id=recipe._id) }}" class="btn">Cancel <i class="fas fa-ban"></i></a>
                 </div>
             </div>
         </div>
