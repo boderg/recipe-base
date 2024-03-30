@@ -406,61 +406,26 @@ Defensive programming for Recipe Base was manually tested with the below user ac
 
 ## Bugs
 
-- Jinja2 `'Undefined Error'` while trying to set a delete button with a confirmation modal on my categories page I was getting this error saying that 'category' was not defined. I tried to fix at first by adding a jinja2 for loop to the modal but this resulted in multiple delete buttons as in image 2.
+The labels in the edit recipe form were overlapping the 1st prepopulated field until that field was clicked for editing.
 
-| Error | Failed solution | Solution |
-| :---: | :---: | :---: |
-| ![screenshot](documentation/bugs/jinja2-undefined-category.png) | ![screenshot](documentation/bugs/failed-solution.png) | ![screenshot](documentation/bugs/modal-inside-jinja-for-loop.png) |
+![screenshot](documentation/bugs/label-overlap.png) ![screenshot](documentation/bugs/label-selected.png)
+
+- To fix this , I moved the label to outside of the input div.
+
+Jinja2 `'Undefined Error'` while trying to set a delete button with a confirmation modal on my categories page I was getting this error saying that 'category' was not defined. I tried to fix at first by adding a jinja2 for loop to the modal but this resulted in multiple delete buttons as in image 2.
+
+| ![screenshot](documentation/bugs/jinja2-undefined-category.png) ![screenshot](documentation/bugs/failed-solution.png) ![screenshot](documentation/bugs/modal-inside-jinja-for-loop.png)
 
 - To fix this, I moved the modal structure inside of the jinja2 for loop and appended the modal id with the category id.
 
-- Werkzeug `Build error` could not build endpoint single_recipe with values [recipe_id].
+Werkzeug `Build error` could not build endpoint single_recipe with values [recipe_id].
 
-| Error description | Error code | Solution |
-| :---: | :---: | :---: |
-| ![screenshot](documentation/bugs/wekzeug-build-error.png) | ![screenshot](documentation/bugs/werkzeug-build-code.png) | ![screenshot](documentation/bugs/adjusted-code.png) |
+| ![screenshot](documentation/bugs/wekzeug-build-error.png) ![screenshot](documentation/bugs/werkzeug-build-code.png) ![screenshot](documentation/bugs/adjusted-code.png)
 
 - To fix this, I renamed all 'single_recipe' entries to 'recipe' in the app routing along with the name of the recipe.html page.
 
 ## Unfixed Bugs
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+- The placeholders are too long for mobile screens.
 
-You will need to mention unfixed bugs and why they were not fixed.
-This section should include shortcomings of the frameworks or technologies used.
-Although time can be a big variable to consider, paucity of time and difficulty understanding
-implementation is not a valid reason to leave bugs unfixed.
-
-If you've identified any unfixed bugs, no matter how small, be sure to list them here.
-It's better to be honest and list them, because if it's not documented and an assessor finds the issue,
-they need to know whether or not you're aware of them as well, and why you've not corrected/fixed them.
-
-Some examples:
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-- On devices smaller than 375px, the page starts to have `overflow-x` scrolling.
-
-    ![screenshot](documentation/unfixed-bug01.png)
-
-  - Attempted fix: I tried to add additional media queries to handle this, but things started becoming too small to read.
-
-- For PP3, when using a helper `clear()` function, any text above the height of the terminal does not clear, and remains when you scroll up.
-
-    ![screenshot](documentation/unfixed-bug02.png)
-
-  - Attempted fix: I tried to adjust the terminal size, but it only resizes the actual terminal, not the allowable area for text.
-
-- When validating HTML with a semantic `section` element, the validator warns about lacking a header `h2-h6`. This is acceptable.
-
-    ![screenshot](documentation/unfixed-bug03.png)
-
-  - Attempted fix: this is a known warning and acceptable, and my section doesn't require a header since it's dynamically added via JS.
-
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-If you legitimately cannot find any unfixed bugs or warnings, then use the following sentence:
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-There are no remaining bugs that I am aware of.
+![screenshot](documentation/bugs/placeholders.png)
