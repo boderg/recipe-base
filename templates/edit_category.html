@@ -7,19 +7,24 @@
 <div class="row">
     <form class="col s12 m8 offset-m2" method="post" action="{{ url_for('edit_category', category_id=category._id) }}">
         <div class="card-panel">
+
             <!-- category title -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-pen-clip prefix"></i>
-                    <input id="category_name" name="category_name" type="text" value="{{ category.category_name }}" class="validate" required>
+                    <input id="category_name" name="category_name" type="text" value="{{ category.category_name }}"
+                        class="validate" required>
                     <label for="category_name">Food Category</label>
                 </div>
+
                 <!-- category image url -->
                 <div class="input-field col s12">
                     <i class="fas fa-image prefix"></i>
-                    <input id="category_image" name="category_image" type="url" value="{{ category.category_image}}" class="validate">
+                    <input id="category_image" name="category_image" type="url" value="{{ category.category_image}}"
+                        class="validate">
                     <label for="category_image">Category Image URL (optional)</label>
                 </div>
+
                 <!-- submit button -->
                 <div class="row">
                     <div class="col s12 center-align">
@@ -33,8 +38,5 @@
         </div>
     </form>
 </div>
-
-
-        
 
 {% endblock %}

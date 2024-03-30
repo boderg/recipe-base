@@ -10,7 +10,6 @@
         <div class="card-panel">
 
             <!-- recipe title -->
-            <!-- <div class="row"> -->
             <div class="col s12">
                 <label for="recipe_name">Recipe Title</label>
                 <div class="input-field col s12">
@@ -25,8 +24,8 @@
                 <label for="serving_size">Serving Size (numbers only)</label>
                 <div class="input-field col s12">
                     <i class="fas fa-utensils prefix"></i>
-                    <input id="serving_size" name="serving_size" value="{{ recipe.serving_size }}" type="number"
-                        class="validate" required>
+                    <input id="serving_size" name="serving_size" value="{{ recipe.serving_size }}" 
+                    type="number" class="validate" required>
                 </div>
             </div>
 
@@ -45,8 +44,8 @@
                 <label for="recipe_image">Recipe Image URL (optional)</label>
                 <div class="input-field col s12">
                     <i class="fas fa-image prefix"></i>
-                    <input id="recipe_image" name="recipe_image" value="{{ recipe.recipe_image }}" type="url"
-                        class="validate">
+                    <input id="recipe_image" name="recipe_image" class="validate"
+                    value="{{ recipe.recipe_image }}" type="url">
                 </div>
             </div>
 
@@ -56,9 +55,9 @@
                 <div class="input-field col s12" id="list1">
                     <i class="fas fa-list prefix"></i>
                     {% for ingredient in recipe.main_ingredients %}
-                    <label for="main_ingredients_{{ loop.index }}"></label>
-                    <input id="main_ingredients_{{ loop.index }}" name="main_ingredients" value="{{ ingredient }}"
-                        type="text" class="validate" required>
+                        <label for="main_ingredients_{{ loop.index }}"></label>
+                        <input id="main_ingredients_{{ loop.index }}" name="main_ingredients" value="{{ ingredient }}"
+                            type="text" class="validate" required>
                     {% endfor %}
                     <i class="fas fa-plus tooltipped" data-position="left"
                         data-tooltip="Use the '+' and '-' buttons to add or remove lines."
@@ -73,9 +72,9 @@
                 <div class="input-field col s12" id="list2">
                     <i class="fas fa-list prefix"></i>
                     {% for ingredient in recipe.optional_ingredients %}
-                    <label for="optional_ingredients_{{ loop.index }}"></label>
-                    <input id="optional_ingredients_{{ loop.index }}" name="optional_ingredients"
-                        value="{{ ingredient }}" type="text" class="validate" required>
+                        <label for="optional_ingredients_{{ loop.index }}"></label>
+                        <input id="optional_ingredients_{{ loop.index }}" name="optional_ingredients"
+                            value="{{ ingredient }}" type="text" class="validate" required>
                     {% endfor %}
                     <i class="fas fa-plus tooltipped" data-position="left"
                         data-tooltip="Use the '+' and '-' buttons to add or remove lines."
@@ -90,9 +89,9 @@
                 <div class="input-field col s12" id="list3">
                     <i class="fas fa-list prefix"></i>
                     {% for instruction in recipe.preparation_method %}
-                    <label for="preparation_method_{{ loop.index }}"></label>
-                    <input id="preparation_method_{{ loop.index }}" name="preparation_method"
-                        value="{{ instruction }}" type="text" class="validate" required>
+                        <label for="preparation_method_{{ loop.index }}"></label>
+                        <input id="preparation_method_{{ loop.index }}" name="preparation_method" value="{{ instruction }}"
+                            type="text" class="validate" required>
                     {% endfor %}
                     <i class="fas fa-plus tooltipped" data-position="left"
                         data-tooltip="Use the '+' and '-' buttons to add or remove lines."
@@ -107,9 +106,9 @@
                 <div class="input-field col s12" id="list4">
                     <i class="fas fa-list prefix"></i>
                     {% for instruction in recipe.cooking_method %}
-                    <label for="cooking_method_{{ loop.index }}"></label>
-                    <input id="cooking_method_{{ loop.index }}" name="cooking_method" value="{{ instruction }}"
-                        type="text" class="validate" required>
+                        <label for="cooking_method_{{ loop.index }}"></label>
+                        <input id="cooking_method_{{ loop.index }}" name="cooking_method" value="{{ instruction }}"
+                            type="text" class="validate" required>
                     {% endfor %}
                     <i class="fas fa-plus tooltipped" data-position="left"
                         data-tooltip="Use the '+' and '-' buttons to add or remove lines."
@@ -133,24 +132,25 @@
                 <label for="cooking_time">Cooking Time</label>
                 <div class="input-field col s12 tooltipped" data-position="left" data-tooltip="Enter time value">
                     <i class="fas fa-clock prefix"></i>
-                    <input id="cooking_time" name="cooking_time" value="{{ recipe.cooking_time }}" 
-                        type="time" step="60" class="validate" required>
+                    <input id="cooking_time" name="cooking_time" value="{{ recipe.cooking_time }}" type="time" step="60"
+                        class="validate" required>
                 </div>
             </div>
 
             <!-- select categories -->
             <div class="col s12">
                 <label for="category_name">Select your recipe's food categories from the dropdown.</label>
-                <div class="input-field col s12 tooltipped" data-position="left" data-tooltip="Select at least one category">
+                <div class="input-field col s12 tooltipped" data-position="left"
+                    data-tooltip="Select at least one category">
                     <i class="fas fa-folder-open prefix"></i>
                     <select multiple required title="category_name" name="category_name" id="category_name">
-                        <!-- <option value="" disabled selected>Select all that apply</option> -->
                         {% for category in categories %}
-                        {% if category.category_name in recipe.category_name %}
-                        <option value="{{ category.category_name }}" selected>{{ category.category_name.capitalize() }}</option>
-                        {% else %}
-                        <option value="{{ category.category_name }}">{{ category.category_name.capitalize() }}</option>
-                        {% endif %}
+                            {% if category.category_name in recipe.category_name %}
+                                <option value="{{ category.category_name }}" selected>{{ category.category_name.capitalize() }}
+                                </option>
+                            {% else %}
+                                <option value="{{ category.category_name }}">{{ category.category_name.capitalize() }}</option>
+                            {% endif %}
                         {% endfor %}
                     </select>
                 </div>
@@ -162,7 +162,8 @@
                     <button class="btn submit" type="submit">Update Recipe
                         <i class="fas fa-pen-to-square"></i>
                     </button>
-                    <a href="{{ url_for('recipe', recipe_id=recipe._id) }}" class="btn">Cancel <i class="fas fa-ban"></i></a>
+                    <a href="{{ url_for('recipe', recipe_id=recipe._id) }}" class="btn">Cancel 
+                        <i class="fas fa-ban"></i></a>
                 </div>
             </div>
         </div>

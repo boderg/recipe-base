@@ -24,6 +24,7 @@
     <body>
 
         <header>
+
             <!-- top navbar -->
             <nav id="navbar" class="row">
                 <div class="nav-wrapper col s12 l8 offset-l2">
@@ -47,6 +48,7 @@
                     </ul>
                 </div>
             </nav>
+
             <!-- mobile sidenav -->
             <ul class="sidenav" id="mobile-demo">
                 <li>
@@ -59,7 +61,8 @@
                 {% if session.user|lower == "admin"|lower %}
                 <li><a href="{{ url_for('add_category') }}"><i class="fas fa-plus prefix"></i>Add Category</a></li>
                 {% endif %}
-                <li><a href="{{ url_for('profile', username=session['user']) }}"><i class="fas fa-user prefix"></i>Profile</a></li>
+                <li><a href="{{ url_for('profile', username=session['user']) }}"><i
+                            class="fas fa-user prefix"></i>Profile</a></li>
                 <li><a href="{{ url_for('logout') }}"><i class="fas fa-right-from-bracket prefix"></i>Log Out</a></li>
                 {% else %}
                 <li><a href="{{ url_for('register') }}"><i class="fas fa-pen-clip prefix"></i>Sign Up</a></li>
@@ -91,15 +94,20 @@
         <footer class="page-footer">
             <div class="container footer">
                 <div class="row">
+
+                    <!-- about -->
                     <div class="col l7 s12">
                         <h5>Recipe Base</h5>
                         <p>This website was created by Simon Boylan for the Code Institute Milestone Project 3.
                             It is a recipe sharing website where users can view and find recipes.
                             Users can also sign up and log in to the website to add, edit and delete their own recipes.
                         </p>
-                        <p>Disclaimer: This website is for educational purposes only and is not intended for commercial
-                            use.</p>
+                        <p>Disclaimer: This website is for educational purposes only 
+                            and is not intended for commercial use.
+                        </p>
                     </div>
+
+                    <!-- social media links -->
                     <div class="col l3 offset-l2 s12">
                         <h5>Social</h5>
                         <ul>
@@ -115,6 +123,8 @@
                     </div>
                 </div>
             </div>
+
+            <!-- footer copyright -->
             <div class="footer-copyright">
                 <div class="container">
                     © 2024 Copyright Simon Boylan.
@@ -124,7 +134,7 @@
             </div>
         </footer>
 
-        <!-- modals -->
+        <!-- modal 1 -->
         <div id="modal1" class="modal">
             <div class="modal-content">
                 <h4>Save your recipes</h4>
@@ -135,11 +145,12 @@
             </div>
             <div class="modal-footer">
                 <div class="center-align">
-                <a href="{{ url_for('register') }}" class="modal-close btn">Sign Up</a>
-            </div>
+                    <a href="{{ url_for('register') }}" class="modal-close btn">Sign Up</a>
+                </div>
             </div>
         </div>
 
+        <!-- modal 2 -->
         <div id="modal2" class="modal">
             <div class="modal-content">
                 <h4>Why join us?</h4>
@@ -151,8 +162,8 @@
             </div>
             <div class="modal-footer">
                 <div class="center-align">
-                <a href="{{ url_for('register') }}" class="modal-close btn">Sign Up</a>
-            </div>
+                    <a href="{{ url_for('register') }}" class="modal-close btn">Sign Up</a>
+                </div>
             </div>
         </div>
 

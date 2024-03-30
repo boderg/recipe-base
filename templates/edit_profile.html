@@ -6,7 +6,8 @@
 
 <div class="row">
     <form class="col s12 m8 offset-m2" method="post" action="{{ url_for('edit_profile', username=session['user']) }}">
-        <div class="card-panel">            
+        <div class="card-panel">
+
             <!-- first name -->
             <div class="row">
                 <div class="input-field col s6">
@@ -15,7 +16,8 @@
                         pattern="^[a-zA-Z]{1,30}$" class="validate" value="{{ user.first_name }}" required>
                     <label for="first_name">First name: </label>
                 </div>
-            <!-- last name -->
+
+                <!-- last name -->
                 <div class="input-field col s6">
                     <i class="fas fa-user-pen prefix"></i>
                     <input id="last_name" name="last_name" type="text" minlength="1" maxlength="30"
@@ -23,6 +25,7 @@
                     <label for="last_name">Last name: </label>
                 </div>
             </div>
+
             <!-- email -->
             <div class="row">
                 <div class="input-field col s12">
@@ -30,26 +33,33 @@
                     <input id="email" name="email" type="email" class="validate" value="{{ user.email }}" required>
                     <label for="email">Email: </label>
                 </div>
-            <!-- bio -->
+
+                <!-- bio -->
                 <div class="input-field col s12">
                     <i class="fas fa-comment-dots prefix"></i>
-                    <textarea id="bio" name="bio" class="materialize-textarea validate" required>{{ user.bio }}</textarea>
+                    <textarea id="bio" name="bio" class="materialize-textarea validate"
+                        required>{{ user.bio }}</textarea>
                     <label for="bio">Bio: </label>
                 </div>
-            <!-- profile image -->
+
+                <!-- profile image -->
                 <div class="input-field col s12">
                     <i class="fas fa-image prefix"></i>
                     <input id="profile_image" name="profile_image" type="url" class="validate">
                     <label for="profile_image">Profile Image URL: </label>
                 </div>
             </div>
+
+            <!-- buttons -->
             <div class="row">
                 <div class="col s12 ed-btn center-align">
                     <button class="btn submit" type="submit">Update Profile
                         <i class="fas fa-pen-to-square right"></i>
                     </button>
-                    <a href="{{ url_for('profile', username=session['user']) }}" class="btn">Cancel <i class="fas fa-ban"></i></a>
-                    <a href="#modal-profile" class="btn delete modal-trigger">Delete Profile <i class="fas fa-trash-can"></i></a>
+                    <a href="{{ url_for('profile', username=session['user']) }}" class="btn">Cancel <i
+                            class="fas fa-ban"></i></a>
+                    <a href="#modal-profile" class="btn delete modal-trigger">Delete Profile <i
+                            class="fas fa-trash-can"></i></a>
                 </div>
             </div>
         </div>
@@ -61,16 +71,15 @@
     <div class="modal-content center-align">
         <h4>Delete {{ user.username.capitalize() }}'s Profile</h4>
         <h5>Are you sure you want to delete your profile? <br>
-        This action cannot be undone!</h5>
+            This action cannot be undone!</h5>
     </div>
     <div class="modal-footer">
         <div class="center-align">
-        <a href="#!" class="modal-close btn">Cancel <i class="fas fa-ban"></i></a>
-        <a href="{{ url_for('delete_profile', username=session['user']) }}" 
-        class="modal-close btn delete">Delete Profile <i class="fas fa-trash-can"></i></a>
-        </div>        
+            <a href="#!" class="modal-close btn">Cancel <i class="fas fa-ban"></i></a>
+            <a href="{{ url_for('delete_profile', username=session['user']) }}" class="modal-close btn delete">Delete
+                Profile <i class="fas fa-trash-can"></i></a>
+        </div>
     </div>
 </div>
-
 
 {% endblock %}

@@ -5,6 +5,7 @@
 <hr>
 <br><br>
 
+<!-- search bar -->
 <div class="row search">
     <form action="{{ url_for('search') }}" method="post" class="col s12 m10 offset-m1  ">
         <div class="row valign-wrapper center-align">
@@ -12,7 +13,7 @@
                 <i class="fas fa-search prefix"></i>
                 <input id="query" type="text" name="query" minlength="3" class="validate" required>
                 <label for="query">Search Recipes</label>
-                <button type="submit" class="btn">Search <i class="fas fa-search"></i> 
+                <button type="submit" class="btn">Search <i class="fas fa-search"></i>
                 </button>
                 <a href="{{ url_for('get_recipes') }}" class="btn">Reset <i class="fas fa-repeat"></i></a>
             </div>
@@ -21,69 +22,79 @@
 </div>
 
 {% if recipes|length > 0 %}
-<div class="row">
-    <!-- card front content -->
-    {% for recipe in recipes %}
-    <div class="col s12 m6 l4">
-        <div class="card">
-            <div class="card-image">
-                {% if recipe.recipe_image %}
-                <img class="activator food" src="{{ recipe.recipe_image }}" alt="alt image">
-                {% else %}
-                <img class="activator food" src="{{ url_for('static', filename='images/kitchen.jpg') }}"
-                    alt="Copper Kitchen Utensils">
-                {% endif %}
-            </div>
-            <!-- recipe name -->
-            <div class="card-content">
-                <span class="card-title activator">
-                    <em>{{ recipe.recipe_name.title() }}</em>
-                    <i class="fas fa-ellipsis-vertical right tooltipped" data-position="right" data-tooltip="Sneek Peek"></i>
-                </span>
-                <!-- recipe description -->
-                <p class="description">{{ recipe.recipe_description.capitalize() }}</p>
-                <div class="card-action">
-                    {% if session.user|lower %}
-                <a href="{{ url_for('recipe', recipe_id=recipe._id) }}" class="btn">View Full Recipe 
-                    <i class="fas fa-glasses "></i></a>
-                    {% endif %}
+    <div class="row">
+
+        <!-- card front content -->
+        {% for recipe in recipes %}
+            <div class="col s12 m6 l4">
+                <div class="card">
+                    <div class="card-image">
+                        {% if recipe.recipe_image %}
+                            <img class="activator food" src="{{ recipe.recipe_image }}" alt="alt image">
+                        {% else %}
+                            <img class="activator food" src="{{ url_for('static', filename='images/kitchen.jpg') }}"
+                            alt="Copper Kitchen Utensils">
+                        {% endif %}
+                    </div>
+
+                    <!-- recipe name -->
+                    <div class="card-content">
+                        <span class="card-title activator">
+                            <em>{{ recipe.recipe_name.title() }}</em>
+                            <i class="fas fa-ellipsis-vertical right tooltipped" data-position="right"
+                                data-tooltip="Sneek Peek"></i>
+                        </span>
+
+                        <!-- recipe description -->
+                        <p class="description">{{ recipe.recipe_description.capitalize() }}</p>
+                        <div class="card-action">
+                            {% if session.user|lower %}
+                                <a href="{{ url_for('recipe', recipe_id=recipe._id) }}" class="btn">View Full Recipe
+                                <i class="fas fa-glasses "></i></a>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <!-- card reveal content -->
+                    <div class="card-reveal">
+                        <span class="card-title">
+                            <em>{{ recipe.recipe_name.title() }}</em>
+                            <i class="fas fa-xmark right"></i>
+                        </span>
+
+                        <!-- main ingredients -->
+                        <h5><strong><em>Ingredients:</em></strong></h5>
+                        <ol class="ingredient">
+                            {% for ingredient in recipe.main_ingredients %}
+                                <li>{{ ingredient.capitalize() }}</li>
+                            {% endfor %}
+                        </ol>
+
+                        <!-- optional ingredients -->
+                        <h5><strong><em>Optional Ingredients:</em></strong></h5>
+                        <ol class="ingredient">
+                            {% for ingredient in recipe.optional_ingredients %}
+                                <li>{{ ingredient.capitalize() }}</li>
+                            {% endfor %}
+                        </ol>
+
+                        <!-- category -->
+                        <h5><strong><em>Category:</em></strong></h5>
+                        <ol class="category">
+                            {% for category in recipe.category_name %}
+                                <li><a href="#">{{ category.capitalize() }}</a></li>
+                            {% endfor %}
+                        </ol>
+                    </div>
                 </div>
             </div>
-            <!-- card reveal content -->
-            <div class="card-reveal">
-                <span class="card-title">
-                    <em>{{ recipe.recipe_name.title() }}</em>
-                    <i class="fas fa-xmark right"></i>
-                </span>
-                <!-- main ingredients -->
-                <h5><strong><em>Ingredients:</em></strong></h5>
-                <ol class="ingredient">
-                    {% for ingredient in recipe.main_ingredients %}
-                    <li>{{ ingredient.capitalize() }}</li>
-                    {% endfor %}
-                </ol>
-                <!-- optional ingredients -->
-                <h5><strong><em>Optional Ingredients:</em></strong></h5>
-            <ol class="ingredient">
-                {% for ingredient in recipe.optional_ingredients %}
-                <li>{{ ingredient.capitalize() }}</li>
-                {% endfor %}
-            </ol>
-                <h5><strong><em>Category:</em></strong></h5>
-                <ol class="category">
-                    {% for category in recipe.category_name %}
-                    <li><a href="#">{{ category.capitalize() }}</a></li>
-                    {% endfor %}
-                </ol>
-            </div>
-        </div>
+        {% endfor %}
     </div>
-    {% endfor %}
-</div>
 {% else %}
-<h3>No Recipes Found!</h3>
+    <h3>No Recipes Found!</h3>
 {% endif %}
 
+<!-- back button -->
 <div class="row">
     <div class="col s12 center-align">
         <a href="{{ url_for('get_categories') }}" class="btn">Back to Categories</a>
