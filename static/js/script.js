@@ -11,6 +11,10 @@ $(document).ready(function () {
     $('.modal').modal();
 });
 
+
+// Add and remove item functionality, used in the add and edit recipe pages
+// to add and remove input fields for ingredients and instructions.
+
 function addItem(listId, inputName) {
     // Create a new input element
     var newInput = document.createElement("input");

@@ -21,7 +21,7 @@
     --button-gradient: linear-gradient(135deg, #403b4a 0%, #e7e9bb  51%, #403b4a  100%);
 }
 
-/* Body and main */
+/* Body and Main */
 
 body {
     margin: 0;
@@ -81,7 +81,7 @@ hr {
     margin-bottom: 5px;
 }
 
-/* Navigation */
+/* Navigation and Brand Logo */
 
 #navbar {
     background-color: var(--transparent);
@@ -472,7 +472,7 @@ a.btn {
     margin: 0 0 0 30px;
 }
 
-/* 404 and 500 Errors */
+/* 404 and 500 Error pages */
 
 .error404 h4,
 .error500 h4{
