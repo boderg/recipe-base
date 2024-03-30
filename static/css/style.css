@@ -536,4 +536,8 @@ a.btn {
         height: 200px;
         width: auto;
     }
+    input::placeholder,
+    textarea::placeholder {
+        font-size: 80%;
+    }
 }
