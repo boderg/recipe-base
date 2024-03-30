@@ -123,7 +123,6 @@ Here are some of the user stories for the Recipe Base site.
 - As a site administrator, I should be able to access, so that I can create new food categories.
 - As a site administrator, I should be able to access the site, so that I can categorise recipes that have not been categorised by the owner, making them more easily accessible in searches.
 - As a site administrator, I should be able to access the site, so that I can delete fake entries (if created).
-- As a site administrator, I should be able to access the site, so that I can remove fake or malicious accounts.
 
 ## Wireframes
 
