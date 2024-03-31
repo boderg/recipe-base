@@ -245,7 +245,7 @@ The results are as follows:
 | Category | ![screenshot](documentation/responsive/ultrawide/category.png) | Works as expected |
 | Add Category | ![screenshot](documentation/responsive/ultrawide/add-category.png) | Works as expected |
 | Edit Category | ![screenshot](documentation/responsive/ultrawide/edit-category.png) | Works as expected |
-| Profile | ![screenshot](documentation/responsive/ultrawide/profile.pngultrawide/) | Works as expected |
+| Profile | ![screenshot](documentation/responsive/ultrawide/profile.png) | Works as expected |
 | Edit Profile | ![screenshot](documentation/responsive/ultrawide/edit-profile.png) | Works as expected |
 | Log In | ![screenshot](documentation/responsive/ultrawide/login.png) | Works as expected |
 | Register | ![screenshot](documentation/responsive/ultrawide/sign-up.png) | Works as expected |
