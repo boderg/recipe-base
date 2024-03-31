@@ -307,6 +307,7 @@ The following are the tools and technologies that were used in the creation of t
 - [CSS](https://en.wikipedia.org/wiki/CSS) used for the main site design and layout.
 - [CSS :root variables](https://www.w3schools.com/css/css3_variables.asp) used for reusable styles throughout the site.
 - [JavaScript](https://www.javascript.com) used for user interaction on the site.
+- [JQuery](https://releases.jquery.com/) used for the Materalize actionable elements.
 - [Python](https://www.python.org) used as the back-end programming language.
 - [VSCode](https://code.visualstudio.com/) used for local IDE for development.
 - [Git](https://git-scm.com) used for version control. (`git add`, `git commit`, `git push`)
@@ -322,10 +323,10 @@ The following are the tools and technologies that were used in the creation of t
 
 ## Database Design
 
-My project uses a non-relational database with MongoDB, and therefore the database architecture
+The Recipe Base site uses a non-relational database with MongoDB, and therefore the database architecture
 doesn't have actual relationships like a relational database would.
 
-My database is called **recipe_base**.
+The database is called **recipe_base**.
 
 It contains 3 collections:
 
@@ -430,7 +431,7 @@ The Recipe Base project can be cloned or forked in order to make a local copy on
 
 For either method, you will need to install any applicable packages found within the *requirements.txt* file susing the following code:
 
-  `pip3 install -r requirements.txt`
+- `pip3 install -r requirements.txt`
 
 You will need to create a new file called `env.py` at the root-level,
 and include the same environment variables listed above from the Heroku deployment steps, plus a few extras.
@@ -509,7 +510,7 @@ I would like to acknowledge all applicable content that has aided the creation o
 | [Unsplash](https://unsplash.com/photos/cooked-food-on-black-frying-pan-gUU4MF87Ipw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) | Categories Page | Photo by - Christina Rumpf | Used as a title image on the vegetarian categories card |
 | [Free Images](https://www.freeimages.com/vector/grumpy-chef-4851986) | Home Page | SVG by openclipart.org | Used as a home page image |
 | [Free Images](https://www.freeimages.com/vector/chef-with-tray-5501732) | Home Page | SVG by Johnny Automatic | Used as a home page image |
-| [Night Cafe](https://creator.nightcafe.studio) | Profile Page |AI image generated using my account | Used as a profile placeholder image |
+| [Night Cafe](https://creator.nightcafe.studio) | Profile Page | AI generated image | Used as a profile placeholder image |
 
 ### Acknowledgements
 
