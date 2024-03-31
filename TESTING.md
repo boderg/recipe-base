@@ -301,6 +301,15 @@ The main issue that slows down mobile rendering was showing on all pages. This i
 
 </details>
 
+## Wave Compatibility
+
+The deployed Recipe Base site was tested using the Wave Compatibility tester, however the Wave tester could only test pages that were not signed into as it does not have access to secured pages.
+The following results are from the only pages that were able to be tested.
+
+| Home | Recipes | Log In | Sign Up |
+| :---: | :---: | :---: | :---: |
+| ![screenshot](documentation/wave/home.png) | ![screenshot](documentation/wave/recipes.png) | ![screenshot](documentation/wave/login.png) | ![screenshot](documentation/wave/sign-up.png) |
+
 ## Defensive Programming
 
 Defensive programming for Recipe Base was manually tested with the below user acceptance testing:
