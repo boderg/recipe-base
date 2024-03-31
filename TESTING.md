@@ -56,7 +56,7 @@ The recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com) was used t
 
 | File | CI URL | Screenshot | Notes |
 | --- | --- | --- | --- |
-| app.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/boderg/recipe-base/main/app.py) | ![screenshot](documentation/validation/python/python-line-to-long.png) ![screenshot](documentation/validation/python/python.png) | ES01 line too long. <br> W293 blank line contains whitespace.. <br> W292 no new line at end of file. <br> This last one (W293) seems to be a quirk of GitHub. Copying the raw faile from GitHub seems to omit the empty line at the end of the file, however when edit is clicked, the newline is showing in the editor. |
+| app.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/boderg/recipe-base/main/app.py) | ![screenshot](documentation/validation/python/python-line-to-long.png) ![screenshot](documentation/validation/python/python.png) | ES01 line too long. <br> W293 blank line contains whitespace.. <br> W292 no new line at end of file. <br> This last one (W293) seems to be a quirk of GitHub. Copying the raw file from GitHub seems to omit the empty line at the end of the file, however when edit is clicked in the GitHub editor, the newline is shows. <br> All errors corrected. |
 
 </details>
 
@@ -250,8 +250,8 @@ The results are as follows:
 | Log In | ![screenshot](documentation/responsive/ultrawide/login.png) | Works as expected |
 | Register | ![screenshot](documentation/responsive/ultrawide/sign-up.png) | Works as expected |
 
-The only issue noted is the navbar cannot be made narrower using the standrd materialize framework without affecting the smaller screens.<br>
-This would be something that can be worked on via css as a future development.
+The only issue noted is the navbar cannot be made narrower using the standard materialize framework without affecting the smaller screens.<br>
+This is something that could be adjusted using css as a future development.
 
 ### Samsung Galaxy S10 plus
 
@@ -283,15 +283,15 @@ The deployed Recipe Base project has been tested using the Lighthouse Audit tool
 
 | Page | Mobile | Desktop | Notes |
 | --- | --- | --- | --- |
-| Home | ![screenshot](documentation/lighthouse/mobile/home.png) | ![screenshot](documentation/lighthouse/desktop/home.png) | Slightly slower mobile performnce. |
-| Recipes | ![screenshot](documentation/lighthouse/mobile/recipes.png) | ![screenshot](documentation/lighthouse/desktop/recipes.png) | Slightly slower mobile performnce. |
-| Recipe | ![screenshot](documentation/lighthouse/mobile/recipe.png) | ![screenshot](documentation/lighthouse/desktop/recipe.png) | Slightly slower mobile performnce. |
-| Add Recipe | ![screenshot](documentation/lighthouse/mobile/add-recipe.png) | ![screenshot](documentation/lighthouse/desktop/add-recipe.png) | Slightly slower performnce. |
-| Edit Recipe | ![screenshot](documentation/lighthouse/mobile/edit-recipe.png) | ![screenshot](documentation/lighthouse/desktop/edit-recipe.png) | Slight drop in performance. |
+| Home | ![screenshot](documentation/lighthouse/mobile/home.png) | ![screenshot](documentation/lighthouse/desktop/home.png) | Slight drop in mobile performance and optimisation. |
+| Recipes | ![screenshot](documentation/lighthouse/mobile/recipes.png) | ![screenshot](documentation/lighthouse/desktop/recipes.png) | Slightly slower mobile performance. |
+| Recipe | ![screenshot](documentation/lighthouse/mobile/recipe.png) | ![screenshot](documentation/lighthouse/desktop/recipe.png) | Slight drop in mobile optimisation. |
+| Add Recipe | ![screenshot](documentation/lighthouse/mobile/add-recipe.png) | ![screenshot](documentation/lighthouse/desktop/add-recipe.png) | Slight drop in performance and optimisation. |
+| Edit Recipe | ![screenshot](documentation/lighthouse/mobile/edit-recipe.png) | ![screenshot](documentation/lighthouse/desktop/edit-recipe.png) | Slight drop in performance and optimisation. |
 | Categories | ![screenshot](documentation/lighthouse/mobile/categories.png) | ![screenshot](documentation/lighthouse/desktop/categories.png) | Slower performance. |
-| Category | ![screenshot](documentation/lighthouse/mobile/category.png) | ![screenshot](documentation/lighthouse/desktop/category.png) | Slower mobile performance. |
+| Category | ![screenshot](documentation/lighthouse/mobile/category.png) | ![screenshot](documentation/lighthouse/desktop/category.png) | Slower mobile performance and drop in optimisation. |
 | Add Category | ![screenshot](documentation/lighthouse/mobile/add-category.png) | ![screenshot](documentation/lighthouse/desktop/add-category.png) | Slight drop in optimisation. |
-| Edit category | ![screenshot](documentation/lighthouse/mobile/edit-category.png) | ![screenshot](documentation/lighthouse/desktop/edit-category.png) | Slight drop in optimisation. Slight drop in performnce on mobile. |
+| Edit category | ![screenshot](documentation/lighthouse/mobile/edit-category.png) | ![screenshot](documentation/lighthouse/desktop/edit-category.png) | Slight drop in optimisation. Slight drop in performance on mobile. |
 | Profile | ![screenshot](documentation/lighthouse/mobile/profile.png) | ![screenshot](documentation/lighthouse/desktop/profile.png) | Slight drop in performance and optimisation on mobile. |
 | Edit Profile | ![screenshot](documentation/lighthouse/mobile/edit-profile.png) | ![screenshot](documentation/lighthouse/desktop/edit-profile.png) | Slight drop in performance and optimisation on mobile. Small drop in optimisation on desktop. |
 | Log In | ![screenshot](documentation/lighthouse/mobile/login.png) | ![screenshot](documentation/lighthouse/desktop/login.png) | Slight drop in mobile performance. Slight drop in optimisation. |
@@ -344,13 +344,13 @@ Defensive programming for Recipe Base was manually tested with the below user ac
 | | The Dropdown Select is expected to open a dropdown selction of category checkboxes. | Tested the feature by clicking on the Dropdown Selector. | The feature behaved as expected, and opened the dropdown selection of category checkboxes. | Test concluded and passed. | ![screenshot](documentation/defensive/dropdowen-selector.png) |
 | | The Add Recipe button is expected to add the completed recipe form details to create a new recipe. | Tested the feature by completing the form and clicking the Add Recipe button. | The Add Recipe button behaved as expected, and added the completed form to the recipe database. | Test concluded and passed. | ![screenshot](documentation/defensive/add-recipe-buttons.png) |
 | | The Cancel button is expected to return the user back to the Recipes page. | Tested the feature by clicking the Cancel button. | The feature behaved as expected, and returned back to the Recipes page. | Test concluded and passed. | ![screenshot](documentation/defensive/add-recipe-buttons.png) |
-| | Form validation is expected to prevent the Add Recipe sumission if there is no data entered. | Tested by completing the form and leaving various blank entries. | The form validation did not act as expected and entered blank entries into the recipe database. | To fix this 'required' was added to the input fields and the empty disabled option removed from the dropdown selectoor. | |
+| | Form validation is expected to prevent the Add Recipe submission if there is no data entered. | Tested by completing the form and leaving various blank entries. | The form validation did not act as expected and entered blank entries into the recipe database. | To fix this the 'required' attribute was added to the input fields and the empty disabled option removed from the dropdown selectoor. | |
 | Edit Recipe | | | | | |
 | | The Plus / Minus symbols are expected to add and remove new lines. | Tested the feature by clicking on the buttons. | The feature behaved as expected, and added a line when the plus symbol was clicked and removed a line when the minus symbol was clicked. | Test concluded and passed. | ![screenshot](documentation/defensive/plus-minus-symbols.png) |
 | | The Dropdown Select is expected to open a dropdown selction of category checkboxes. | Tested the feature by clicking on the Dropdown Selector. | The feature behaved as expected, and opened the dropdown selection of category checkboxes. | Test concluded and passed. | ![screenshot](documentation/defensive/dropdowen-selector.png) |
 | | The Update Recipe button is expected to update the completed recipe form details to edit a current recipe. | Tested the feature by completing the form and clicking the Update Recipe button. | The Update Recipe button behaved as expected, and updated the completed form to the recipe database. | Test concluded and passed. | ![screenshot](documentation/defensive/edit-recipe-buttons.png) |
 | | The Cancel button is expected to return the user back to the Recipe page. | Tested the feature by clicking the Cancel button. | The feature behaved as expected, and returned back to the Recipe page. | Test concluded and passed. | ![screenshot](documentation/defensive/edit-recipe-buttons.png) |
-| | Form validation is expected to prevent the Edit Recipe sumission if there is no data entered. | Tested by completing the form and leaving various blank entries. | The form validation did not act as expected and entered blank entries into the recipe database. | To fix this 'required' was added to the input fields and the empty disabled option removed from the dropdown selectoor. | |
+| | Form validation is expected to prevent the Edit Recipe submission if there is no data entered. | Tested by completing the form and leaving various blank entries. | The form validation did not act as expected and entered blank entries into the recipe database. | To fix this the 'required' attribute was added to the input fields and the empty disabled option removed from the dropdown selectoor. | |
 | Categories | | | | | |
 | | The View Categories button is expected to open a page with all recipes associated with that category provided the recipe has had a category added. | Tested the feature by clicking on the View Categories button.  | The feature behaved as expected, and opened a page with recipes related to that category or an empty page with 'No Recipes Found' if there were none associated with that category.  | Test concluded and passed. | ![screenshot](documentation/defensive/categories-buttons.png) |
 | | The Edit button is expected to open the edit categorries form for the selected category.  | Tested the feature by clcking on different Edit buttons on different categories.  | The feature behaved as expected, and opened the relevant category that was selected.  | Test concluded and passed. | ![screenshot](documentation/defensive/categories-buttons.png) |
@@ -433,8 +433,12 @@ Werkzeug `Build error` could not build endpoint single_recipe with values [recip
 
 - To fix this, I renamed all 'single_recipe' entries to 'recipe' in the app routing along with the name of the recipe.html page.
 
-## Unfixed Bugs
-
-- The placeholders are too long for mobile screens.
+The placeholders are too long for mobile screens.
 
 ![screenshot](documentation/bugs/placeholders.png)
+
+- To fix this I shortened the legth of the placeholder text and made the size of the text samller using css.
+
+## Unfixed Bugs
+
+There are no more bugs that I am aware of.
