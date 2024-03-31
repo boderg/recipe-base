@@ -81,11 +81,11 @@ CSS `:root` variables were used to easily update the global colour scheme by cha
 
 Fontjoy was used for font pairing and selection for the Recipe Base site.
 
+Here are screenshots of the font selection.
+
 | Light background | Dark background |
 | :---: | :---: |
 | ![screenshot](documentation/ux/typeography/fontjoy-pairing-light.png) | ![screenshot](documentation/ux/typeography/fontjoy-pairing-dark.png) |
-
-Here are screenshots of the font selection:
 
 Three fonts were decided upon and implemented as follows:
 
