@@ -157,6 +157,7 @@ def profile(username):
 @app.route("/edit_profile/<username>", methods=["GET", "POST"])
 def edit_profile(username):
     if not session.get("user"):
+        flash("Please login to edit your profile")
         return redirect(url_for("login"))
 
     if request.method == "POST":
@@ -297,6 +298,7 @@ def get_categories():
 @app.route("/add_category", methods=["GET", "POST"])
 def add_category():
     if not session.get("user"):
+        flash("Please login to add a category")
         return redirect(url_for("login"))
 
     if request.method == "POST":
