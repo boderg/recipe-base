@@ -156,8 +156,15 @@ def profile(username):
 # Route to edit the user's profile
 @app.route("/edit_profile/<username>", methods=["GET", "POST"])
 def edit_profile(username):
+    profile = mongo.db.users.find_one({"username": username})
+
     if not session.get("user"):
         flash("Please login to edit your profile")
+        return redirect(url_for("login"))
+
+    # Check if the user is the owner of the profile or is "admin"
+    if session.get("user") != profile["username"] and session.get("user") != "admin":
+        flash("You do not have permission to edit this profile.")
         return redirect(url_for("login"))
 
     if request.method == "POST":
