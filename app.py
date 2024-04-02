@@ -355,8 +355,16 @@ def add_category():
 # Route to edit a category
 @app.route("/edit_category/<category_id>", methods=["GET", "POST"])
 def edit_category(category_id):
+
+    # Check if the user is logged in
     if not session.get("user"):
+        flash("Please login to edit the category.")
         return redirect(url_for("login"))
+
+    # Check if the user is "admin"
+    if session.get("user") != "admin":
+        flash("You do not have permission to edit this category.")
+        return redirect(url_for("get_categories"))
 
     if request.method == "POST":
         edit = {
