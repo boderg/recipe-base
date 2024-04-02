@@ -74,7 +74,7 @@
                     {% for ingredient in recipe.optional_ingredients %}
                         <label for="optional_ingredients_{{ loop.index }}"></label>
                         <input id="optional_ingredients_{{ loop.index }}" name="optional_ingredients"
-                            value="{{ ingredient }}" type="text" class="validate" required>
+                            value="{{ ingredient }}" type="text" class="validate">
                     {% endfor %}
                     <i class="fas fa-plus tooltipped" data-position="left"
                         data-tooltip="Use the '+' and '-' buttons to add or remove lines."
