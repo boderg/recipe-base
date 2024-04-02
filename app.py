@@ -3,7 +3,7 @@
 # This code has been adapted and added to in order
 # to create the Recipe Base website.
 
-# Imports
+# Imports for the app to run
 import os
 from flask import (
     Flask, flash, render_template,
