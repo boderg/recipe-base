@@ -226,18 +226,13 @@ def add_recipe():
 def edit_recipe(recipe_id):
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
 
-    # Check if the recipe exists
-    if not recipe:
-        flash("Recipe not found")
-        return redirect(url_for("get_recipes"))
-    
     if not session.get("user"):
         flash("Please login to edit the recipe")
         return redirect(url_for("login"))
 
-    # Check if the user is the creator of the recipe or an admin
-    if session["user"] != recipe["created_by"] and not session["admin"]:
-        flash("You can only edit your own recipes")
+    # Check if the user is the creator of the recipe
+    if session.get("user") != recipe["created_by"] and session.get("user") != "admin":
+        flash("You do not have permission to edit this recipe.")
         return redirect(url_for("get_recipes"))
 
     if request.method == "POST":
