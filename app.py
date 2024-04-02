@@ -285,6 +285,19 @@ def edit_recipe(recipe_id):
 # Route to delete a recipe
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
+    
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+
+    # Check if the user is logged in
+    if not session.get("user"):
+        flash("Please login to delete the recipe.")
+        return redirect(url_for("login"))
+
+    # Check if the user is the creator of the recipe or is "admin"
+    if session.get("user") != recipe["created_by"] and session.get("user") != "admin":
+        flash("You do not have permission to delete this recipe.")
+        return redirect(url_for("login"))
+    
     mongo.db.recipes.delete_one({"_id": ObjectId(recipe_id)})
     flash("Recipe Successfully Deleted")
     return redirect(url_for("get_recipes"))
