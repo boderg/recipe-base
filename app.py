@@ -190,6 +190,18 @@ def edit_profile(username):
 # Route to delete the user's profile
 @app.route("/delete_profile/<username>")
 def delete_profile(username):
+    profile = mongo.db.users.find_one({"username": username})
+
+    # Check if the user is logged in
+    if not session.get("user"):
+        flash("Please login to delete the profile.")
+        return redirect(url_for("login"))
+
+    # Check if the user is the owner of the profile or is "admin"
+    if session.get("user") != profile["username"] and session.get("user") != "admin":
+        flash("You do not have permission to delete this profile.")
+        return redirect(url_for("login"))
+    
     mongo.db.users.delete_one({"username": session["user"]})
     flash("User Successfully Deleted")
     session.pop("user")
