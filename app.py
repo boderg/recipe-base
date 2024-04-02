@@ -252,7 +252,7 @@ def edit_recipe(recipe_id):
     # Check if the user is the creator of the recipe
     if session.get("user") != recipe["created_by"] and session.get("user") != "admin":
         flash("You do not have permission to edit this recipe.")
-        return redirect(url_for("login"))
+        return redirect(url_for("get_recipes"))
 
     if request.method == "POST":
         edit = {
