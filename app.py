@@ -163,7 +163,8 @@ def edit_profile(username):
         return redirect(url_for("login"))
 
     # Check if the user is the owner of the profile or is "admin"
-    if session.get("user") != profile["username"] and session.get("user") != "admin":
+    if session.get("user") != profile[
+        "username"] and session.get("user") != "admin":
         flash("You do not have permission to edit this profile.")
         return redirect(url_for("profile", username=session["user"]))
 
@@ -198,7 +199,8 @@ def delete_profile(username):
         return redirect(url_for("login"))
 
     # Check if the user is the owner of the profile or is "admin"
-    if session.get("user") != profile["username"] and session.get("user") != "admin":
+    if session.get("user") != profile[
+        "username"] and session.get("user") != "admin":
         flash("You do not have permission to delete this profile.")
         return redirect(url_for("login"))
     
@@ -250,7 +252,8 @@ def edit_recipe(recipe_id):
         return redirect(url_for("login"))
 
     # Check if the user is the creator of the recipe
-    if session.get("user") != recipe["created_by"] and session.get("user") != "admin":
+    if session.get("user") != recipe[
+        "created_by"] and session.get("user") != "admin":
         flash("You do not have permission to edit this recipe.")
         return redirect(url_for("get_recipes"))
 
@@ -294,7 +297,8 @@ def delete_recipe(recipe_id):
         return redirect(url_for("login"))
 
     # Check if the user is the creator of the recipe or is "admin"
-    if session.get("user") != recipe["created_by"] and session.get("user") != "admin":
+    if session.get("user") != recipe[
+        "created_by"] and session.get("user") != "admin":
         flash("You do not have permission to delete this recipe.")
         return redirect(url_for("login"))
     
