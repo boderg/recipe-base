@@ -437,7 +437,7 @@ The placeholders are too long for mobile screens.
 
 ![screenshot](documentation/bugs/placeholders.png)
 
-- To fix this I shortened the legth of the placeholder text and made the size of the text samller using css.
+- To fix this I shortened the length of the placeholder text and made the size of the text samller using css.
 
 ## Unfixed Bugs
 
