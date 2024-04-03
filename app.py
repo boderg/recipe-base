@@ -165,7 +165,7 @@ def edit_profile(username):
     # Check if the user is the owner of the profile or is "admin"
     if session.get("user") != profile["username"] and session.get("user") != "admin":
         flash("You do not have permission to edit this profile.")
-        return redirect(url_for("login"))
+        return redirect(url_for("profile", username=session["user"]))
 
     if request.method == "POST":
         edit = {
